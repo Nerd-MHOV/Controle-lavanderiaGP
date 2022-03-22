@@ -11,7 +11,7 @@ class Web extends Controller
         parent::__construct($router);
 
         if (!empty($_SESSION['user'])) {
-            //$this->router->redirect("app.home");
+            $this->router->redirect("painel.home");
         }
     }
 

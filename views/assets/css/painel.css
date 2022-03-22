@@ -1,0 +1,79 @@
+.containerPainel
+{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 12%);
+    border-radius: 20px;
+    margin: 20px;
+}
+.cardBox_retirar .card .iconBx
+{
+    position: absolute;
+    right: 20px;
+    opacity: 0.3;
+    font-size: 6em;
+}
+.cardBox_retirar .card .numbers
+{
+    z-index: 1;
+}
+.itensRetirada table
+{
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+.cardBox input[type=number]
+{
+    width: 45px;
+    color: var(--black2);
+    font-size: 1.1em;
+    border: none;
+    background: none;
+    outline: none;
+}
+.cardBox select 
+{
+    color: var(--black2);
+    font-size: 1.1em;
+    border: none;
+    background: none;
+}
+.cardBox select:focus-visible
+{
+    outline: none;
+}
+.cardBox select option
+{
+    color: var(--black1);
+}
+.itensRetirada table tr
+{
+    border: 5px solid var(--grey);
+}
+.itensRetirada table th
+{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--blue);
+    padding: 20px 0;
+}
+.itensRetirada table td
+{
+    padding: 10px 0;
+}
+.itensRetirada select
+{
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 90%;
+    font-size: 1.2em;
+    text-align: center;
+}
+.itensRetirada textarea
+{
+    width: 98%;
+}

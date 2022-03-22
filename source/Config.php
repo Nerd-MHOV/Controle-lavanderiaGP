@@ -2,6 +2,7 @@
 
 if ($_SERVER["SERVER_NAME"] == "localhost") {
     require __DIR__."/Minify.php";
+    require __DIR__."/MinifyDashbord.php";
 
     define("SITE", [
         "name" => "controle_lavanderia",

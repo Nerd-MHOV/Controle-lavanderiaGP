@@ -42,7 +42,7 @@ templates/
 The following looks ups, *regardless of where they are called from*, would resolve to the following files:
 
 ```php
-$templates->render('home'); // templates/main/home.php
+$templates->render('home'); // templates/main/painel_home.php
 $templates->render('layout'); // templates/user/layout.php
 $templates->render('header'); // templates/seasonal/header.php
 ```

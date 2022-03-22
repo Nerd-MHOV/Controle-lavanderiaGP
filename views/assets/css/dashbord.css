@@ -1,0 +1,545 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.center{
+  max-width: 100%;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+
+
+.sucesso-box{
+  width: 100%;
+  padding: 8px 2%;
+  text-align: center;
+  background: #a5d6a7;
+  color: white;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.sucesso-box a{
+  color: white;
+}
+
+.erro-box{
+  width: 100%;
+  padding: 8px 2%;
+  text-align: center;
+  background: #F75353;
+  color: white;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.box{
+  margin: 20px 0;
+  text-align: center;
+  border-top: 3px solid #396396;
+  padding: 20px;
+  position: block;
+  width: 100%;
+  background: #ffffffd4;
+  overflow-x: auto;
+}
+
+.box h1{
+  font-size: 50px;
+  color: #91c9d6;
+  padding: 80px 0;
+}
+
+.box h2{
+  font-size: 50px;
+  color: #396396;
+  margin-bottom: 20px;
+}
+
+.box .obs{
+  color: #ccc;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+form .box-single{
+  margin: 20px auto;
+}
+
+form .box-single input,
+form .box-single select{
+  width: 100% !important;
+  max-width: 400px;
+}
+
+.line-form{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.line-form select,
+.line-form input{
+  width: 100% !important;
+}
+
+.line-form #ajustes{
+  grid-column: 1/4;
+}
+
+.line-form #ajustes input[type=submit]{
+  max-width: 200px;
+}
+
+form label{
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  color: #396396;
+}
+
+form select:not(.ignoreClass), form input:not(.ignoreClass){
+  height: 50px;
+  width: 300px;
+  background-color: transparent;
+  border: none;
+  color: #747474;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  -webkit-appearance: none;
+}
+
+form select:focus:not(.ignoreClass), input:focus:not(.ignoreClass), select:focus:not(.ignoreClass){
+  outline: 0;
+}
+
+form input::placeholder{
+  color: #7474746e;
+}
+
+form select option{
+  color: black;
+}
+
+form input[type=submit]:not(.ignoreClass){
+  background-color: #396396;
+  font-size: 21px;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid white;
+  box-shadow: 8px 5px 5px black;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+}
+
+form input[type=submit]:hover:not(.ignoreClass){
+  background-color: #88bbe7;
+  box-shadow: none;
+  font-size: 24px;
+}
+
+table{
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  align-items: center;
+  color: black;
+  border-collapse: collapse;
+  border: 1px solid #98afef;
+}
+
+table thead{
+  background: #5b7fe545;
+}
+
+table tr{
+  border-bottom: 1px solid #98afef;
+}
+
+table th, table td{
+  white-space: nowrap;
+  max-width: 500px;
+  position: relative;
+  padding: 10px 10px;
+  background-color: #0e7bff12;
+}
+
+form .box-single{
+  display: block;
+}
+
+td a{
+  color: black;
+  text-decoration: none;
+}
+
+.box-wapper-collum{
+  flex-direction: column;
+}
+
+.depar-all{
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.depar-text{
+  font-size: 20px;
+  font-weight: 600;
+  color: #6e91bf;
+  border: groove #6e91bf;
+  padding: 0 90px;
+  margin: 4px 0;
+}
+
+.box-wapper{
+  display: flex;
+  justify-content: space-around;
+}
+
+.box-wapper label{
+  font-size: 23px;
+}
+
+#colaborador{
+  display: flex;
+  justify-content: center;
+}
+
+#colaborador label{
+  font-size: 20px;
+}
+
+#colaborador .box-single{
+  margin: 20px 5%;
+}
+
+.text-obs input{
+  border: 1px solid;
+  margin-left: -51px;
+  min-width: 350px;
+  font-size: 15px;
+}
+
+.item{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  text-align: center;
+  max-width: 550px;
+  align-items: flex-end;
+  margin: 20px 0;
+  border-bottom: 1px groove;
+}
+
+.item h4{
+  white-space: nowrap;
+  color: #747474;
+}
+
+.item select{
+  width: 250px;
+  float: left;
+}
+
+.item select:nth-child(2n+1){
+  width: 60px;
+}
+
+.item input{
+  float: left;
+  width: 60px !important;
+}
+
+.item input::placeholder{
+  color: #747474;
+}
+
+.cadastrar-item{
+  margin: 20px auto;
+  /*max-width: 800px;*/
+  height: 50px;
+  display: grid;
+  grid-gap: 8px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.cadastrar-item input,
+.cadastrar-item select{
+  width: 100% !important;
+  float: none;
+}
+
+/*filtro*/
+.align-align{
+  display: flex;
+  justify-content: center;
+}
+.align-all{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.align-all table{
+  margin: 0;
+}
+.filtro{
+  display: flex;
+  position: relative;
+  margin: 20px 0;
+  align-items: flex-end;
+}
+
+.filtro input[type=text]{
+  border-bottom: 1px solid;
+  height: 45px;
+  font-size: 15px;
+}
+
+.filtro input[type=submit]{
+  font-weight: 300 !important;
+  width: 100px;
+  padding: 5px 10px;
+  height: 50px;
+  font-size: 15px !important;
+  box-shadow: none !important;
+  margin: 0;
+}
+
+.filtro input[type=submit]:hover{
+  background-color: #88bbe7;
+  box-shadow: none;
+  font-size: 15px;
+}
+
+.lb-all{
+  display: flex;
+  justify-content: center;
+}
+
+.lb-all .lb-inpt{
+  display: flex;
+  flex-direction: column;
+}
+
+.lb-all .lb-inpt label{
+  font-size: 15px;
+}
+
+.lb-all .lb-inpt input[type=number]{
+  margin-left: 13px;
+}
+
+.table-item{
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.table-item label{
+  font-size: 12px !important;
+}
+
+.line-form .table-item label{
+  font-size: 15px !important;
+}
+
+
+.table-item input,
+.table-item select{
+  width: 100% !important;
+}
+
+.table-item input[type=number]{
+  max-width: 60px;
+  padding-left: 10px;
+  margin: 0 auto;
+}
+
+/*MODAL*/
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  padding-left: 78px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content{
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close-btn{
+  margin-top: -18px;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-wrapper{
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 80px ;
+  align-items: center;
+}
+
+.modal-setor{
+  justify-content: center;
+}
+
+.modal-setor-single{
+  width: 30%;
+  text-align: center;
+  align-items: center;
+}
+
+.modal-setor-single input{
+  margin: 0 auto;
+  padding-left: 9px;
+}
+
+.modal .modal-icon{
+  font-size: 50px;
+  color: #396396;
+  margin: 0 20px;
+}
+
+.modal-single{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal h3{
+  border-bottom: 1.5px groove #00000033;
+  padding-bottom: 10px;
+}
+
+.modal-single select{
+  height: 40px;
+  padding-left: 10px;
+}
+
+.modal-single input[type=number]{
+  max-width: 90px;
+  border: 1px groove;
+  margin-bottom: 25px;
+}
+
+.modal-single textarea,
+.modal .textarea textarea{
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  font-size: 15px;
+}
+
+.modal .textarea{
+  flex-grow: 1;
+  width: 70%;
+}
+
+.modal .textarea textarea{
+  width: 100%;
+}
+
+.modal-buttom{
+  display: flex;
+  justify-content: end;
+}
+
+.modal-buttom input{
+  padding: 5px 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.modal-buttom input[name=cancelar]{
+  background-color: #F75353;
+  border: white;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.modal-buttom input[name=cancelar]:hover{
+  background-color: #ff0000;
+}
+
+.modal-buttom input[name=devolver],
+.modal-buttom input[name=devolver-setor]{
+  background-color: #4ba74f;
+  border: white;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.modal-buttom input[name=devolver]:hover,
+.modal-buttom input[name=devolver-setor]:hover{
+  background-color: #1bc322;
+}
+
+.modal-buttom input[name=btnDevol]{
+  background-color: #396396;
+  margin: 0 !important;
+  border: white;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.modal-buttom input[name=btnDevol]:hover{
+ background-color: #7a97b9;
+}
+
+/*FIM-MODAL*/
+
+@media (max-width: 790px){
+  #colaborador{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px){
+  .item{
+    grid-template-columns: 1fr;
+  }
+
+  .item .text-obs{
+    grid-column: 1 !important;
+  }
+}

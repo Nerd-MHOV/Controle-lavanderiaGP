@@ -28,11 +28,16 @@ $router->post("/forget", "Auth:forget", "auth.forget");
 $router->post("/reset", "Auth:reset", "auth.reset");
 
 /**
- *  home WEBPAGE
+ *  home DASHBORD
  */
-$router->group('/me');
-$router->get("/","App:home", "app.home");
-$router->get("/sair","App:logoff", "app.logoff");
+$router->group('/painel');
+$router->get("/home","Painel:home", "painel.home");
+$router->get("/retirar","Painel:retirar", "painel.retirar");
+$router->get("/produto","Painel:produto", "painel.produto");
+$router->get("/departamento","Painel:departamento", "painel.departamento");
+$router->get("/relatorio","Painel:relatorio", "painel.relatorio");
+$router->get("/estoque","Painel:estoque", "painel.estoque");
+$router->get("/sair","Painel:logoff", "painel.logoff");
 
 
 

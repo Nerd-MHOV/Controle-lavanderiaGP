@@ -27,7 +27,7 @@ class App extends Controller
             unset($_SESSION["user"]);
 
             flash("error", "Acesso negado. Favor logue-se");
-            $this->router->redirect("web.login");
+            $this->router->redirect("painel.home");
         }
 
     }
