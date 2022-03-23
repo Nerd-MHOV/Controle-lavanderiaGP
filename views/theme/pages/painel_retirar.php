@@ -48,7 +48,7 @@
 </div>
 
 <div class="containerPainel">
-    <div class="itensRetirada">
+    <div class="tablePainel">
         <table>
             <thead>
             <tr>

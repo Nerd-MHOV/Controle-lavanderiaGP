@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'e93a05e5b9f51ee8e43626553d03239fc2c1eb06',
         'name' => 'nerd-mhov/controle_lavanderia4.0',
         'dev' => true,
     ),
@@ -67,12 +67,12 @@
             'dev_requirement' => false,
         ),
         'nerd-mhov/controle_lavanderia4.0' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'e93a05e5b9f51ee8e43626553d03239fc2c1eb06',
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(

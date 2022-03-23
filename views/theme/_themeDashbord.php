@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?= $head; ?>
     <link rel="stylesheet" href="<?= asset("/css/sidebarDashbord.css"); ?>">
@@ -27,46 +28,51 @@
             <li>
                 <a href="#">
                     <span class="icon logo_peraltas">
-                        <img src="<?=asset("images/GP.png")?>" alt="logo" />
+                        <img src="<?= asset("images/GP.png") ?>" alt="logo"/>
                     </span>
                     <span class="title" style="font-size: 22px">Controle Lavanderia</span>
                 </a>
             </li>
 
-            <li <?= (str_contains($_GET["route"], "home")) ? "class=\"hovered\"" : "";?>>
-                <a href="<?=$router->route("painel.home")?>">
-                    <span class="icon"><i class='bx bxs-home' ></i></span>
+            <li <?= (str_contains($_GET["route"], "home")) ? "class=\"hovered\"" : ""; ?>>
+                <a href="<?= $router->route("painel.home") ?>">
+                    <span class="icon"><i class='bx bxs-home'></i></span>
                     <span class="title">Home</span>
                 </a>
             </li>
-            <li <?= (str_contains($_GET["route"], "retirar")) ? "class=\"hovered\"" : "";?>>
-            <a href="<?=$router->route("painel.retirar")?>">
-                <span class="icon"><i class='bx bxs-shopping-bags' ></i></span>
-                <span class="title">Retirar</span>
-            </a>
-            </li <?= (str_contains($_GET["route"], "produto")) ? "class=\"hovered\"" : "";?>>
-
-            <li>
-            <a href="<?=$router->route("painel.produto")?>">
-                <span class="icon"><i class='bx bx-list-plus'></i></span>
-                <span class="title">Produto</span>
-            </a>
+            <li <?= (str_contains($_GET["route"], "retirar")) ? "class=\"hovered\"" : ""; ?>>
+                <a href="<?= $router->route("painel.retirar") ?>">
+                    <span class="icon"><i class='bx bxs-shopping-bags'></i></span>
+                    <span class="title">Retirar</span>
+                </a>
             </li>
-            <li <?= (str_contains($_GET["route"], "departamento")) ? "class=\"hovered\"" : "";?>>
-                <a href="<?=$router->route("painel.departamento")?>">
+            <li <?= (str_contains($_GET["route"], "devolver")) ? "class=\"hovered\"" : ""; ?>>
+                <a href="<?= $router->route("painel.devolver") ?>">
+                    <span class="icon"><i class='bx bx-task'></i></span>
+                    <span class="title">Devolver</span>
+                </a>
+            </li>
+            <li <?= (str_contains($_GET["route"], "produto")) ? "class=\"hovered\"" : ""; ?>>
+                <a href="<?= $router->route("painel.produto") ?>">
+                    <span class="icon"><i class='bx bx-list-plus'></i></span>
+                    <span class="title">Produto</span>
+                </a>
+            </li>
+            <li <?= (str_contains($_GET["route"], "departamento")) ? "class=\"hovered\"" : ""; ?>>
+                <a href="<?= $router->route("painel.departamento") ?>">
                     <span class="icon"><i class='bx bx-hard-hat'></i></span>
                     <span class="title">Departamento</span>
                 </a>
             </li>
-            <li <?= (str_contains($_GET["route"], "relatorios")) ? "class=\"hovered\"" : "";?>>
-                <a href="<?=$router->route("painel.relatorio")?>">
-                    <span class="icon"><i class='bx bxs-pie-chart-alt-2' ></i></span>
+            <li <?= (str_contains($_GET["route"], "relatorios")) ? "class=\"hovered\"" : ""; ?>>
+                <a href="<?= $router->route("painel.relatorio") ?>">
+                    <span class="icon"><i class='bx bxs-pie-chart-alt-2'></i></span>
                     <span class="title">Relatórios</span>
                 </a>
             </li>
-            <li <?= (str_contains($_GET["route"], "estoque")) ? "class=\"hovered\"" : "";?>>
-                <a href="<?=$router->route("painel.estoque")?>">
-                    <span class="icon"><i class='bx bxs-package' ></i></span>
+            <li <?= (str_contains($_GET["route"], "estoque")) ? "class=\"hovered\"" : ""; ?>>
+                <a href="<?= $router->route("painel.estoque") ?>">
+                    <span class="icon"><i class='bx bxs-package'></i></span>
                     <span class="title">Estoque</span>
                 </a>
             </li>
@@ -93,6 +99,7 @@
             <label>
                 <input type="text" placeholder="Search here">
                 <i class='bx bx-search'></i>
+                <!--<img style="width: 100%; max-width:200px" src="<?=asset("images/GrupoperaltasCompleto.png")?>" alt="LogoCompleta">-->
             </label>
         </div>
         <!-- userImg -->

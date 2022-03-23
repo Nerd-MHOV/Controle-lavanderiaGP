@@ -28,11 +28,12 @@ $router->post("/forget", "Auth:forget", "auth.forget");
 $router->post("/reset", "Auth:reset", "auth.reset");
 
 /**
- *  home DASHBORD
+ *  home PAINEL
  */
-$router->group('/painel');
+$router->group('painel');
 $router->get("/home","Painel:home", "painel.home");
 $router->get("/retirar","Painel:retirar", "painel.retirar");
+$router->get("/devolver","Painel:devolver", "painel.devolver");
 $router->get("/produto","Painel:produto", "painel.produto");
 $router->get("/departamento","Painel:departamento", "painel.departamento");
 $router->get("/relatorio","Painel:relatorio", "painel.relatorio");
@@ -40,6 +41,12 @@ $router->get("/estoque","Painel:estoque", "painel.estoque");
 $router->get("/sair","Painel:logoff", "painel.logoff");
 
 
+/**
+ *  produtos PAINEL
+ */
+$router->group('produto');
+$router->get("/cadastrar", "Painel:produtoCadastrar", "painel.produto_cadastrar");
+$router->get("/cadastrar_tipo", "Painel:produtoCadastrarTipo", "painel.produto_cadastrar_tipo");
 
 /**
  * ERRORS

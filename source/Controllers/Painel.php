@@ -59,16 +59,52 @@ class Painel extends Controller
         echo $this->view->render("theme/pages/painel_retirar");
     }
 
+    public function devolver(): void
+    {
+        $head = $this->seo->optimize(
+            "Devolver | " . site("name"),
+            site("desc"),
+            $this->router->route('painel.devolver'),
+            routeImage("Devolver"),
+        )->render();
+        $this->view->addData(['head' => $head]);
+        echo $this->view->render("theme/pages/painel_devolver");
+    }
+
     public function produto(): void
     {
         $head = $this->seo->optimize(
             "Produtos | " . site("name"),
             site("desc"),
             $this->router->route('painel.produto'),
-            routeImage("Produtos Painel"),
+            routeImage("Produtos - Painel"),
         )->render();
         $this->view->addData(['head' => $head]);
         echo $this->view->render("theme/pages/painel_produto");
+    }
+
+    public function departamento(): void
+    {
+        $head = $this->seo->optimize(
+            "Departamentos | " . site("name"),
+            site("desc"),
+            $this->router->route('painel.departamento'),
+            routeImage("Departamento - Painel")
+        )->render();
+        $this->view->addData(['head'=>$head]);
+        echo $this->view->render("theme/pages/painel_departamento");
+    }
+
+    public function estoque(): void
+    {
+        $head = $this->seo->optimize(
+          "Estoque | " . site("name"),
+          site("desc"),
+          $this->router->route('painel.estoque'),
+          routeImage("Estoque itens")
+        )->render();
+        $this->view->addData(['head'=>$head]);
+        echo $this->view->render("theme/pages/painel_estoque");
     }
 
     /**
