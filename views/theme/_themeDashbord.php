@@ -80,7 +80,7 @@
             <li>
                 <a href="<?= $router->route("painel.logoff"); ?>">
                     <span class="icon"><i class='bx bx-log-out'></i></span>
-                    <span class="title">Sing Out</span>
+                    <span class="title">Sair</span>
                 </a>
             </li>
         </ul>
