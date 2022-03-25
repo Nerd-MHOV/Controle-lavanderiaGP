@@ -38,11 +38,11 @@
 .form input {
     width: 100%;
     font-size: 1em;
-    color: #ffffff;
+    color: #222f3e;
     padding: 15px;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgb(46, 133, 221);
+    background: rgb(246, 248, 250);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
