@@ -9,9 +9,6 @@ use Source\Controllers\Web;
 $router = new Router(site());
 $router->namespace("Source\Controllers");
 
-include("views/fragments/painel_alldepartamentos.php");
-
-die;
 /**
 * login WEB
 */

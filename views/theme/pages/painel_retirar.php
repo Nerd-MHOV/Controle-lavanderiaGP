@@ -7,10 +7,14 @@
             <div class="numbers">Departamento</div>
             <div class="cardName">
                 <select name="departamento">
-                    <option value="">Monitoria</option>
-                    <option value="">Monitoria</option>
-                    <option value="">Monitoria</option>
-                    <option value="">Monitoria</option>
+                    <?php
+                        print_r($user);
+                        //foreach ($department as $depart):
+                    ?>
+                            <option value="<?=$depart?>"><?=$depart?></option>
+                    <?php
+                        //endforeach;
+                    ?>
                 </select>
             </div>
         </div>

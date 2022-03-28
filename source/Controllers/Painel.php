@@ -2,6 +2,7 @@
 
 namespace Source\Controllers;
 
+use Source\Models\Department;
 use Source\Models\User;
 use CoffeeCode\DataLayer\DataLayer;
 
@@ -14,6 +15,9 @@ class Painel extends Controller
      * @var User|DataLayer|null
      */
     protected User $user;
+
+    protected Department $department;
+
 
 
     /**
@@ -29,6 +33,8 @@ class Painel extends Controller
             flash("error", "Acesso negado. Favor logue-se");
             $this->router->redirect("web.login");
         }
+
+        $this->department = (new Department())->find()->fetch(true);
 
     }
 
@@ -55,7 +61,7 @@ class Painel extends Controller
             $this->router->route('painel.retirar'),
             routeImage("Retirar"),
         )->render();
-        $this->view->addData(['head' => $head]);
+        $this->view->addData(['head' => $head, 'department' => $this->department, 'user' => $this->user]);
         echo $this->view->render("theme/pages/painel_retirar");
     }
 

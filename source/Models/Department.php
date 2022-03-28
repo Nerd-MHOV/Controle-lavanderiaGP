@@ -8,6 +8,6 @@ class Department extends DataLayer
 {
     public function __construct()
     {
-        parent::__construct("departamento", ["departamento"], "id", false);
+        parent::__construct("department", ["department"], "id", false);
     }
 }
