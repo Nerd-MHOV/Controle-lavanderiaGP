@@ -118,9 +118,6 @@
 
 <script src="<?= asset("/scriptsDashbord.mim.js"); ?>"></script>
 <?= $this->section("scripts"); ?>
-<script src="<?= asset("js/jquery.mask.js") ?>"></script>
-<script src="<?= asset("js/jquery.maskMoney.js") ?>"></script>
-<script src="<?= asset("js/cpf.js") ?>"></script>
 </body>
 </html>
 

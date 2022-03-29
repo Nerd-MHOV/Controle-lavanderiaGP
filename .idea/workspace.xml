@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.phar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/controle_lavanderia4.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/controle_lavanderia4.0.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/Collaborator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/ProductType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_alldepartments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_collaborator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/MinifyDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/MinifyDashbord.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Models/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Department.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/scripts.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scripts.mim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/js/cpf.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/mainMasks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fragments/painel_alldepartamentos.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/painel_alldepartamentos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fragments/painel_alldepartamentos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/_themeDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/_themeDashbord.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +27,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="2659ce3a-3e6d-48ac-bda9-86c49a92c04f" />
@@ -29,6 +35,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,12 +69,34 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Response.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/Controllers/Response.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 8.1" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.Response.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,7 +106,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648501028776</updated>
-      <workItem from="1648501031839" duration="2942000" />
+      <workItem from="1648501031839" duration="3199000" />
+      <workItem from="1648562297908" duration="20978000" />
     </task>
     <servers />
   </component>

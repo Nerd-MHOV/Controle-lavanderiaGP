@@ -49,6 +49,14 @@ $router->get("/cadastrar", "Painel:produtoCadastrar", "painel.produto_cadastrar"
 $router->get("/cadastrar_tipo", "Painel:produtoCadastrarTipo", "painel.produto_cadastrar_tipo");
 
 /**
+ *  retirar RESPONSE
+ */
+$router->group('retirar');
+$router->post("/colaborador", "Response:collaborator","response.colaborador");
+$router->post("/produtos", "Response:products", "response.produtos");
+
+
+/**
  * ERRORS
  */
 $router->group('ops');

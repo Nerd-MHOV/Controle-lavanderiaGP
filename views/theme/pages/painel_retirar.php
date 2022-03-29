@@ -6,14 +6,17 @@
         <div>
             <div class="numbers">Departamento</div>
             <div class="cardName">
-                <select name="departamento">
+                <select name="departamento" id="select_department">
+                    <option value="">Selecione o departamento</option>
                     <?php
-                        print_r($user);
-                        //foreach ($department as $depart):
-                    ?>
-                            <option value="<?=$depart?>"><?=$depart?></option>
-                    <?php
-                        //endforeach;
+                    if (!empty($departments)):
+                        foreach ($departments as $department):
+                            $this->insert(
+                                "assets/fragments/painel_alldepartments",
+                                ['id_department' => $department->id, 'department' => $department->department]
+                            );
+                        endforeach;
+                    endif;
                     ?>
                 </select>
             </div>
@@ -26,11 +29,8 @@
         <div>
             <div class="numbers">Colaborador</div>
             <div class="cardName">
-                <select name="colaborador">
-                    <option value="">Matheus Henrique</option>
-                    <option value="">Matheus Henrique</option>
-                    <option value="">Matheus Henrique</option>
-                    <option value="">Matheus Henrique</option>
+                <select name="colaborador" id="select_collaborators">
+
                 </select>
             </div>
         </div>
@@ -42,7 +42,7 @@
         <div>
             <div class="numbers">Qtde de retiradas</div>
             <div class="cardName">
-                <input type="number" name="qtde_itens" value="1" min="1" />
+                <input type="number" name="qtde_itens" value="0" min="1" id="nmb_qtdeRetiradas" disabled/>
             </div>
         </div>
         <div class="iconBx">
@@ -56,55 +56,90 @@
         <table>
             <thead>
             <tr>
-                <th></th>
                 <th colspan="2">Produto</th>
                 <th>Estado</th>
+                <th>Obs:</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>Item 01:</td>
-                <td>
-                    <select name="tipo_produto">
-                        <option value="">Toalha</option>
-                    </select>
-                </td>
-                <td>
-                    <select name="produto">
-                        <option value="">Amarela - Brotas Eco</option>
-                    </select>
-                </td>
-                <td>
-                    <select name="estado">
-                        <option value="bom">bom</option>
-                        <option value="ruim">ruim</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>OBS Item 01:</td>
-                <td colspan="3"><textarea class="textarea-obs" name="observação" placeholder="descreva o defeito do item!"></textarea></td>
-            </tr>
-            <tr>
-                <td>Item 02:</td>
-                <td>
-                    <select name="tipo_produto">
-                        <option value="">Cobertor</option>
-                    </select>
-                </td>
-                <td>
-                    <select name="produto">
-                        <option value="">Amarela - Brotas Eco</option>
-                    </select>
-                </td>
-                <td>
-                    <select name="estado">
-                        <option value="bom">bom</option>
-                        <option value="ruim">ruim</option>
-                    </select>
-                </td>
-            </tr>
+            <tbody id="tb_products">
+
             </tbody>
         </table>
     </div>
 </div>
+
+<?php $this->start("scripts"); ?>
+<script>
+    $(function () {
+        let select_collaborator = $("#select_collaborators");
+        let nmb_qtdeRetiradas = $("#nmb_qtdeRetiradas");
+
+        function ajax_load(action) {
+            ajax_load_div = $(".ajax_load");
+
+            if (action === "open") {
+                ajax_load_div.fadeIn(200).css("display", "flex");
+            }
+
+            if (action === "close") {
+                ajax_load_div.fadeOut(200);
+            }
+        }
+
+        $("#select_department").on("change", function () {
+            let select_department = $(this).val();
+
+
+            $.ajax({
+                type: "POST",
+                url: "<?=$router->route("response.colaborador")?>",
+                data: {
+                    id_department: select_department
+                },
+                dataType: "json",
+                beforeSend: function () {
+                    ajax_load("open");
+                },
+                success: function (callback) {
+                    if (callback.data.id_department) {
+                        select_collaborator.html(callback.collaborators);
+                    }
+                    nmb_qtdeRetiradas.prop("disabled", false);
+                },
+                complete: function () {
+                    ajax_load("close");
+                }
+            })
+        });
+
+        $("#nmb_qtdeRetiradas").on("change", function() {
+            let select_department = $("#select_department").val();
+            let select_collaborator = $("#select_collaborators").val();
+            let nmb_qtdeRetiradas = $(this).val();
+            let tb_products = $("#tb_products");
+
+            $.ajax({
+                type: "POST",
+                url: "<?=$router->route("response.produtos")?>",
+                data: {
+                    id_collaborator: select_collaborator,
+                    id_department: select_department,
+                    qtdeRetiradas: nmb_qtdeRetiradas
+                },
+                dataType: "json",
+                beforeSend: function () {
+                    ajax_load("open");
+                },
+                success: function (callback) {
+                    if (callback.data.qtdeRetiradas) {
+                        tb_products.html(callback.products);
+                    }
+                },
+                complete: function () {
+                    ajax_load("close");
+                }
+            });
+        })
+    })
+</script>
+<?php $this->end(); ?>
