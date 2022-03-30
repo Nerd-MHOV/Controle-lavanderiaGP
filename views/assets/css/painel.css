@@ -77,3 +77,16 @@
 {
     width: 98%;
 }
+.buttonRetirar
+{
+    position: relative;
+    margin-top: 60px;
+}
+.buttonRetirar button
+{
+    background: var(--blue);
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

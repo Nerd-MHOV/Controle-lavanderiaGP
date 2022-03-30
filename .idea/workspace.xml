@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Models/Collaborator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Models/ProductType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_alldepartments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_collaborator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/MinifyDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/MinifyDashbord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Department.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/js/cpf.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/mainMasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fragments/painel_alldepartamentos.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/_themeDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/_themeDashbord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/dashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/dashbord.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/painel.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/painel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,10 +67,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/assets/fragments" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets" />
     </key>
@@ -107,7 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1648501028776</updated>
       <workItem from="1648501031839" duration="3199000" />
-      <workItem from="1648562297908" duration="20978000" />
+      <workItem from="1648562297908" duration="21216000" />
+      <workItem from="1648665423030" duration="6356000" />
     </task>
     <servers />
   </component>

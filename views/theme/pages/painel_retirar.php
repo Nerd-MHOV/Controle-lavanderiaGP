@@ -1,6 +1,7 @@
 <!--validar permissão (1)-->
 <?php $this->layout("theme/_themeDashbord"); ?>
 <!-- cards -->
+<form action="">
 <div class="cardBox cardBox_retirar">
     <div class="card">
         <div>
@@ -66,25 +67,30 @@
             </tbody>
         </table>
     </div>
+    <div class="buttonRetirar">
+        <button class="btn btn-green">Retirar!</button>
+    </div>
 </div>
+</form>
 
 <?php $this->start("scripts"); ?>
 <script>
+    function ajax_load(action) {
+        ajax_load_div = $(".ajax_load");
+
+        if (action === "open") {
+            ajax_load_div.fadeIn(200).css("display", "flex");
+        }
+
+        if (action === "close") {
+            ajax_load_div.fadeOut(200);
+        }
+    }
     $(function () {
         let select_collaborator = $("#select_collaborators");
         let nmb_qtdeRetiradas = $("#nmb_qtdeRetiradas");
 
-        function ajax_load(action) {
-            ajax_load_div = $(".ajax_load");
 
-            if (action === "open") {
-                ajax_load_div.fadeIn(200).css("display", "flex");
-            }
-
-            if (action === "close") {
-                ajax_load_div.fadeOut(200);
-            }
-        }
 
         $("#select_department").on("change", function () {
             let select_department = $(this).val();
@@ -105,6 +111,7 @@
                         select_collaborator.html(callback.collaborators);
                     }
                     nmb_qtdeRetiradas.prop("disabled", false);
+                    nmb_qtdeRetiradas.val("0");
                 },
                 complete: function () {
                     ajax_load("close");

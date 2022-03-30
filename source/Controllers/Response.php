@@ -25,14 +25,23 @@ class Response extends Controller
     public function products(array $data): void
     {
         $id_department = (int)$data["id_department"];
-        $products = (new Product())->find("status = 'A' AND id_department = :did", "did={$id_department}")->fetch(true);
-        $callback["products"] = $this->view->render("assets/fragments/painel_response_products",[
+        $products = (new Product())->find("status = 'A' AND id_department = :did", "did={$id_department}")->group("id_product_type")->fetch(true);
+        $callback["products"] = $this->view->render("assets/fragments/painel_response_products", [
             "countRow" => $data["qtdeRetiradas"],
+            "products" => $products
+        ]);
+        $callback["data"] = $data;
+        echo json_encode($callback);
+    }
+
+    public function productType(array $data): void
+    {
+        $products = (new Product())->find("id_product_type = :idpt", "idpt={$data["id_selectProductType"]}")->fetch(true);
+        $callback["products"] = $this->view->render("assets/fragments/painel_product",[
             "products" => $products
         ]);
         $callback["debug"] = $products;
         $callback["data"] = $data;
-        $callback["status"] = "success";
         echo json_encode($callback);
     }
 }
