@@ -19,7 +19,7 @@ $router->get("/recuperar","Web:forget","web.forget");
 $router->get("/senha/{email}/{forget}","Web:reset","web.reset");
 
 /**
- * login WEB
+ * login AUTH
  */
 $router->group(null);
 $router->post("/login", "Auth:login", "auth.login");
@@ -55,6 +55,7 @@ $router->group('retirar');
 $router->post("/colaborador", "Response:collaborator","response.colaborador");
 $router->post("/produtos", "Response:products", "response.produtos");
 $router->post("/produtos/tipo", "Response:productType", "response.typeproducts");
+$router->post("/retirada", "Response:withdrawal","response.withdrawal");
 
 
 /**

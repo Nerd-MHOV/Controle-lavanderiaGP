@@ -7,7 +7,7 @@
         <table>
             <thead>
             <tr>
-                <td>Name</td>
+                <td>Nome</td>
                 <td>Departamento</td>
                 <td colspan="2">Produto</td>
                 <td>Retirado</td>
@@ -15,38 +15,6 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td rowspan="4">Matheus</td>
-            </tr>
-            <tr>
-                <td>Monitoria</td>
-                <td>Toalha</td>
-                <td>Amarela</td>
-                <td>12/11 16:38</td>
-                <td><span class="status inProgress">Devolver</span></td>
-            </tr>
-            <tr>
-                <td>Monitoria</td>
-                <td>Toalha</td>
-                <td>Amarela</td>
-                <td>12/11 16:38</td>
-                <td><span class="status inProgress">Devolver</span></td>
-            </tr>
-            <tr>
-                <td>Monitoria</td>
-                <td>Toalha</td>
-                <td>Amarela</td>
-                <td>12/11 16:38</td>
-                <td><span class="status inProgress">Devolver</span></td>
-            </tr>
-            <tr>
-                <td>Matheus</td>
-                <td>Monitoria</td>
-                <td>Toalha</td>
-                <td>Amarela</td>
-                <td>12/11 16:38</td>
-                <td><span class="status inProgress">Devolver</span></td>
-            </tr>
             <tr>
                 <td>Matheus</td>
                 <td>Monitoria</td>
@@ -65,7 +33,6 @@
         <table>
             <thead>
             <tr>
-                <td>Name</td>
                 <td>Departamento</td>
                 <td colspan="2">Produto</td>
                 <td>Retirado</td>
@@ -74,31 +41,6 @@
             </thead>
             <tbody>
             <tr>
-                <td>Matheus</td>
-                <td>Monitoria</td>
-                <td>Toalha</td>
-                <td>Amarela</td>
-                <td>12/11 16:38</td>
-                <td><span class="status inProgress">Devolver</span></td>
-            </tr>
-            <tr>
-                <td>Matheus</td>
-                <td>Monitoria</td>
-                <td>Toalha</td>
-                <td>Amarela</td>
-                <td>12/11 16:38</td>
-                <td><span class="status inProgress">Devolver</span></td>
-            </tr>
-            <tr>
-                <td>Matheus</td>
-                <td>Monitoria</td>
-                <td>Toalha</td>
-                <td>Amarela</td>
-                <td>12/11 16:38</td>
-                <td><span class="status inProgress">Devolver</span></td>
-            </tr>
-            <tr>
-                <td>Matheus</td>
                 <td>Monitoria</td>
                 <td>Toalha</td>
                 <td>Amarela</td>

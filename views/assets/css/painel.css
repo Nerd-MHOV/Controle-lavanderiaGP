@@ -34,6 +34,7 @@
     border: none;
     background: none;
     outline: none;
+    padding: 0;
 }
 .cardBox select 
 {
@@ -76,6 +77,18 @@
 .tablePainel textarea
 {
     width: 98%;
+}
+.tablePainel input[type=number]
+{
+    background: none;
+    border: 1px solid;
+    max-width: 70px;
+    padding: 10px;
+    text-align: center;
+}
+.tablePainel input[type=number]:focus
+{
+    border: 1px solid;
 }
 .buttonRetirar
 {

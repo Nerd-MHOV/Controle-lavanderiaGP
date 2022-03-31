@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/Inventory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/Output.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/dashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/dashbord.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/css/painel.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/painel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +27,13 @@
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="2659ce3a-3e6d-48ac-bda9-86c49a92c04f" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,6 +78,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/views/assets/fragments" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -104,7 +115,8 @@
       <updated>1648501028776</updated>
       <workItem from="1648501031839" duration="3199000" />
       <workItem from="1648562297908" duration="21216000" />
-      <workItem from="1648665423030" duration="6356000" />
+      <workItem from="1648665423030" duration="6502000" />
+      <workItem from="1648734459236" duration="23337000" />
     </task>
     <servers />
   </component>

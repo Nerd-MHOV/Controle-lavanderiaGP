@@ -8,7 +8,7 @@ class Product extends DataLayer
 {
     public function __construct()
     {
-        parent::__construct("product", ["status", "id_department", "id_product_type", "product", "unitary_value"]);
+        parent::__construct("product", ["status", "id_product_type", "product", "unitary_value"]);
     }
 
     public function productTypes()

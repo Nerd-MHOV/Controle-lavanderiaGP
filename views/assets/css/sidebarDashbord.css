@@ -321,7 +321,7 @@ body
 {
     position: relative;
     display: grid;
-    min-height: 500px;
+    min-height: 180px;
     background: var(--white);
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0,0.12);
@@ -376,7 +376,7 @@ body
 {
     padding: 10px;
 }
-.details .recentOrders table tr td:last-child
+/*.details .recentOrders table tr td:last-child
 {
     text-align: end;
 }
@@ -387,7 +387,7 @@ body
 .details .recentOrders table tr td:nth-child(3)
 {
     text-align: center;
-}
+}*/
 .status.delivered
 {
     padding: 2px 4px;
