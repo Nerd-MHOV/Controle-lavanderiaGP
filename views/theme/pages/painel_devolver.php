@@ -15,14 +15,12 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Matheus</td>
-                <td>Monitoria</td>
-                <td>Toalha</td>
-                <td>Amarela</td>
-                <td>12/11 16:38</td>
-                <td><span class="status inProgress">Devolver</span></td>
-            </tr>
+            <?php
+            $this->insert(
+                "assets/fragments/painel_outputsCollaborator",
+                ["pendingCollaborator" => $pendingCollaborator]
+            );
+            ?>
             </tbody>
         </table>
     </div>
@@ -40,14 +38,76 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Monitoria</td>
-                <td>Toalha</td>
-                <td>Amarela</td>
-                <td>12/11 16:38</td>
-                <td><span class="status inProgress">Devolver</span></td>
-            </tr>
+            <?php
+            $this->insert(
+                "assets/fragments/painel_outputsDepartment",
+                ["pendingDepartment" => $pendingDepartment]
+            );
+            ?>
             </tbody>
         </table>
     </div>
 </div>
+
+<!-- MODAL -->
+<div id="myModal" class="modal">
+    <?php
+    $this->insert(
+        "assets/fragments/painel_devolver_modal"
+    )
+    ?>
+</div>
+
+<?php $this->start("scripts") ?>
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+
+
+    openModal = function (id, department = false) {
+
+        modal.style.display = "block";
+        if (!department) {
+
+            $.ajax({
+                type: 'POST',
+                data: {id_saida: id},
+                url: '<?=$router->route("response.returncollaborator")?>',
+                dataType: 'json',
+                success: function (data) {
+                    $('#myModal').html(data);
+                }
+            });
+
+        } else {
+
+            $(function () {
+                $.ajax({
+                    type: 'POST',
+                    data: {id_saida: id},
+                    url: '<?=$router->route("response.returndepartment")?>',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#myModal').html(data);
+                    }
+                });
+            });
+
+        }
+
+    }
+
+    //SEPARATOR_____
+    var span = document.getElementsByClassName('close-btn')[0];
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<?php $this->end() ?>

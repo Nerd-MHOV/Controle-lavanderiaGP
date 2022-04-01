@@ -1,8 +1,9 @@
 <?php
+date_default_timezone_set('America/Sao_Paulo');
 
 if ($_SERVER["SERVER_NAME"] == "localhost") {
-    require __DIR__."/Minify.php";
-    require __DIR__."/MinifyDashbord.php";
+    require __DIR__ . "/Minify.php";
+    require __DIR__ . "/MinifyDashbord.php";
 
     define("SITE", [
         "name" => "controle_lavanderia",
@@ -36,7 +37,7 @@ const DATA_LAYER_CONFIG = [
     ]
 ];
 
-const MAIL= [
+const MAIL = [
     "host" => "smtp.sendgrid.net",
     "port" => "587",
     "user" => "apikey",

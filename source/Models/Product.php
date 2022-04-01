@@ -13,6 +13,6 @@ class Product extends DataLayer
 
     public function productTypes()
     {
-        return (new ProductType())->find("id = :idtp", "idtp={$this->id_product_type}")->fetch(true);
+        return (new ProductType())->find("id = :idtp", "idtp={$this->id_product_type}")->fetch();
     }
 }

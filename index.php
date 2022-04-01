@@ -9,6 +9,7 @@ use Source\Controllers\Web;
 $router = new Router(site());
 $router->namespace("Source\Controllers");
 
+
 /**
 * login WEB
 */
@@ -56,6 +57,13 @@ $router->post("/colaborador", "Response:collaborator","response.colaborador");
 $router->post("/produtos", "Response:products", "response.produtos");
 $router->post("/produtos/tipo", "Response:productType", "response.typeproducts");
 $router->post("/retirada", "Response:withdrawal","response.withdrawal");
+
+/**
+ *  devolver RESPONSE
+ */
+$router->group('devolver');
+$router->post("/colaborador", "Response:returnCollaborator", "response.returncollaborator");
+$router->post("/setor", "Response:returnDepartment", "response.returndepartment");
 
 
 /**

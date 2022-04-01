@@ -105,11 +105,12 @@ class Response extends Controller
 
             for ($i = 0; $i < $countRows; $i++) {
                 $inventory = (new Inventory())->find("id_product = :idp", "idp={$data["select_product"][$i]}")->fetch();
-                if($inventory->amount < $data["amount"][$i]){
-
+                if ($inventory->amount < $data["amount"][$i]) {
+                    $productInventory = $inventory->products();
+                    $typeInventory = $inventory->productTypes($productInventory->id_product_type);
                     echo $this->ajaxResponse("message", [
                         "type" => "alert",
-                        "message" => "Em estoque: {$inventory->amount} {$data["select_productType"][$i]} {$data["select_product"][$i]}" //TODO: TROCAR ID POR NOMES!
+                        "message" => "Em estoque: {$inventory->amount} unidades de <u>{$typeInventory->product_type} {$productInventory->product}</u>"
                     ]);
                     return;
                 }
@@ -117,7 +118,7 @@ class Response extends Controller
         }
 
 
-        if(!$data["colaborador"]){
+        if (!$data["colaborador"]) {
             for ($i = 0; $i < $countRows; $i++) {
                 $output = new Output();
                 $output->id_product = $data["select_product"][$i];
@@ -169,5 +170,15 @@ class Response extends Controller
             ]);
             return;
         }
+    }
+
+    public function returnCollaborator(array $data): void
+    {
+
+        $callback["modal"] = $this->view->render("assets/fragments/painel_devolver_modal",[
+            "id" => $data["id_saida"]
+        ]);
+        $callback["data"] = $data;
+        echo json_encode($callback);
     }
 }

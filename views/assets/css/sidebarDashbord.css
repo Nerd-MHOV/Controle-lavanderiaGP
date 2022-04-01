@@ -492,6 +492,13 @@ body
 }
 
 /* Responsive design */
+@media (max-width: 1430px)
+{
+    .dw50
+    {
+        grid-template-columns: 1fr;
+    }
+}
 @media (max-width: 1412px)
 {
     .cardBox_retirar
@@ -531,10 +538,6 @@ body
         grid-template-columns: repeat(2, 1fr);
     }
     .cardBox_retirar
-    {
-        grid-template-columns: 1fr;
-    }
-    .dw50
     {
         grid-template-columns: 1fr;
     }

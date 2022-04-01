@@ -1,0 +1,151 @@
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    padding-left: 78px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-btn{
+    margin-top: -18px;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-wrapper{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 80px ;
+    align-items: center;
+}
+
+.modal-setor{
+    justify-content: center;
+}
+
+.modal-setor-single{
+    width: 30%;
+    text-align: center;
+    align-items: center;
+}
+
+.modal-setor-single input{
+    margin: 0 auto;
+    padding-left: 9px;
+}
+
+.modal .modal-icon{
+    font-size: 50px;
+    color: #396396;
+    margin: 0 20px;
+}
+
+.modal-single{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal h3{
+    border-bottom: 1.5px groove #00000033;
+    padding-bottom: 10px;
+}
+
+.modal-single select{
+    height: 40px;
+    padding-left: 10px;
+}
+
+.modal-single input[type=number]{
+    max-width: 90px;
+    border: 1px groove;
+    margin-bottom: 25px;
+}
+
+.modal-single textarea,
+.modal .textarea textarea{
+    padding: 10px;
+    width: 100%;
+    height: 200px;
+    font-size: 15px;
+}
+
+.modal .textarea{
+    flex-grow: 1;
+    width: 70%;
+}
+
+.modal .textarea textarea{
+    width: 100%;
+}
+
+.modal-buttom{
+    display: flex;
+    justify-content: end;
+}
+
+.modal-buttom input{
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.modal-buttom input[name=cancelar]{
+    background-color: #F75353;
+    border: white;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.modal-buttom input[name=cancelar]:hover{
+    background-color: #ff0000;
+}
+
+.modal-buttom input[name=devolver],
+.modal-buttom input[name=devolver-setor]{
+    background-color: #4ba74f;
+    border: white;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.modal-buttom input[name=devolver]:hover,
+.modal-buttom input[name=devolver-setor]:hover{
+    background-color: #1bc322;
+}
+
+.modal-buttom input[name=btnDevol]{
+    background-color: #396396;
+    margin: 0 !important;
+    border: white;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.modal-buttom input[name=btnDevol]:hover{
+    background-color: #7a97b9;
+}

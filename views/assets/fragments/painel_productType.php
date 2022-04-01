@@ -1,12 +1,8 @@
 <?php
 if (!empty($products)):
     foreach ($products as $product):
-        foreach ($product->productTypes as $productType) {
-            $type = $productType->product_type;
-            $id = $productType->id;
-        }
         ?>
-        <option value="<?= $id  ?>"><?= $type ?></option>
+        <option value="<?= $product->productTypes->id  ?>"><?= $product->productTypes->product_type ?></option>
     <?php
     endforeach;
 endif;

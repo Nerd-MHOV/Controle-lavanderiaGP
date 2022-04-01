@@ -10,6 +10,7 @@ $minCSS->add(dirname(__DIR__,1)."/views/assets/css/form.css");
 $minCSS->add(dirname(__DIR__,1)."/views/assets/css/button.css");
 $minCSS->add(dirname(__DIR__,1)."/views/assets/css/message.css");
 $minCSS->add(dirname(__DIR__,1)."/views/assets/css/load.css");
+$minCSS->add(dirname(__DIR__,1)."/views/assets/css/modal.css");
 $minCSS->minify(dirname(__DIR__,1)."/views/assets/styleDashbord.min.css");
 
 

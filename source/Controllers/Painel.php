@@ -4,6 +4,7 @@ namespace Source\Controllers;
 
 use Source\Models\Collaborator;
 use Source\Models\Department;
+use Source\Models\Output;
 use Source\Models\User;
 use CoffeeCode\DataLayer\DataLayer;
 
@@ -72,7 +73,13 @@ class Painel extends Controller
             $this->router->route('painel.devolver'),
             routeImage("Devolver"),
         )->render();
-        $this->view->addData(['head' => $head]);
+        $pendingCollaborator = (new Output())->find("id_collaborator != 0")->fetch(true);
+        $pendingDepartment = (new Output())->find("id_collaborator = 0")->fetch(true);
+        $this->view->addData([
+            'head' => $head,
+            "pendingCollaborator" => $pendingCollaborator,
+            "pendingDepartment" => $pendingDepartment
+        ]);
         echo $this->view->render("theme/pages/painel_devolver");
     }
 

@@ -2,20 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/source/Models/Inventory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Models/Output.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_collaborator.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_department.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_department_head.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_input.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_inventory.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_output.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_product.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_product_type.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_users.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/css/modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsCollaborator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsDepartment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/MinifyDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/MinifyDashbord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Inventory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Output.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Output.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/painel.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/painel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -77,7 +90,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/assets/fragments" />
+    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MySql" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -117,6 +132,7 @@
       <workItem from="1648562297908" duration="21216000" />
       <workItem from="1648665423030" duration="6502000" />
       <workItem from="1648734459236" duration="23337000" />
+      <workItem from="1648832347574" duration="13745000" />
     </task>
     <servers />
   </component>
