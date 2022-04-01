@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_collaborator.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_department.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_department_head.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_input.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_inventory.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_output.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_product.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_product_type.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia_users.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/css/modal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsCollaborator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsDepartment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/script.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/MinifyDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/MinifyDashbord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Inventory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Output.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Output.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
+    <property name="database.data.extractors.current.export.id" value="XML-Groovy.xml.groovy" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/MySql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -105,7 +81,11 @@
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.controle_lavanderia4.0">
+    <configuration name="controle_lavanderia4.0" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="Response.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/Controllers/Response.php">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -116,6 +96,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.controle_lavanderia4.0" />
         <item itemvalue="PHP Script.Response.php" />
       </list>
     </recent_temporary>
@@ -132,7 +113,7 @@
       <workItem from="1648562297908" duration="21216000" />
       <workItem from="1648665423030" duration="6502000" />
       <workItem from="1648734459236" duration="23337000" />
-      <workItem from="1648832347574" duration="13745000" />
+      <workItem from="1648832347574" duration="15548000" />
     </task>
     <servers />
   </component>
@@ -152,5 +133,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/controle_lavanderia4_0@controle_lavanderia4_0.xml" NAME="controle_lavanderia4.0 Coverage Results" MODIFIED="1648850123261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
