@@ -66,7 +66,6 @@
 
     openModal = function (id, department = false) {
 
-        modal.style.display = "block";
         if (!department) {
 
             $.ajax({
@@ -75,7 +74,9 @@
                 url: '<?=$router->route("response.returncollaborator")?>',
                 dataType: 'json',
                 success: function (data) {
-                    $('#myModal').html(data);
+
+                    $('#myModal').html(data.modal);
+                    modal.style.display = "block";
                 }
             });
 
@@ -89,6 +90,7 @@
                     dataType: 'json',
                     success: function (data) {
                         $('#myModal').html(data);
+                        modal.style.display = "block";
                     }
                 });
             });
@@ -97,16 +99,14 @@
 
     }
 
-    //SEPARATOR_____
-    var span = document.getElementsByClassName('close-btn')[0];
 
-    span.onclick = function () {
+    closeModal = function () {
         modal.style.display = "none";
     }
 
     window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target === modal) {
+            closeModal();
         }
     }
 </script>

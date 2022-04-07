@@ -60,7 +60,7 @@
             <table>
                 <thead>
                 <tr id="tr_obs">
-                    <th colspan="2">Produto</th>
+                    <th colspan="3">Produto</th>
                     <th id="amnt_status">Estado</th>
                     <th id="th_obs">Obs</th>
                 </tr>

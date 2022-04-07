@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MySql/script.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/ProductService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/js/select2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/MinifyDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/MinifyDashbord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/HomeModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/_themeDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/_themeDashbord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/login/forget.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/login/forget.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +131,8 @@
       <workItem from="1648665423030" duration="6502000" />
       <workItem from="1648734459236" duration="23337000" />
       <workItem from="1648832347574" duration="15548000" />
+      <workItem from="1649257219912" duration="929000" />
+      <workItem from="1649258518916" duration="11837000" />
     </task>
     <servers />
   </component>

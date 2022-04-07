@@ -74,7 +74,7 @@ if (!$id_collaborator) { //SETOR
         ?>
         <tr>
             <td>
-                <select name="select_productType[]" id="select_productType-<?= $i ?>">
+                <select class="selectClass" name="select_productType[]" id="select_productType-<?= $i ?>">
                     <option value="">Selecione o tipo</option>
                     <?php
                     $this->insert(
@@ -82,6 +82,11 @@ if (!$id_collaborator) { //SETOR
                         ["products" => $products]
                     );
                     ?>
+                </select>
+            </td>
+            <td>
+                <select name="select_productService[]" disabled id="select_productService-<?= $i ?>">
+                    <option value="">Serviço</option>
                 </select>
             </td>
             <td>
@@ -103,10 +108,10 @@ if (!$id_collaborator) { //SETOR
 
 
         <script>
+            $(".selectClass").select2();
             $("#select_productType-<?=$i?>").on("change", function () {
                 let select_productType = $(this).val();
-                let select_product = $("#select_product-<?=$i?>");
-                let select_status = $("#select_status-<?=$i?>");
+                let select_productService = $("#select_productService-<?= $i ?>");
                 $.ajax({
                     type: "POST",
                     url: "<?=$router->route("response.typeproducts")?>",
@@ -119,8 +124,7 @@ if (!$id_collaborator) { //SETOR
                     },
                     success: function (callback) {
                         console.log(callback);
-                        select_product.prop("disabled", false);
-                        select_status.prop("disabled", false);
+                        select_productService.prop("disabled", false);
                         if (callback.data.id_selectProductType) {
                             select_product.html(callback.products);
                         }

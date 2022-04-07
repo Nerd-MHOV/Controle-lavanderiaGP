@@ -64,6 +64,7 @@ $router->post("/retirada", "Response:withdrawal","response.withdrawal");
 $router->group('devolver');
 $router->post("/colaborador", "Response:returnCollaborator", "response.returncollaborator");
 $router->post("/setor", "Response:returnDepartment", "response.returndepartment");
+$router->post("/finalizar", "Response:returnProduct", "response.returnproduct");
 
 
 /**

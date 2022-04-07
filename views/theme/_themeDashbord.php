@@ -92,7 +92,7 @@
     <div class="topbar">
         <div class="toggle">
             <i class='bx bx-menu'></i>
-            <!--            <ion-icon name="menu-outline"></ion-icon>-->
+            <!-- <ion-icon name="menu-outline"></ion-icon> -->
         </div>
         <!-- search -->
         <div class="search">
@@ -104,7 +104,7 @@
         </div>
         <!-- userImg -->
         <div class="user">
-            <img src="<?= asset("images/perfil.jpg") ?>"/>
+            <!--<img src="<?= asset("images/perfil.jpg") ?>"/>-->
         </div>
     </div>
 

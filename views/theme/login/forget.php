@@ -23,7 +23,6 @@
         </div>
     </div>
 </div>
-
 <?php $this->start("scripts"); ?>
 <script src="<?= asset("/js/form.js"); ?>"></script>
 <?php $this->end(); ?>

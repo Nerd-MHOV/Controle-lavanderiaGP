@@ -174,10 +174,24 @@ class Response extends Controller
 
     public function returnCollaborator(array $data): void
     {
+        $outputs = (new Output())->findById($data["id_saida"]);
+        $product = $outputs->product();
+        $productType = $outputs->productType($product->id_product_type);
 
         $callback["modal"] = $this->view->render("assets/fragments/painel_devolver_modal",[
-            "id" => $data["id_saida"]
+            "productName" => "{$productType->product_type} {$product->product}",
+            "status_old" => $outputs->status,
+            "obs_old" => $outputs->obs,
+            "id_saida" => $outputs->id,
         ]);
+
+        $callback["debug"] = $productType->product_type;
+        $callback["data"] = $data;
+        echo json_encode($callback);
+    }
+
+    public function returnProduct(array $data): void
+    {
         $callback["data"] = $data;
         echo json_encode($callback);
     }

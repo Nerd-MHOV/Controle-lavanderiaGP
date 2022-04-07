@@ -1222,402 +1222,435 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="348" parent="327" name="product_type">
+    <table id="348" parent="327" name="product_service">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="349" parent="327" name="users">
+    <table id="349" parent="327" name="product_type">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <argument id="350" parent="340" name="id_prod">
+    <table id="350" parent="327" name="users">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <argument id="351" parent="340" name="id_prod">
       <DataType>int(11)|0s</DataType>
       <Position>1</Position>
     </argument>
-    <argument id="351" parent="340" name="input_amount">
+    <argument id="352" parent="340" name="input_amount">
       <DataType>int(11)|0s</DataType>
       <Position>2</Position>
     </argument>
-    <argument id="352" parent="340" name="id_depart">
+    <argument id="353" parent="340" name="id_depart">
       <DataType>int(11)|0s</DataType>
       <Position>3</Position>
     </argument>
-    <column id="353" parent="341" name="id">
+    <column id="354" parent="341" name="id">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="354" parent="341" name="id_department">
+    <column id="355" parent="341" name="id_department">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="355" parent="341" name="collaborator">
+    <column id="356" parent="341" name="collaborator">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="356" parent="341" name="cpf">
+    <column id="357" parent="341" name="cpf">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="357" parent="341" name="type">
+    <column id="358" parent="341" name="type">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="358" parent="341" name="created_at">
+    <column id="359" parent="341" name="created_at">
       <DataType>timestamp|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="359" parent="341" name="updated_at">
+    <column id="360" parent="341" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <Position>7</Position>
     </column>
-    <key id="360" parent="341" name="PRIMARY">
+    <key id="361" parent="341" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="361" parent="342" name="id">
+    <column id="362" parent="342" name="id">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="362" parent="342" name="department">
+    <column id="363" parent="342" name="department">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="363" parent="342" name="created_at">
+    <column id="364" parent="342" name="created_at">
       <DataType>timestamp|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="364" parent="342" name="update_at">
+    <column id="365" parent="342" name="update_at">
       <DataType>timestamp|0s</DataType>
       <Position>4</Position>
     </column>
-    <key id="365" parent="342" name="PRIMARY">
+    <key id="366" parent="342" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="366" parent="343" name="id">
+    <column id="367" parent="343" name="id">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="367" parent="343" name="id_department">
+    <column id="368" parent="343" name="id_department">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="368" parent="343" name="name">
+    <column id="369" parent="343" name="name">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="369" parent="343" name="email">
+    <column id="370" parent="343" name="email">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="370" parent="343" name="cel">
+    <column id="371" parent="343" name="cel">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="371" parent="343" name="created_at">
+    <column id="372" parent="343" name="created_at">
       <DataType>timestamp|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="372" parent="343" name="updated_at">
+    <column id="373" parent="343" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <Position>7</Position>
     </column>
-    <key id="373" parent="343" name="PRIMARY">
+    <key id="374" parent="343" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="374" parent="344" name="id">
+    <column id="375" parent="344" name="id">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="375" parent="344" name="id_product">
+    <column id="376" parent="344" name="id_product">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="376" parent="344" name="id_department">
+    <column id="377" parent="344" name="id_department">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="377" parent="344" name="amount">
+    <column id="378" parent="344" name="amount">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="378" parent="344" name="created_at">
+    <column id="379" parent="344" name="created_at">
       <DataType>timestamp|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="379" parent="344" name="updated_at">
+    <column id="380" parent="344" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <Position>6</Position>
     </column>
-    <key id="380" parent="344" name="PRIMARY">
+    <key id="381" parent="344" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <trigger id="381" parent="344" name="TRG_EntradaProduto_AI">
+    <trigger id="382" parent="344" name="TRG_EntradaProduto_AI">
       <Definer>root@localhost</Definer>
       <Events>I</Events>
       <SourceTextLength>88</SourceTextLength>
       <Turn>after-row</Turn>
     </trigger>
-    <trigger id="382" parent="344" name="TRG_EntradaProduto_AU">
+    <trigger id="383" parent="344" name="TRG_EntradaProduto_AU">
       <Definer>root@localhost</Definer>
       <Events>U</Events>
       <SourceTextLength>101</SourceTextLength>
       <Turn>after-row</Turn>
     </trigger>
-    <trigger id="383" parent="344" name="TRG_EntradaProduto_AD">
+    <trigger id="384" parent="344" name="TRG_EntradaProduto_AD">
       <Definer>root@localhost</Definer>
       <Events>D</Events>
       <SourceTextLength>93</SourceTextLength>
       <Turn>after-row</Turn>
     </trigger>
-    <column id="384" parent="345" name="id">
+    <column id="385" parent="345" name="id">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="385" parent="345" name="id_product">
+    <column id="386" parent="345" name="id_product">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="386" parent="345" name="id_department">
+    <column id="387" parent="345" name="id_department">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="387" parent="345" name="amount">
+    <column id="388" parent="345" name="amount">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="388" parent="345" name="created_at">
+    <column id="389" parent="345" name="created_at">
       <DataType>timestamp|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="389" parent="345" name="updated_at">
+    <column id="390" parent="345" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <Position>6</Position>
     </column>
-    <key id="390" parent="345" name="PRIMARY">
+    <key id="391" parent="345" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="391" parent="346" name="id">
+    <column id="392" parent="346" name="id">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="392" parent="346" name="id_product">
+    <column id="393" parent="346" name="id_product">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="393" parent="346" name="id_department">
+    <column id="394" parent="346" name="id_department">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="394" parent="346" name="id_collaborator">
+    <column id="395" parent="346" name="id_collaborator">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="395" parent="346" name="id_user">
+    <column id="396" parent="346" name="id_user">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="396" parent="346" name="amount">
+    <column id="397" parent="346" name="amount">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="397" parent="346" name="status">
+    <column id="398" parent="346" name="status">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="398" parent="346" name="obs">
+    <column id="399" parent="346" name="obs">
       <DataType>varchar(255)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="399" parent="346" name="created_at">
+    <column id="400" parent="346" name="created_at">
       <DataType>timestamp|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="400" parent="346" name="updated_at">
+    <column id="401" parent="346" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <Position>10</Position>
     </column>
-    <key id="401" parent="346" name="PRIMARY">
+    <key id="402" parent="346" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <trigger id="402" parent="346" name="TRG_SaidaProduto_AI">
+    <trigger id="403" parent="346" name="TRG_SaidaProduto_AI">
       <Definer>root@localhost</Definer>
       <Events>I</Events>
       <SourceTextLength>93</SourceTextLength>
       <Turn>after-row</Turn>
     </trigger>
-    <trigger id="403" parent="346" name="TRG_SaidaProduto_AU">
+    <trigger id="404" parent="346" name="TRG_SaidaProduto_AU">
       <Definer>root@localhost</Definer>
       <Events>U</Events>
       <SourceTextLength>101</SourceTextLength>
       <Turn>after-row</Turn>
     </trigger>
-    <trigger id="404" parent="346" name="TRG_SaidaProduto_AD">
+    <trigger id="405" parent="346" name="TRG_SaidaProduto_AD">
       <Definer>root@localhost</Definer>
       <Events>D</Events>
       <SourceTextLength>91</SourceTextLength>
       <Turn>after-row</Turn>
     </trigger>
-    <column id="405" parent="347" name="id">
+    <column id="406" parent="347" name="id">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="406" parent="347" name="status">
+    <column id="407" parent="347" name="status">
       <DataType>char(1)|0s</DataType>
       <DefaultExpression>&apos;A&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="407" parent="347" name="id_department">
+    <column id="408" parent="347" name="id_department">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="408" parent="347" name="id_product_type">
+    <column id="409" parent="347" name="id_product_type">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="409" parent="347" name="product">
+    <column id="410" parent="347" name="id_product_service">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="411" parent="347" name="product">
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="410" parent="347" name="unitary_value">
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="411" parent="347" name="created_at">
-      <DataType>timestamp|0s</DataType>
+    <column id="412" parent="347" name="unitary_value">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="412" parent="347" name="updated_at">
+    <column id="413" parent="347" name="created_at">
       <DataType>timestamp|0s</DataType>
       <Position>8</Position>
     </column>
-    <key id="413" parent="347" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-    </key>
-    <column id="414" parent="348" name="id">
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
-    </column>
-    <column id="415" parent="348" name="product_type">
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="416" parent="348" name="created_at">
-      <DataType>timestamp|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="417" parent="348" name="updated_at">
-      <DataType>timestamp|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <key id="418" parent="348" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-    </key>
-    <column id="419" parent="349" name="id">
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
-    </column>
-    <column id="420" parent="349" name="first_name">
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="421" parent="349" name="last_name">
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="422" parent="349" name="email">
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="423" parent="349" name="user">
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="424" parent="349" name="passwd">
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-    </column>
-    <column id="425" parent="349" name="photo">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="426" parent="349" name="forget">
-      <DataType>varchar(255)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="427" parent="349" name="created_at">
+    <column id="414" parent="347" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="428" parent="349" name="updated_at">
+    <key id="415" parent="347" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="416" parent="348" name="id">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="417" parent="348" name="service">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="418" parent="348" name="created_at">
+      <DataType>timestamp|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="419" parent="348" name="updated_at">
+      <DataType>timestamp|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <key id="420" parent="348" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="421" parent="349" name="id">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="422" parent="349" name="product_type">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="423" parent="349" name="created_at">
+      <DataType>timestamp|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="424" parent="349" name="updated_at">
+      <DataType>timestamp|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <key id="425" parent="349" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="426" parent="350" name="id">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="427" parent="350" name="first_name">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="428" parent="350" name="last_name">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="429" parent="350" name="email">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="430" parent="350" name="user">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="431" parent="350" name="passwd">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="432" parent="350" name="photo">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="433" parent="350" name="forget">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="434" parent="350" name="created_at">
+      <DataType>timestamp|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="435" parent="350" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <Position>10</Position>
     </column>
-    <key id="429" parent="349" name="PRIMARY">
+    <key id="436" parent="350" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
