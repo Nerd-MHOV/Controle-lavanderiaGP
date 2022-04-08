@@ -7,7 +7,7 @@
             <div>
                 <div class="numbers">Departamento</div>
                 <div class="cardName">
-                    <select name="departamento" id="select_department">
+                    <select class="selectClass" name="departamento" id="select_department">
                         <option value="">Selecione o departamento</option>
                         <?php
                         if (!empty($departments)):
@@ -29,8 +29,8 @@
         <div class="card">
             <div>
                 <div class="numbers">Colaborador</div>
-                <div class="cardName">
-                    <select name="colaborador" id="select_collaborators">
+                <div class="cardName" style="width: 200px">
+                    <select class="selectClass" name="colaborador" id="select_collaborators">
 
                     </select>
                 </div>

@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/source/Models/ProductService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/css/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/js/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/js/painel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/MinifyDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/MinifyDashbord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/HomeModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/dashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/dashbord.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/select2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/select2.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/_themeDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/_themeDashbord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/login/forget.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/login/forget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -83,8 +78,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.data.extractors.current.export.id" value="XML-Groovy.xml.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MySql" />
+    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/assets/fragments" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
@@ -132,7 +127,8 @@
       <workItem from="1648734459236" duration="23337000" />
       <workItem from="1648832347574" duration="15548000" />
       <workItem from="1649257219912" duration="929000" />
-      <workItem from="1649258518916" duration="11837000" />
+      <workItem from="1649258518916" duration="12087000" />
+      <workItem from="1649428244985" duration="10039000" />
     </task>
     <servers />
   </component>

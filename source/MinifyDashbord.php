@@ -28,4 +28,5 @@ $minJS->add(dirname(__DIR__,1)."/views/assets/js/form.js");
 $minJS->add(dirname(__DIR__,1)."/views/assets/js/mainMasks.js");
 $minJS->add(dirname(__DIR__,1)."/views/assets/js/sidebar.js");
 $minJS->add(dirname(__DIR__,1)."/views/assets/js/select2.min.js");
+$minJS->add(dirname(__DIR__,1)."/views/assets/js/painel.js");
 $minJS->minify(dirname(__DIR__,1)."/views/assets/scriptsDashbord.mim.js");

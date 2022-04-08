@@ -299,7 +299,8 @@ body
 .cardBox .card:hover .cardName,
 .cardBox .card:hover .iconBx,
 .cardBox .card:hover select,
-.cardBox .card:hover input[type=number]
+.cardBox .card:hover input[type=number],
+.cardBox .card:hover .select2-selection__rendered
 {
     color: var(--white);
 }

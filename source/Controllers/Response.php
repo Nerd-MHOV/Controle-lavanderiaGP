@@ -55,10 +55,24 @@ class Response extends Controller
      * @param array $data
      * @return void
      */
+    public function productService(array $data): void
+    {
+        $products = (new Product())->find("id_product_type = :ipt AND id_product_service = :ips", "ipt={$data["id_productType"]}&ips={$data["id_productService"]}")->fetch(true);
+        $callback["products"] = $this->view->render("assets/fragments/painel_product", [
+            "products" => $products
+        ]);
+        $callback["data"] = $data;
+        echo json_encode($callback);
+    }
+
+    /**
+     * @param array $data
+     * @return void
+     */
     public function productType(array $data): void
     {
-        $products = (new Product())->find("id_product_type = :idpt", "idpt={$data["id_selectProductType"]}")->fetch(true);
-        $callback["products"] = $this->view->render("assets/fragments/painel_product", [
+        $products = (new Product())->find("id_product_type = :idpt", "idpt={$data["id_selectProductType"]}")->group("id_product_service")->fetch(true);
+        $callback["products"] = $this->view->render("assets/fragments/painel_productService", [
             "products" => $products
         ]);
         $callback["debug"] = $products;
@@ -172,6 +186,10 @@ class Response extends Controller
         }
     }
 
+    /**
+     * @param array $data
+     * @return void
+     */
     public function returnCollaborator(array $data): void
     {
         $outputs = (new Output())->findById($data["id_saida"]);
@@ -190,6 +208,10 @@ class Response extends Controller
         echo json_encode($callback);
     }
 
+    /**
+     * @param array $data
+     * @return void
+     */
     public function returnProduct(array $data): void
     {
         $callback["data"] = $data;
