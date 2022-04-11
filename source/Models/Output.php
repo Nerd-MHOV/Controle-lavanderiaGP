@@ -30,4 +30,9 @@ class Output extends DataLayer
     {
         return (new ProductType())->findById($id);
     }
+
+    public function productService($id)
+    {
+        return (new ProductService())->findById($id);
+    }
 }

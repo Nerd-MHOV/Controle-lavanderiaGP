@@ -13,3 +13,5 @@ INSERT INTO lavanderia.department (id, department, created_at, update_at) VALUES
 INSERT INTO lavanderia.department (id, department, created_at, update_at) VALUES (4, 'Manutenção', null, null);
 INSERT INTO lavanderia.department (id, department, created_at, update_at) VALUES (5, 'Recepção', null, null);
 INSERT INTO lavanderia.department (id, department, created_at, update_at) VALUES (6, 'Portaria', null, null);
+INSERT INTO lavanderia.department (id, department, created_at, update_at) VALUES (11, 'Governança', null, null);
+INSERT INTO lavanderia.department (id, department, created_at, update_at) VALUES (12, 'Equipe Salão', null, null);

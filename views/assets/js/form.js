@@ -10,8 +10,6 @@ function ajax_load(action) {
     }
 }
 
-console.log("carregou o form");
-
 $("form").submit(function (e) {
     e.preventDefault();
 
@@ -29,6 +27,16 @@ $("form").submit(function (e) {
         },
         success: function (su) {
             ajax_load("close");
+
+            if (modal) {
+                modal.style.display = "none";
+
+                if (su.message.type === "success") {
+                    let id_saida = su.message.id
+
+                    $("[data-id="+id_saida+"]").remove();
+                }
+            }
 
             if (su.message) {
                 var view = '<div class="message ' + su.message.type + '">' + su.message.message + '</div>';

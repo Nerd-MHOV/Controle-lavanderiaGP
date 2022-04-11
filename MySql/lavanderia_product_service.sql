@@ -7,6 +7,6 @@ create table product_service
     updated_at timestamp    null
 );
 
-INSERT INTO lavanderia.product_service (id, service, created_at, updated_at) VALUES (1, 'Gerla', null, null);
+INSERT INTO lavanderia.product_service (id, service, created_at, updated_at) VALUES (1, 'Geral', null, null);
 INSERT INTO lavanderia.product_service (id, service, created_at, updated_at) VALUES (2, 'Hotel Fazenda', null, null);
 INSERT INTO lavanderia.product_service (id, service, created_at, updated_at) VALUES (3, 'Resort', null, null);

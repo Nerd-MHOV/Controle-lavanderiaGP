@@ -1,4 +1,7 @@
 <?= $this->layout("theme/_themeDashbord"); ?>
+<div class="login_form_callback center20px">
+    <?= flash(); ?>
+</div>
 <div class="details dw50">
     <div class="recentOrders">
         <div class="cardHeader">
@@ -9,7 +12,7 @@
             <tr>
                 <td>Nome</td>
                 <td>Departamento</td>
-                <td colspan="2">Produto</td>
+                <td colspan="3">Produto</td>
                 <td>Retirado</td>
                 <td>Devolver</td>
             </tr>
@@ -32,7 +35,7 @@
             <thead>
             <tr>
                 <td>Departamento</td>
-                <td colspan="2">Produto</td>
+                <td colspan="3">Produto</td>
                 <td>Retirado</td>
                 <td>Devolver</td>
             </tr>

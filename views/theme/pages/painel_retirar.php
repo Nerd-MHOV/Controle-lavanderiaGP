@@ -151,13 +151,14 @@
                         tb_products.html(callback.products);
                     }
                     if (select_collaborator === "0") {
-                        $("#amnt_status").html("Total");
+                        $("#amnt_status").html("Qtde");
                         $("#th_obs").remove();
                     }else{
                         $("#amnt_status").html("Estado");
-                        $("#tr_obs").html(`<th colspan="2">Produto</th>
-                        <th id="amnt_status">Estado</th>
-                        <th id="th_obs">Obs</th>`);
+                        $("#tr_obs").
+                        html(`<th colspan="3">Produto</th>
+                              <th id="amnt_status">Estado</th>
+                              <th id="th_obs">Obs</th>`);
                     }
                 },
                 complete: function () {

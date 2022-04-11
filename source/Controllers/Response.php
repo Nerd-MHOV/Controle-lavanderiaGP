@@ -7,6 +7,7 @@ use Source\Models\Inventory;
 use Source\Models\Output;
 use Source\Models\Product;
 use Source\Models\ProductType;
+use Source\Models\Returns;
 
 /**
  *
@@ -195,15 +196,15 @@ class Response extends Controller
         $outputs = (new Output())->findById($data["id_saida"]);
         $product = $outputs->product();
         $productType = $outputs->productType($product->id_product_type);
+        $productService = $outputs->productService($product->id_product_service);
 
         $callback["modal"] = $this->view->render("assets/fragments/painel_devolver_modal",[
-            "productName" => "{$productType->product_type} {$product->product}",
+            "productName" => "{$productType->product_type} {$product->product} {$productService->service}",
             "status_old" => $outputs->status,
             "obs_old" => $outputs->obs,
             "id_saida" => $outputs->id,
         ]);
 
-        $callback["debug"] = $productType->product_type;
         $callback["data"] = $data;
         echo json_encode($callback);
     }
@@ -214,7 +215,54 @@ class Response extends Controller
      */
     public function returnProduct(array $data): void
     {
-        $callback["data"] = $data;
-        echo json_encode($callback);
+        if(!$data["estado-modal"]){
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => "Informe o estado do item!"
+            ]);
+
+            return;
+        }
+
+        if (isset($data["obs-modal"]) && $data["obs-modal"] === ""){
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => "Descreva o porquê de o item estar \"Ruim\""
+            ]);
+
+            return;
+        }
+
+        $id = $data["id_saida"];
+        $output = (new Output())->findById($id);
+        $returns = new Returns();
+
+        $returns->id_product = $output->id_product;
+        $returns->id_department = $output->id_department;
+        $returns->id_collaborator = $output->id_collaborator;
+        $returns->id_user = $_SESSION["user"];
+        $returns->amount = $output->amount;
+        $returns->status_in = $output->status;
+        $returns->status_out = $data["estado-modal"];
+        $returns->obs_in = $output->obs;
+        $returns->obs_out = $data["obs-modal"] ?? "";
+
+        $returns->save();
+        $output->destroy();
+
+        if ($output->fail() || $returns->fail()) {
+            $debug = $output->fail()->getMessage();
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => "Erro com Banco de Dados, Favor chamar o responsavel! {$debug}"
+            ]);
+            return;
+        } else {
+            echo $this->ajaxResponse("message", [
+                "type" => "success",
+                "message" => "ITEM retirado com sucesso!",
+                "id" => $id,
+            ]);
+        }
     }
 }

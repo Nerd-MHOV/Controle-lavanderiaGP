@@ -60,7 +60,7 @@
 
 .modal .modal-icon{
     font-size: 50px;
-    color: #396396;
+    color: rgb(20 28 37);
     margin: 0 20px;
 }
 
@@ -105,7 +105,7 @@
 
 .modal-buttom{
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .modal-buttom input{
@@ -127,7 +127,9 @@
 
 .modal-buttom input[name=devolver],
 .modal-buttom input[name=devolver-setor]{
-    background-color: #4ba74f;
+    background-color: rgb(20 28 37);
+    max-width: 200px;
+    padding: 10px;
     border: white;
     color: white;
     transition: all 0.2s ease;
@@ -135,7 +137,7 @@
 
 .modal-buttom input[name=devolver]:hover,
 .modal-buttom input[name=devolver-setor]:hover{
-    background-color: #1bc322;
+    background-color: rgb(43, 133, 221);
 }
 
 .modal-buttom input[name=btnDevol]{

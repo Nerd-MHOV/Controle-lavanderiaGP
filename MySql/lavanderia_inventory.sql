@@ -9,7 +9,7 @@ create table inventory
     updated_at    timestamp null
 );
 
-INSERT INTO lavanderia.inventory (id, id_product, id_department, amount, created_at, updated_at) VALUES (1, 1, 1, 86, null, null);
+INSERT INTO lavanderia.inventory (id, id_product, id_department, amount, created_at, updated_at) VALUES (1, 1, 1, 34, null, null);
 INSERT INTO lavanderia.inventory (id, id_product, id_department, amount, created_at, updated_at) VALUES (2, 2, 1, 98, null, null);
 INSERT INTO lavanderia.inventory (id, id_product, id_department, amount, created_at, updated_at) VALUES (3, 3, 1, 148, null, null);
 INSERT INTO lavanderia.inventory (id, id_product, id_department, amount, created_at, updated_at) VALUES (4, 0, 0, 5, null, null);

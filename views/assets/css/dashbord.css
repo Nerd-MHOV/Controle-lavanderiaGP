@@ -485,7 +485,7 @@ td a{
 
 .modal-buttom{
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 .modal-buttom input{

@@ -2,19 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/js/painel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/Returns.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/MinifyDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/MinifyDashbord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Output.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Output.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/css/dashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/dashbord.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/select2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/select2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/message.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_outputsCollaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsCollaborator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_outputsDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsDepartment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,6 +135,8 @@
       <workItem from="1649257219912" duration="929000" />
       <workItem from="1649258518916" duration="12087000" />
       <workItem from="1649428244985" duration="10039000" />
+      <workItem from="1649686218658" duration="228000" />
+      <workItem from="1649686633084" duration="10880000" />
     </task>
     <servers />
   </component>

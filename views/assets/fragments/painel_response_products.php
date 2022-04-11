@@ -66,6 +66,7 @@ if (!$id_collaborator): //SETOR
                 let select_productService = $(this).val();
                 let select_productType = $("#select_productType-<?= $i ?>").val();
                 let select_product = $("#select_product-<?= $i ?>");
+                let nmb_amount = $("#amount-<?=$i?>");
 
                 $.ajax({
                     type:"post",
@@ -82,8 +83,10 @@ if (!$id_collaborator): //SETOR
                         if (callback.data.id_productService) {
                             select_product.prop("disabled", false);
                             select_product.html(callback.products);
+                            nmb_amount.prop("disabled", false);
                         } else {
                             select_product.prop("disabled", true);
+                            nmb_amount.prop("disabled", true)
                         }
                     },
                     complete: function () {
