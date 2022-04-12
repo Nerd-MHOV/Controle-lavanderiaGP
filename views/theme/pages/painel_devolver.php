@@ -52,7 +52,7 @@
     </div>
 </div>
 
-<!-- MODAL -->
+<!-- MODAL  -->
 <div id="myModal" class="modal">
     <?php
     $this->insert(
@@ -74,7 +74,7 @@
             $.ajax({
                 type: 'POST',
                 data: {id_saida: id},
-                url: '<?=$router->route("response.returncollaborator")?>',
+                url: '<?=$router->route("response.return_collaborator")?>',
                 dataType: 'json',
                 success: function (data) {
 
@@ -85,17 +85,16 @@
 
         } else {
 
-            $(function () {
-                $.ajax({
-                    type: 'POST',
-                    data: {id_saida: id},
-                    url: '<?=$router->route("response.returndepartment")?>',
-                    dataType: 'json',
-                    success: function (data) {
-                        $('#myModal').html(data);
-                        modal.style.display = "block";
-                    }
-                });
+
+            $.ajax({
+                type: 'POST',
+                data: {id_saida: id},
+                url: '<?=$router->route("response.return_department")?>',
+                dataType: 'json',
+                success: function (data) {
+                    $('#myModal').html(data.modal);
+                    modal.style.display = "block";
+                }
             });
 
         }

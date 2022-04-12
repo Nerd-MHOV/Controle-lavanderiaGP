@@ -1,4 +1,4 @@
-<form class="form" method="post" action="<?=$router->route("response.returnproduct")?>">
+<form method="post" action="<?=$router->route("response.return_product")?>">
     <div id="modalphp" class="modal-content">
 
         <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -38,6 +38,7 @@
         </div>
 
         <div class="modal-buttom">
+            <input type="hidden" name="productName" value="<?=$productName?>">
             <input type="hidden" name="id_saida" value="<?=$id_saida?>">
             <input type="submit" name="devolver" value="Devolver">
         </div>

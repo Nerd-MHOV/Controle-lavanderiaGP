@@ -136,13 +136,20 @@ class Response extends Controller
         if (!$data["colaborador"]) {
             for ($i = 0; $i < $countRows; $i++) {
                 $output = new Output();
+                //TODO: count for find or not;
+                if (!($output->find("id_product = :idp", "idp={$data["select_product"]}")->fetch())){
+                    echo "achou";
+                    return;
+                } else {
+                    echo "não achou";
+                    return;
+                }
+                $output->status = "bom";
                 $output->id_product = $data["select_product"][$i];
                 $output->id_department = $data["departamento"];
                 $output->id_collaborator = 0;
                 $output->id_user = $_SESSION["user"];
                 $output->amount = $data["amount"][$i];
-                $output->status = "bom";
-                $output->save();
             }
         } else {
             $ruim = 0;
@@ -209,6 +216,21 @@ class Response extends Controller
         echo json_encode($callback);
     }
 
+    public function returnDepartment(array $data): void
+    {
+        $outputs = (new Output())->findById($data["id_saida"]);
+        $product = $outputs->product();
+        $productType = $outputs->productType($product->id_product_type);
+        $productService = $outputs->productService($product->id_product_service);
+        $callback["modal"] = $this->view->render("assets/fragments/painel_devolver_modalDepartment", [
+            "productName" => "{$productType->product_type} {$product->product} {$productService->service}",
+            "id_saida" => $data["id_saida"],
+            "totalAmount" => $outputs->amount
+        ]);
+        $callback["data"] = $data;
+        echo json_encode($callback);
+    }
+
     /**
      * @param array $data
      * @return void
@@ -260,7 +282,7 @@ class Response extends Controller
         } else {
             echo $this->ajaxResponse("message", [
                 "type" => "success",
-                "message" => "ITEM retirado com sucesso!",
+                "message" => "{$data["productName"]} devolvido com sucesso!",
                 "id" => $id,
             ]);
         }

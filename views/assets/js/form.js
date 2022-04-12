@@ -28,7 +28,7 @@ $("form").submit(function (e) {
         success: function (su) {
             ajax_load("close");
 
-            if (modal) {
+            if (typeof modal !== "undefined") {
                 modal.style.display = "none";
 
                 if (su.message.type === "success") {
