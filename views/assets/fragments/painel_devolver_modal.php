@@ -30,7 +30,7 @@
                     <option>ruim</option>
                 </select>
 
-                <textarea placeholder="Descrição necessaria, quando o estado for 'Ruim'" name="obs-modal" id="obs_new" maxlength="255" required disabled></textarea>
+                <textarea placeholder="Descrição necessaria, quando o estado for 'Ruim'" name="obs-modal" id="obs_new" maxlength="255" required disabled><?=$obs_old?></textarea>
             </div>
 
 

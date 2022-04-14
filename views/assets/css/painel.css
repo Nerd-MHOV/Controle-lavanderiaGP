@@ -76,6 +76,7 @@
 }
 .tablePainel textarea
 {
+    padding: 5px;
     width: 98%;
 }
 .tablePainel input[type=number]

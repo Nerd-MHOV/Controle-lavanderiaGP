@@ -134,6 +134,14 @@
             let nmb_qtdeRetiradas = $(this).val();
             let tb_products = $("#tb_products");
 
+            //capturar informações para não perdelas quando att
+            var val_productType = $("[id^=select_productType]").map(function () { return $(this).val(); }).get();
+            var val_productService = $("[id^=select_productService]").map(function () { return $(this).val(); }).get();
+            var val_product = $("[id^=select_product-]").map(function () { return $(this).val(); }).get();
+            var val_amount = $("[id^=amount]").map(function () { return $(this).val(); }).get();
+            var val_status = $("[id^=select_status]").map(function () { return $(this).val(); }).get();
+            var val_obs = $("[id^=txta_obs]").map(function () { return $(this).val(); }).get();
+
             $.ajax({
                 type: "POST",
                 url: "<?=$router->route("response.produtos")?>",
@@ -160,9 +168,21 @@
                               <th id="amnt_status">Estado</th>
                               <th id="th_obs">Obs</th>`);
                     }
+                    for (i=0;i <= val_productType.length; i++) {
+                        if(val_productType[i] !== "" && val_productType[i] !== "undefined"){
+                            $("#select_productType-"+i).select2("val", val_productType[i])
+                        }
+                    }
                 },
                 complete: function () {
-                    ajax_load("close");
+                    ajax_load("close")
+                    for (i=0; i <= val_productService.length; i++) {
+                        if(val_productService[i] !== "" && val_productService[i] !== "undefined"){
+                            $("#select_productService-"+i).select2("val", val_productService[i])
+                            console.log($("#select_productService-"+i))
+                        }
+                    }
+
                 }
             });
         })

@@ -5,6 +5,7 @@ namespace Source\Controllers;
 use Source\Models\Collaborator;
 use Source\Models\Department;
 use Source\Models\Output;
+use Source\Models\Product;
 use Source\Models\User;
 use CoffeeCode\DataLayer\DataLayer;
 
@@ -91,7 +92,8 @@ class Painel extends Controller
             $this->router->route('painel.produto'),
             routeImage("Produtos - Painel"),
         )->render();
-        $this->view->addData(['head' => $head]);
+        $products = (new Product())->find()->fetch(true);
+        $this->view->addData(['head' => $head, 'products' => $products]);
         echo $this->view->render("theme/pages/painel_produto");
     }
 

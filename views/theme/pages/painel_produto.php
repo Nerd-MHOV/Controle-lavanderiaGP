@@ -1,4 +1,3 @@
-<!--validar permissão (1)-->
 <?php $this->layout("theme/_themeDashbord"); ?>
 <!-- cards -->
 <div class="containerPainel">
@@ -13,34 +12,27 @@
         <table>
             <thead>
             <tr>
-                <th colspan="2">Produto</th>
+                <th colspan="3">Produto</th>
                 <th>Valor por Unidade</th>
                 <th>Departamento</th>
                 <th>Status</th>
             </tr>
             </thead>
             <tbody>
+            <?php
+            foreach ($products as $product):
+            ?>
             <tr>
                 <td>Camiseta</td>
-                <td>Amarela</td>
+                <td><?=$product->product?></td>
+                <td>brotas eco</td>
                 <td>R$ 10,00</td>
                 <td>Monitoria</td>
                 <td><span class="status delivered">Ativo</span></td>
             </tr>
-            <tr>
-                <td>Camiseta</td>
-                <td>Verde</td>
-                <td>R$ 15,00</td>
-                <td>Monitoria</td>
-                <td><span class="status pending">Desativada</span></td>
-            </tr>
-            <tr>
-                <td>Camiseta</td>
-                <td>Amarela</td>
-                <td>R$ 10,00</td>
-                <td>Monitoria</td>
-                <td><span class="status delivered">Ativo</span></td>
-            </tr>
+            <?php
+            endforeach;
+            ?>
             </tbody>
         </table>
     </div>

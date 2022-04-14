@@ -10,11 +10,11 @@
             <div class="modal-setor-single">
                 <div class="modal-single">
                     <h5>Qtde de itens bons:</h5>
-                    <input style="color: green" name="numx" type="number" id="numx" value="<?=$totalAmount?>" min="0" max="<?= $totalAmount ?>">
+                    <input style="color: green" name="nmb_good" type="number" id="numx" value="<?=$totalAmount?>" min="0" max="<?= $totalAmount ?>">
                 </div>
                 <div class="modal-single">
                     <h5>Qtde de danificadas:</h5>
-                    <input style="color: red" name="numy" type="number" id="numy" value="0" min="0" max="0">
+                    <input style="color: red" name="nmb_bad" type="number" id="numy" value="0" min="0" max="0">
                 </div>
             </div>
 
@@ -24,6 +24,7 @@
         </div>
 
         <div class="modal-buttom">
+            <input type="hidden" name="productName" value="<?=$productName?>">
             <input type="hidden" name="id_saida" value="<?=$id_saida?>">
             <input type="hidden" name="total" value="<?=$totalAmount?>">
             <input class="ignoreClass" type="submit" name="devolver-setor" value="Devolver">
@@ -32,6 +33,7 @@
     </div>
 </form>
 
+<script src="<?=asset("js/form.js")?>"></script>
 <script>
     $('#numx').change(function(){
         maxValue = <?=$totalAmount?>;

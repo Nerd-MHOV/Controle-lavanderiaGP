@@ -2,8 +2,8 @@
 date_default_timezone_set('America/Sao_Paulo');
 
 if ($_SERVER["SERVER_NAME"] == "localhost") {
-    require __DIR__ . "/Minify.php";
-    require __DIR__ . "/MinifyDashbord.php";
+   // require __DIR__ . "/Minify.php";
+   // require __DIR__ . "/MinifyDashbord.php";
 
     define("SITE", [
         "name" => "controle_lavanderia",
@@ -11,6 +11,21 @@ if ($_SERVER["SERVER_NAME"] == "localhost") {
         "domain" => "NULL",
         "locale" => "pt-BR",
         "root" => "http://localhost/controle_lavanderia4.0"
+    ]);
+
+    define("DATA_LAYER_CONFIG", [
+        "driver" => "mysql",
+        "host" => "localhost",
+        "port" => "3306",
+        "dbname" => "lavanderia",
+        "username" => "root",
+        "passwd" => "",
+        "options" => [
+            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+            PDO::ATTR_CASE => PDO::CASE_NATURAL
+        ]
     ]);
 } else {
     define("SITE", [
@@ -20,22 +35,24 @@ if ($_SERVER["SERVER_NAME"] == "localhost") {
         "locale" => "pt-BR",
         "root" => "http://192.168.10.87/controle_lavanderia4.0"
     ]);
+
+    define("DATA_LAYER_CONFIG", [
+        "driver" => "mysql",
+        "host" => "localhost",
+        "port" => "3306",
+        "dbname" => "lavanderia",
+        "username" => "phpmyadmin",
+        "passwd" => "backspaceEnter1",
+        "options" => [
+            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+            PDO::ATTR_CASE => PDO::CASE_NATURAL
+        ]
+    ]);
 }
 
-const DATA_LAYER_CONFIG = [
-    "driver" => "mysql",
-    "host" => "localhost",
-    "port" => "3306",
-    "dbname" => "lavanderia",
-    "username" => "root",
-    "passwd" => "",
-    "options" => [
-        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
-        PDO::ATTR_CASE => PDO::CASE_NATURAL
-    ]
-];
+
 
 const MAIL = [
     "host" => "smtp.sendgrid.net",

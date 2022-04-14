@@ -4,12 +4,13 @@ if (!$id_collaborator): //SETOR
         ?>
         <tr>
             <td>
-                <select class="selectClass" name="select_productType[]" id="select_productType-<?= $i ?>">
+                <select class="selectClass" name="select_productType[]" id="select_productType-<?= $i ?>" value="1">
                     <option value="">Selecione o tipo</option>
                     <?php
                     $this->insert(
-                        "assets/fragments/painel_productType",
-                        ["products" => $products]
+                        "assets/fragments/painel_productType", [
+                                "products" => $products
+                        ]
                     );
                     ?>
                 </select>
@@ -37,6 +38,7 @@ if (!$id_collaborator): //SETOR
                 let select_productType = $(this).val();
                 let select_productService = $("#select_productService-<?= $i ?>");
                 let select_product = $("#select_product-<?= $i ?>");
+
 
                 $.ajax({
                     type: "POST",

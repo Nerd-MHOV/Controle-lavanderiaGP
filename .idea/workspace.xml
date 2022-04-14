@@ -2,16 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modalDepartment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia.sql.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/SP_AtualizaEstoque.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_EntradaProduto_AD.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_EntradaProduto_AI.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_EntradaProduto_AU.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_SaidaProduto_AD.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_SaidaProduto_AI.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_SaidaProduto_AU.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/collaborator.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/department.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/input.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/inventory.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/output.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/product.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/product_service.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/product_type.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/returns.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_collaborator.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department_head.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia/department_head.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_input.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_inventory.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_output.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_service.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_type.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_returns.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia/users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/painel.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/painel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modalDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modalDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +105,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/assets/fragments" />
+    <property name="database.data.extractors.current.export.id" value="JSON-Groovy.json.groovy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MySql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
@@ -83,6 +114,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\MySql" />
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -109,6 +141,15 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SQLScriptSettings">
+    <option name="matrix">
+      <map>
+        <entry key="MARIADB.CreateComplete" value="Reformat=0" />
+      </map>
+    </option>
+    <option name="outputLayout" value="File per object by schema.groovy" />
+    <option name="outputPath" value="C:\xampp\htdocs\controle_lavanderia4.0\MySql" />
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -128,6 +169,9 @@
       <workItem from="1649686218658" duration="228000" />
       <workItem from="1649686633084" duration="10991000" />
       <workItem from="1649790277955" duration="5839000" />
+      <workItem from="1649862479057" duration="12020000" />
+      <workItem from="1649939587428" duration="1056000" />
+      <workItem from="1649956944967" duration="12925000" />
     </task>
     <servers />
   </component>

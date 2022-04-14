@@ -135,21 +135,21 @@ class Response extends Controller
 
         if (!$data["colaborador"]) {
             for ($i = 0; $i < $countRows; $i++) {
-                $output = new Output();
-                //TODO: count for find or not;
-                if (!($output->find("id_product = :idp", "idp={$data["select_product"]}")->fetch())){
-                    echo "achou";
-                    return;
-                } else {
-                    echo "não achou";
-                    return;
+                if ( ((new Output())->find("id_product = :idp AND id_collaborator = 0", "idp={$data["select_product"][$i]}")->count()) ){ //Já existe pendencias
+                    $output = (new Output())->find("id_product = :idp AND id_collaborator = 0", "idp={$data["select_product"][$i]}")->fetch();
+                    $output->id_user = $_SESSION["user"];
+                    $output->amount = ($output->amount + $data["amount"][$i]);
+                    $output->save();
+                } else { //Não existe pendencia!
+                    $output = new Output();
+                    $output->status = "bom";
+                    $output->id_product = $data["select_product"][$i];
+                    $output->id_department = $data["departamento"];
+                    $output->id_collaborator = 0;
+                    $output->id_user = $_SESSION["user"];
+                    $output->amount = $data["amount"][$i];
+                    $output->save();
                 }
-                $output->status = "bom";
-                $output->id_product = $data["select_product"][$i];
-                $output->id_department = $data["departamento"];
-                $output->id_collaborator = 0;
-                $output->id_user = $_SESSION["user"];
-                $output->amount = $data["amount"][$i];
             }
         } else {
             $ruim = 0;
@@ -237,7 +237,7 @@ class Response extends Controller
      */
     public function returnProduct(array $data): void
     {
-        if(!$data["estado-modal"]){
+        if(isset($data["estado-modal"]) && !$data["estado-modal"]){
             echo $this->ajaxResponse("message", [
                 "type" => "error",
                 "message" => "Informe o estado do item!"
@@ -259,18 +259,45 @@ class Response extends Controller
         $output = (new Output())->findById($id);
         $returns = new Returns();
 
-        $returns->id_product = $output->id_product;
-        $returns->id_department = $output->id_department;
-        $returns->id_collaborator = $output->id_collaborator;
-        $returns->id_user = $_SESSION["user"];
-        $returns->amount = $output->amount;
-        $returns->status_in = $output->status;
-        $returns->status_out = $data["estado-modal"];
-        $returns->obs_in = $output->obs;
-        $returns->obs_out = $data["obs-modal"] ?? "";
+        if ($output->id_collaborator == "0") {
+            $returns->id_product = $output->id_product;
+            $returns->id_department = $output->id_department;
+            $returns->id_collaborator = $output->id_collaborator;
+            $returns->id_user = $_SESSION["user"];
+            $returns->amount = ($data["nmb_good"] + $data["nmb_bad"]);
+            $returns->amountBad = $data["nmb_bad"];
+            $returns->status_in = $output->status;
+            $returns->status_out = ($data["nmb_bad"] > 0) ? "ruim" : "bom";
+            $returns->obs_in = $output->obs;
+            $returns->obs_out = $data["obs-modal"] ?? "";
 
-        $returns->save();
-        $output->destroy();
+
+            $newAmount = ($output->amount - $returns->amount);
+            if ($newAmount == "0") {
+                $output->destroy();
+            } else {
+                $output->amount = $newAmount;
+                $output->save();
+            }
+            $returns->save();
+        } else {
+            $returns->id_product = $output->id_product;
+            $returns->id_department = $output->id_department;
+            $returns->id_collaborator = $output->id_collaborator;
+            $returns->id_user = $_SESSION["user"];
+            $returns->amount = $output->amount;
+            $returns->amountBad = "";
+            $returns->status_in = $output->status;
+            $returns->status_out = $data["estado-modal"];
+            $returns->obs_in = $output->obs;
+            $returns->obs_out = $data["obs-modal"] ?? "";
+
+            $newAmount = $returns->amount;
+            $returns->save();
+            $output->destroy();
+        }
+
+
 
         if ($output->fail() || $returns->fail()) {
             $debug = $output->fail()->getMessage();
@@ -282,7 +309,7 @@ class Response extends Controller
         } else {
             echo $this->ajaxResponse("message", [
                 "type" => "success",
-                "message" => "{$data["productName"]} devolvido com sucesso!",
+                "message" => "{$newAmount} {$data["productName"]} devolvido com sucesso!",
                 "id" => $id,
             ]);
         }
