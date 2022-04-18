@@ -2,45 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia.sql.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/SP_AtualizaEstoque.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_EntradaProduto_AD.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_EntradaProduto_AI.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_EntradaProduto_AU.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_SaidaProduto_AD.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_SaidaProduto_AI.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/TRG_SaidaProduto_AU.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/collaborator.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/department.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/input.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/inventory.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/output.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/product.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/product_service.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/product_type.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/lavanderia/returns.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Controllers/Withdraw.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/.github/workflows/test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/document.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/controle_lavanderia4.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/controle_lavanderia4.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_collaborator.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department_head.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia/department_head.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_input.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_inventory.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_output.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_service.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_type.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_returns.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia/users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/painel.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/painel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modalDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modalDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Output.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Output.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/minifycss" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/minifycss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/minifyjs" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/minifyjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/.github/FUNDING.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/bin/minifycss" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/bin/minifycss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/bin/minifyjs" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/bin/minifyjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/keywords_after.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/keywords_after.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/keywords_before.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/keywords_before.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/keywords_reserved.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/keywords_reserved.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/operators.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/operators.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/operators_after.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/operators_after.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/operators_before.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/data/js/operators_before.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/CSS.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/CSS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Exceptions/BasicException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Exceptions/BasicException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Exceptions/FileImportException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Exceptions/FileImportException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Exceptions/IOException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Exceptions/IOException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/JS.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/JS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Minify.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/Minify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_outputsCollaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsCollaborator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_outputsDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
@@ -87,6 +104,10 @@
       <path value="$PROJECT_DIR$/vendor/coffeecode/optimizer" />
       <path value="$PROJECT_DIR$/vendor/coffeecode/datalayer" />
       <path value="$PROJECT_DIR$/vendor/league/plates" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
     </include_path>
   </component>
   <component name="ProjectId" id="271whb3ZEvYO5DACYVz7Qtkhgpr" />
@@ -106,7 +127,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="JSON-Groovy.json.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MySql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/assets/fragments" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
@@ -114,8 +135,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\MySql" />
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments" />
+      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\MySql" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets" />
@@ -171,7 +192,8 @@
       <workItem from="1649790277955" duration="5839000" />
       <workItem from="1649862479057" duration="12020000" />
       <workItem from="1649939587428" duration="1056000" />
-      <workItem from="1649956944967" duration="12925000" />
+      <workItem from="1649956944967" duration="13608000" />
+      <workItem from="1650285891278" duration="18978000" />
     </task>
     <servers />
   </component>

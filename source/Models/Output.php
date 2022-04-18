@@ -26,13 +26,13 @@ class Output extends DataLayer
         return (new Product())->findById($this->id_product);
     }
 
-    public function productType($id)
+    public function productType()
     {
-        return (new ProductType())->findById($id);
+        return (new ProductType())->findById($this->product()->id_product_type);
     }
 
-    public function productService($id)
+    public function productService()
     {
-        return (new ProductService())->findById($id);
+        return (new ProductService())->findById($this->product()->id_product_service);
     }
 }

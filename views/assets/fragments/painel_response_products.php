@@ -16,7 +16,7 @@ if (!$id_collaborator): //SETOR
                 </select>
             </td>
             <td>
-                <select class="selectClass" class="selectClass" name="select_productService[]" disabled id="select_productService-<?= $i ?>">
+                <select class="selectClass" name="select_productService[]" disabled id="select_productService-<?= $i ?>">
                     <option value="">Serviço</option>
                 </select>
             </td>
@@ -51,7 +51,6 @@ if (!$id_collaborator): //SETOR
                         ajax_load("open");
                     },
                     success: function (callback) {
-                        console.log(callback);
                         select_productService.prop("disabled", false);
                         select_product.prop("disabled", true);
                         if (callback.data.id_selectProductType) {
@@ -125,9 +124,9 @@ if (!$id_collaborator): //SETOR
                 </select>
             </td>
             <td>
-                <select name="select_status[]" disabled id="select_status-<?= $i ?>">
-                    <option value="bom">bom</option>
-                    <option value="ruim">ruim</option>
+                <select class="selectClass" name="select_status[]" disabled id="select_status-<?= $i ?>">
+                    <option value="0">bom</option>
+                    <option value="1">ruim</option>
                 </select>
             </td>
             <td>
@@ -207,7 +206,7 @@ if (!$id_collaborator): //SETOR
             $("#select_status-<?=$i?>").on("change", function () {
                 let select_status = $(this).val();
                 let txta_obs = $("#txta_obs-<?=$i?>");
-                if (select_status === "ruim") {
+                if (select_status === "1") {
                     txta_obs.prop("disabled", false);
                 } else {
                     txta_obs.prop("disabled", true);

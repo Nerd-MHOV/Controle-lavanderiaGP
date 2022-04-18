@@ -9,9 +9,7 @@ use Source\Models\Product;
 use Source\Models\User;
 use CoffeeCode\DataLayer\DataLayer;
 
-/**
- *
- */
+
 class Painel extends Controller
 {
     /**
@@ -131,4 +129,6 @@ class Painel extends Controller
         flash("info", "Você saiu com sucesso, volte logo {$this->user->first_name}");
         $this->router->redirect("web.login");
     }
+
+
 }

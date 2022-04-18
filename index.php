@@ -58,6 +58,7 @@ $router->post("/produtos", "Response:products", "response.produtos");
 $router->post("/produtos/tipo", "Response:productType", "response.typeproducts");
 $router->post("/produtos/oficio", "Response:productService", "response.product_service");
 $router->post("/retirada", "Response:withdrawal","response.withdrawal");
+$router->get("/documento/{id}", "Withdraw:document", "withdraw.document");
 
 /**
  *  devolver RESPONSE

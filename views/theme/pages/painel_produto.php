@@ -4,8 +4,9 @@
     <div class="cardHeader">
         <h2>Produtos Cadastrados</h2>
         <div>
-            <a href="<?= $router->route("painel.produto_cadastrar_painel"); ?>" class="btnDashbord">Novo tipo</a>
-            <a href="<?= $router->route("painel.produto_cadastrar"); ?>" class="btnDashbord">Novo produto</a>
+            <a href="<?= $router->route("painel.cadastrar_productType"); ?>" class="btnDashbord">Novo tipo</a>
+            <a href="<?= $router->route("painel.cadastrar_productService"); ?>" class="btnDashbord">Novo oficio</a>
+            <a href="<?= $router->route("painel.cadastrar_product"); ?>" class="btnDashbord">Novo produto</a>
         </div>
     </div>
     <div class="tablePainel">
@@ -23,12 +24,19 @@
             foreach ($products as $product):
             ?>
             <tr>
-                <td>Camiseta</td>
+                <td><?=$product->productType()->product_type?></td>
                 <td><?=$product->product?></td>
-                <td>brotas eco</td>
-                <td>R$ 10,00</td>
-                <td>Monitoria</td>
-                <td><span class="status delivered">Ativo</span></td>
+                <td><?=$product->productService()->service?></td>
+                <td><?=$product->unitary_value?></td>
+                <td><?=$product->department()->department?></td>
+                <?php
+                    if($product->status == "A"):
+                        echo "<td><span class=\"status delivered\">Ativo</span></td>";
+                    elseif($product->status == "D"):
+                        echo "<td><span class=\"status return\">Desativado</span></td>";
+                    endif;
+                ?>
+
             </tr>
             <?php
             endforeach;

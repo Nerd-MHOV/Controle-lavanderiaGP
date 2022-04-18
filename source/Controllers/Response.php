@@ -100,7 +100,9 @@ class Response extends Controller
                 "message" => "Faça ao menos UMA retirada"
             ]);
         }
-        if (!(false === array_search(false, $data["select_productType"], false))) {
+        if (!(false === array_search(false, $data["select_productType"], false))
+            || !(false === array_search(false, $data["select_productService"], false))
+            || !(false === array_search(false, $data["select_product"], false))) {
             echo $this->ajaxResponse("message", [
                 "type" => "error",
                 "message" => "Informe todos os produto adequadamente!"
@@ -133,7 +135,7 @@ class Response extends Controller
         }
 
 
-        if (!$data["colaborador"]) {
+        if (!$data["colaborador"]) { //SETOR
             for ($i = 0; $i < $countRows; $i++) {
                 if ( ((new Output())->find("id_product = :idp AND id_collaborator = 0", "idp={$data["select_product"][$i]}")->count()) ){ //Já existe pendencias
                     $output = (new Output())->find("id_product = :idp AND id_collaborator = 0", "idp={$data["select_product"][$i]}")->fetch();
@@ -151,10 +153,23 @@ class Response extends Controller
                     $output->save();
                 }
             }
-        } else {
+            if ($output->fail()) {
+                $debug = $output->fail()->getMessage();
+                echo $this->ajaxResponse("message", [
+                    "type" => "error",
+                    "message" => "Erro com Banco de Dados, Favor chamar o responsavel! {$debug}"
+                ]);
+            } else {
+                echo $this->ajaxResponse("message", [
+                    "type" => "success",
+                    "message" => "Retirada Feita com Sucesso, lembre-se de devolver!"
+                ]);
+            }
+        } else { // COLABORADOR
             $ruim = 0;
             for ($i = 0; $i < $countRows; $i++) {
-                if ($data["select_status"][$i] == 'ruim') {
+                if ($data["select_status"][$i] == '1') {
+                    $data["select_status"][$i] = "ruim";
                     $output = new Output();
                     $output->id_product = $data["select_product"][$i];
                     $output->id_department = $data["departamento"];
@@ -166,6 +181,7 @@ class Response extends Controller
                     $output->save();
                     $ruim++;
                 } else {
+                    $data["select_status"][$i] = "bom";
                     $output = new Output();
                     $output->id_product = $data["select_product"][$i];
                     $output->id_department = $data["departamento"];
@@ -177,21 +193,20 @@ class Response extends Controller
                     $output->save();
                 }
             }
+
+            if ($output->fail()) {
+                $debug = $output->fail()->getMessage();
+                echo $this->ajaxResponse("message", [
+                    "type" => "error",
+                    "message" => "Erro com Banco de Dados, Favor chamar o responsavel! {$debug}"
+                ]);
+            } else {
+                echo $this->ajaxResponse("redirect", [
+                    "url" => $this->router->route("withdraw.document", ["id" => $data["colaborador"]])
+                ]);
+            }
         }
-        if ($output->fail()) {
-            $debug = $output->fail()->getMessage();
-            echo $this->ajaxResponse("message", [
-                "type" => "error",
-                "message" => "Erro com Banco de Dados, Favor chamar o responsavel! {$debug}"
-            ]);
-            return;
-        } else {
-            echo $this->ajaxResponse("message", [
-                "type" => "success",
-                "message" => "Retirada Feita com Sucesso, lembre-se de devolver!"
-            ]);
-            return;
-        }
+
     }
 
     /**
@@ -202,8 +217,8 @@ class Response extends Controller
     {
         $outputs = (new Output())->findById($data["id_saida"]);
         $product = $outputs->product();
-        $productType = $outputs->productType($product->id_product_type);
-        $productService = $outputs->productService($product->id_product_service);
+        $productType = $outputs->productType();
+        $productService = $outputs->productService();
 
         $callback["modal"] = $this->view->render("assets/fragments/painel_devolver_modal",[
             "productName" => "{$productType->product_type} {$product->product} {$productService->service}",
@@ -220,8 +235,8 @@ class Response extends Controller
     {
         $outputs = (new Output())->findById($data["id_saida"]);
         $product = $outputs->product();
-        $productType = $outputs->productType($product->id_product_type);
-        $productService = $outputs->productService($product->id_product_service);
+        $productType = $outputs->productType();
+        $productService = $outputs->productService();
         $callback["modal"] = $this->view->render("assets/fragments/painel_devolver_modalDepartment", [
             "productName" => "{$productType->product_type} {$product->product} {$productService->service}",
             "id_saida" => $data["id_saida"],

@@ -24,8 +24,6 @@ abstract class Controller
 
     public function ajaxResponse (string $param, array $values): string
     {
-
-
         return json_encode([$param => $values]);
     }
 }

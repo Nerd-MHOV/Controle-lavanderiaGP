@@ -28,6 +28,7 @@
     "coffeecode/datalayer": "^1.1",
     "league/plates": "^v3.x-dev",
     "phpmailer/phpmailer": "^6.6",
+    "dompdf/dompdf": "v1.2.*",
     "ext-pdo": "*",
     "ext-json": "*"
   }
