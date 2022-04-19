@@ -4,8 +4,8 @@
     <div class="cardHeader">
         <h2>Produtos Cadastrados</h2>
         <div>
-            <a href="<?= $router->route("painel.cadastrar_productType"); ?>" class="btnDashbord">Novo tipo</a>
-            <a href="<?= $router->route("painel.cadastrar_productService"); ?>" class="btnDashbord">Novo oficio</a>
+            <a href="<?= $router->route("web-product.new-type"); ?>" class="btnDashbord">Novo tipo</a>
+            <a href="<?= $router->route("web-product.new-service"); ?>" class="btnDashbord">Novo oficio</a>
             <a href="<?= $router->route("painel.cadastrar_product"); ?>" class="btnDashbord">Novo produto</a>
         </div>
     </div>

@@ -322,7 +322,7 @@ body
 {
     position: relative;
     display: grid;
-    min-height: 180px;
+    min-height: 350px;
     background: var(--white);
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0,0.12);
@@ -338,16 +338,6 @@ body
 {
     font-weight: 600;
     color: var(--blue);
-}
-.btnDashbord
-{
-    white-space: nowrap;
-    position: relative;
-    padding: 5px 10px;
-    background: var(--blue);
-    text-decoration: none;
-    color: var(--white);
-    border-radius: 6px;
 }
 .details table
 {

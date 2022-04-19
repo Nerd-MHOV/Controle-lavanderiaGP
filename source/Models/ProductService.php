@@ -10,4 +10,9 @@ class ProductService extends DataLayer
     {
         parent::__construct("product_service", ["service"]);
     }
+
+    public function amountProducts(): int
+    {
+        return (new Product())->find("id_product_service = :pid", "pid={$this->id}")->count();
+    }
 }

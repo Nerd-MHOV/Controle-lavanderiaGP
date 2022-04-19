@@ -43,13 +43,6 @@ $router->get("/sair","Painel:logoff", "painel.logoff");
 
 
 /**
- *  produtos PAINEL
- */
-$router->group('produto');
-$router->get("/cadastrar", "Painel:produtoCadastrar", "painel.produto_cadastrar");
-$router->get("/cadastrar_tipo", "Painel:produtoCadastrarTipo", "painel.produto_cadastrar_tipo");
-
-/**
  *  retirar RESPONSE
  */
 $router->group('retirar');
@@ -67,6 +60,17 @@ $router->group('devolver');
 $router->post("/colaborador", "Response:returnCollaborator", "response.return_collaborator");
 $router->post("/setor", "Response:returnDepartment", "response.return_department");
 $router->post("/finalizar", "Response:returnProduct", "response.return_product");
+
+/**
+ *  produto WEB PRODUCT
+ */
+$router->group('produto');
+$router->get("/novo-tipo", "WebProduct:newType", "web-product.new-type");
+$router->post("/novo-tipo", "WebProduct:registerType", "web-product.register-type");
+$router->get("/novo-oficio","WebProduct:newService", "web-product.new-service");
+$router->post("/novo-oficio", "WebProduct:registerService", "web-product.register-service");
+
+
 
 
 /**

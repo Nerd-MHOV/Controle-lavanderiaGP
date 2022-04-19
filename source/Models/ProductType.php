@@ -4,6 +4,7 @@ namespace Source\Models;
 
 use CoffeeCode\DataLayer\DataLayer;
 
+
 class ProductType extends DataLayer
 {
     public function __construct()
@@ -14,5 +15,10 @@ class ProductType extends DataLayer
     public function products()
     {
         return (new Product())->find("id_product_type = :pid", "pid={$this->id}")->fetch();
+    }
+
+    public function amountProducts(): int
+    {
+        return (new Product())->find("id_product_type = :pid", "pid={$this->id}")->count();
     }
 }

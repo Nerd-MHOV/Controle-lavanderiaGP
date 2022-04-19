@@ -273,13 +273,13 @@ class Response extends Controller
         $id = $data["id_saida"];
         $output = (new Output())->findById($id);
         $returns = new Returns();
-
+        $amountTotal = ($data["nmb_good"] + $data["nmb_bad"]);
         if ($output->id_collaborator == "0") {
             $returns->id_product = $output->id_product;
             $returns->id_department = $output->id_department;
             $returns->id_collaborator = $output->id_collaborator;
             $returns->id_user = $_SESSION["user"];
-            $returns->amount = ($data["nmb_good"] + $data["nmb_bad"]);
+            $returns->amount = $amountTotal;
             $returns->amountBad = $data["nmb_bad"];
             $returns->status_in = $output->status;
             $returns->status_out = ($data["nmb_bad"] > 0) ? "ruim" : "bom";
@@ -307,7 +307,6 @@ class Response extends Controller
             $returns->obs_in = $output->obs;
             $returns->obs_out = $data["obs-modal"] ?? "";
 
-            $newAmount = $returns->amount;
             $returns->save();
             $output->destroy();
         }
@@ -324,7 +323,7 @@ class Response extends Controller
         } else {
             echo $this->ajaxResponse("message", [
                 "type" => "success",
-                "message" => "{$newAmount} {$data["productName"]} devolvido com sucesso!",
+                "message" => "{$amountTotal} {$data["productName"]} devolvido com sucesso!",
                 "id" => $id,
             ]);
         }
