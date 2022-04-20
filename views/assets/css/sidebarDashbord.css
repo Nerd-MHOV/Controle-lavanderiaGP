@@ -482,6 +482,38 @@ body
     color: var(--white);
 }
 
+/* newProductGRIDS */
+
+.grid_newProduct
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.cardBox_newProduct
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid_newProduct_list
+{
+    padding: 20px;
+}
+.recentCustomers_newProduct
+{
+    height: 100%;
+    grid-template-rows: 75px;
+}
+.recentCustomers_newProduct table
+{
+    border-collapse: collapse;
+}
+.container-box-register
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
 /* Responsive design */
 @media (max-width: 1430px)
 {

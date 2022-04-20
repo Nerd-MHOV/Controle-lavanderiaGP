@@ -2,6 +2,7 @@
 
 namespace Source\Controllers;
 
+use Source\Models\Product;
 use Source\Models\ProductService;
 use Source\Models\ProductType;
 use Source\Models\User;
@@ -46,6 +47,21 @@ class WebProduct extends Controller
         $services = (new ProductService())->find()->fetch(true);
         $this->view->addData(['head' => $head, 'services' => $services]);
         echo $this->view->render("theme/pages/product/newService");
+    }
+
+    public function newProduct(): void
+    {
+        $head = $this->seo->optimize(
+            "Cadastrar PRODUTO | " . site("name"),
+            site("desc"),
+            $this->router->route('web-product.new-product'),
+            routeImage("CADASTRAR PRODUTO"),
+        )->render();
+        $types = (new ProductType())->find()->fetch(true);
+        $services = (new ProductService())->find()->fetch(true);
+        $products = (new Product())->find()->fetch(true);
+        $this->view->addData(['head' => $head, 'types' => $types, 'services' => $services, 'products' => $products]);
+        echo $this->view->render("theme/pages/product/newProduct");
     }
 
     public function registerType(array $data): void
@@ -133,5 +149,20 @@ class WebProduct extends Controller
             return;
         }
     }
+
+    public function registerProduct(array $data): void
+    {
+
+        $callback["data"] = $data;
+        echo json_encode($callback);
+    }
+
+    public function filter_type(array $data): void
+    {
+        $callback["data"] = $data;
+        echo json_encode($callback);
+    }
+
+
 
 }

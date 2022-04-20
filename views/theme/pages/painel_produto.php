@@ -6,7 +6,7 @@
         <div>
             <a href="<?= $router->route("web-product.new-type"); ?>" class="btnDashbord">Novo tipo</a>
             <a href="<?= $router->route("web-product.new-service"); ?>" class="btnDashbord">Novo oficio</a>
-            <a href="<?= $router->route("painel.cadastrar_product"); ?>" class="btnDashbord">Novo produto</a>
+            <a href="<?= $router->route("web-product.new-product"); ?>" class="btnDashbord">Novo produto</a>
         </div>
     </div>
     <div class="tablePainel">

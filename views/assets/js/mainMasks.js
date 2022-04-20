@@ -1,5 +1,5 @@
 $(function(){
-	$('[name=cpf]').mask('999.999.999-99');
-	$('[name=celular]').mask('(99) 99999-9999');
-	$('.reais').maskMoney();
+	$('.cpfMask').mask('999.999.999-99');
+	$('.phoneMask').mask('(99) 99999-9999');
+	$('.moneyMask').maskMoney({thousands:'.', decimal:',', allowZero:true, prefix: 'R$ '});
 })

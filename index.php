@@ -69,9 +69,8 @@ $router->get("/novo-tipo", "WebProduct:newType", "web-product.new-type");
 $router->post("/novo-tipo", "WebProduct:registerType", "web-product.register-type");
 $router->get("/novo-oficio","WebProduct:newService", "web-product.new-service");
 $router->post("/novo-oficio", "WebProduct:registerService", "web-product.register-service");
-
-
-
+$router->get("/novo-produto", "WebProduct:newProduct","web-product.new-product");
+$router->post("/novo-produto","WebProduct:registerProduct", "web-product.register-product");
 
 /**
  * ERRORS

@@ -15,7 +15,7 @@
         </div>
 
         <div class="form-register">
-            <form class="form-registerType" action="<?=$router->route("web-product.register-type")?>" method="post">
+            <form class="form-registerType" action="<?=$router->route("web-product.register-type")?>" method="post" autocomplete="off">
                 <div class="box-register">
                     <label for="inp-typeregister">Tipo:</label>
                     <input type="text" name="inp-typeregister" id="inp-typeregister" placeholder="qual o novo tipo...">
