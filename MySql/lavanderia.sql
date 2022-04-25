@@ -81,7 +81,7 @@ CREATE TABLE `department` (
 -- Extraindo dados da tabela `department`
 --
 
-INSERT INTO `department` (`id`, `department`, `created_at`, `update_at`) VALUES
+INSERT INTO `department` (`id`, `department`, `created_at`, updated_at) VALUES
 (1, 'Monitoria', NULL, NULL),
 (2, 'Cozinha', NULL, NULL),
 (3, 'Jardim', NULL, NULL),

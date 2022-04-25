@@ -1,5 +1,4 @@
-<?php $this->layout("theme/_themeDashbord");
-//TODO: GERAR DOC DE RESPONSABILIDADE; ?>
+<?php $this->layout("theme/_themeDashbord");?>
 <!-- cards -->
 <form class="form" action="<?= $router->route("response.withdrawal"); ?>" method="post" autocomplete="off">
     <div class="cardBox cardBox_retirar">

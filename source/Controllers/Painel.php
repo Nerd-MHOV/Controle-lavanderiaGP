@@ -103,7 +103,8 @@ class Painel extends Controller
             $this->router->route('painel.departamento'),
             routeImage("Departamento - Painel")
         )->render();
-        $this->view->addData(['head'=>$head]);
+        $departments = (new Department())->find()->fetch(true);
+        $this->view->addData(['head'=>$head, 'departments' => $departments]);
         echo $this->view->render("theme/pages/painel_departamento");
     }
 

@@ -10,4 +10,22 @@ class Department extends DataLayer
     {
         parent::__construct("department", ["department"]);
     }
+
+    public function departmentHeads (): string
+    {
+        $heads = (new DepartmentHead())->find("id_department = :depart", "depart={$this->id}")->fetch(true);
+        $strHeads = "";
+        $first = true;
+        if(!empty($heads)) {
+            foreach ($heads as $head) {
+                if ($first) {
+                    $strHeads .= $head->first_name;
+                    $first = false;
+                } else {
+                    $strHeads .= " / " . $head->first_name;
+                }
+            }
+        }
+        return $strHeads;
+    }
 }

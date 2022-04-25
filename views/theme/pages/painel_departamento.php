@@ -48,29 +48,15 @@
     <div class="recentCustomers">
         <div class="cardHeader">
             <h2>Departamentos:</h2>
-            <a href="" class="btnDashbord">Novo</a>
+            <a href="<?= $router->route("web-department.new-department") ?>" class="btnDashbord">Novo</a>
         </div>
         <table>
-            <tr>
-                <td><div class="imgBx"><i class="bx bxs-hard-hat"></i></div></td>
-                <td><h4>Monitoria</h4><span>Ariel</span></td>
-            </tr>
-            <tr>
-                <td><div class="imgBx"><i class="bx bxs-hard-hat"></i></div></td>
-                <td><h4>Manutenção</h4><span>Oswaldo</span></td>
-            </tr>
-            <tr>
-                <td><div class="imgBx"><i class="bx bxs-hard-hat"></i></div></td>
-                <td><h4>Monitoria</h4><span>Ativo</span></td>
-            </tr>
-            <tr>
-                <td><div class="imgBx"><i class="bx bxs-hard-hat"></i></div></td>
-                <td><h4>Monitoria</h4><span>Ativo</span></td>
-            </tr>
-            <tr>
-                <td><div class="imgBx"><i class="bx bxs-hard-hat"></i></div></td>
-                <td><h4>Monitoria</h4><span>Ativo</span></td>
-            </tr>
+            <?php
+            $this->insert(
+                "assets/fragments/department/registeredDepartments",
+                ['departments' => $departments]
+            );
+            ?>
         </table>
     </div>
 

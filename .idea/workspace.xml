@@ -2,23 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/product/registeredProducts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/product/select_services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/product/select_types.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/theme/pages/product/newProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/DepartmentHead.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/department/registeredDepartments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/product/select_departments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/theme/pages/department/newDepartment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/WebProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/WebProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Department.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/form.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/js/jquery.maskMoney.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/jquery.maskMoney.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/js/mainMasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/mainMasks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_departamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_departamento.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newService.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newType.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newProduct.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +89,9 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="JSON-Groovy.json.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/assets/fragments/product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/theme/pages/department" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
@@ -94,6 +99,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\theme\pages\department" />
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments\product" />
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\theme\pages\product" />
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments" />
@@ -102,6 +108,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="form.js" />
+    </option>
   </component>
   <component name="RunManager" selected="PHPUnit.controle_lavanderia4.0">
     <configuration name="controle_lavanderia4.0" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -155,7 +166,8 @@
       <workItem from="1649939587428" duration="1056000" />
       <workItem from="1649956944967" duration="13608000" />
       <workItem from="1650285891278" duration="35390000" />
-      <workItem from="1650460226174" duration="14428000" />
+      <workItem from="1650460226174" duration="14751000" />
+      <workItem from="1650896637376" duration="17533000" />
     </task>
     <servers />
   </component>

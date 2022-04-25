@@ -43,7 +43,7 @@ $(function(){
                     $(".login_form_callback").html(view);
                     $(".message").effect("bounce");
                     $("#tbl_registeredTypes").html(su.message.registerType);
-
+                    $("#reloadRegistered").html(su.message.reloadRegistered);
                     return;
                 }
 

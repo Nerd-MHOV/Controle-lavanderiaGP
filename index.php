@@ -71,6 +71,14 @@ $router->get("/novo-oficio","WebProduct:newService", "web-product.new-service");
 $router->post("/novo-oficio", "WebProduct:registerService", "web-product.register-service");
 $router->get("/novo-produto", "WebProduct:newProduct","web-product.new-product");
 $router->post("/novo-produto","WebProduct:registerProduct", "web-product.register-product");
+$router->post("/recarregar-produtos","WebProduct:reloadProducts", "web-product.reload-products");
+
+/**
+ *  departamento WEB DEPARTMENT
+ */
+$router->group('departamento');
+$router->get("/novo-departamento", "WebDepartment:newDepartment", "web-department.new-department");
+$router->post("/novo-departamento", "WebDepartment:registerDepartment", "web-department.register-department");
 
 /**
  * ERRORS

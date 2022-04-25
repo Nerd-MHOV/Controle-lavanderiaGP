@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-*
-{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
-:root
-{
+
+:root {
     --blue: #222f3e; /*#222 #287bff*/
     --lightblue: #d1d1d1; /*#b9d4ff*/
     --white: #fff;
@@ -15,18 +15,18 @@
     --black1: #222;
     --black2: #999;
 }
-body
-{
+
+body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-.container
-{
+
+.container {
     position: relative;
     width: 100%;
 }
-.navigation
-{
+
+.navigation {
     position: fixed;
     width: 300px;
     height: 100%;
@@ -35,40 +35,40 @@ body
     transition: 0.5s;
     overflow: hidden;
 }
-.navigation.active
-{
+
+.navigation.active {
     width: 80px;
 }
-.navigation ul
-{
+
+.navigation ul {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
-.navigation ul li
-{
+
+.navigation ul li {
     position: relative;
     width: 100%;
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
-.navigation ul li:hover
-{
+
+.navigation ul li:hover {
     background: var(--lightblue);
 }
-.navigation ul li.hovered
-{
+
+.navigation ul li.hovered {
     background: var(--white);
 }
-.navigation ul li:nth-child(1)
-{
+
+.navigation ul li:nth-child(1) {
     margin-bottom: 40px;
     pointer-events: none;
 }
-.navigation ul li a
-{
+
+.navigation ul li a {
     position: relative;
     display: block;
     width: 100%;
@@ -76,13 +76,13 @@ body
     text-decoration: none;
     color: var(--white);
 }
+
 .navigation ul li:hover a,
-.navigation ul li.hovered a
-{
+.navigation ul li.hovered a {
     color: var(--blue);
 }
-.navigation ul li a .icon
-{
+
+.navigation ul li a .icon {
     position: relative;
     display: block;
     min-width: 60px;
@@ -90,8 +90,8 @@ body
     line-height: 70px;
     text-align: center;
 }
-.navigation ul li a .logo_peraltas
-{
+
+.navigation ul li a .logo_peraltas {
     position: relative;
     display: block;
     min-width: 60px;
@@ -100,17 +100,17 @@ body
     text-align: center;
     padding: 10px 20px;
 }
-.navigation ul li a .logo_peraltas img
-{
+
+.navigation ul li a .logo_peraltas img {
     width: 30px;
 }
+
 .navigation ul li a .icon ion-icon,
-.navigation ul li a .icon i
-{
+.navigation ul li a .icon i {
     font-size: 1.75em;
 }
-.navigation ul li a .title
-{
+
+.navigation ul li a .title {
     position: relative;
     display: block;
     padding: 0 10px;
@@ -123,8 +123,7 @@ body
 /* curve outside */
 
 .navigation ul li:hover a:before,
-.navigation ul li.hovered a:before
-{
+.navigation ul li.hovered a:before {
     content: '';
     position: absolute;
     right: 0;
@@ -134,18 +133,18 @@ body
     border-radius: 50%;
     pointer-events: none;
 }
-.navigation ul li:hover a:before
-{
+
+.navigation ul li:hover a:before {
     box-shadow: 35px 35px 0 10px var(--lightblue);
 }
-.navigation ul li.hovered a:before
-{
+
+.navigation ul li.hovered a:before {
     box-shadow: 35px 35px 0 10px var(--white);
     z-index: 3;
 }
+
 .navigation ul li:hover a:after,
-.navigation ul li.hovered a:after
-{
+.navigation ul li.hovered a:after {
     content: '';
     position: absolute;
     right: 0;
@@ -155,20 +154,19 @@ body
     border-radius: 50%;
     pointer-events: none;
 }
-.navigation ul li:hover a:after
-{
+
+.navigation ul li:hover a:after {
     box-shadow: 35px -35px 0 10px var(--lightblue);
     z-index: 1;
 }
-.navigation ul li.hovered a:after
-{
+
+.navigation ul li.hovered a:after {
     box-shadow: 35px -35px 0 10px var(--white);
     z-index: 2;
 }
 
 /* main */
-.main
-{
+.main {
     position: absolute;
     width: calc(100% - 300px);
     left: 300px;
@@ -176,13 +174,13 @@ body
     background: var(--white);
     transition: 0.5s;
 }
-.main.active
-{
+
+.main.active {
     width: calc(100% - 80px);
     left: 80px;
 }
-.topbar
-{
+
+.topbar {
     width: 100%;
     height: 60px;
     display: flex;
@@ -190,8 +188,8 @@ body
     align-items: center;
     padding: 0 10px;
 }
-.toggle
-{
+
+.toggle {
     position: relative;
     top: 0;
     width: 60px;
@@ -202,19 +200,19 @@ body
     font-size: 2.5em;
     cursor: pointer;
 }
-.search
-{
+
+.search {
     position: relative;
     width: 400px;
     margin: 0 10px;
 }
-.search label
-{
+
+.search label {
     position: relative;
     width: 100%;
 }
-.search label input
-{
+
+.search label input {
     width: 100%;
     height: 40px;
     border-radius: 40px;
@@ -224,16 +222,24 @@ body
     outline: none;
     border: 1px solid var(--black2);
 }
+
 .search label ion-icon,
-.search label i
-{
+.search label i {
     position: absolute;
     top: 0;
     left: 10px;
     font-size: 1.2em;
 }
-.user
-{
+
+.searchRight {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    margin: 20px 0;
+    margin-left: 10px;
+}
+
+.user {
     position: relative;
     width: 40px;
     height: 40px;
@@ -241,8 +247,8 @@ body
     overflow: hidden;
     cursor: pointer;
 }
-.user img
-{
+
+.user img {
     position: absolute;
     top: 0;
     left: 0;
@@ -250,8 +256,8 @@ body
     height: 100%;
     object-fit: cover;
 }
-.cardBox
-{
+
+.cardBox {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -259,53 +265,53 @@ body
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
-.cardBox_retirar
-{
+
+.cardBox_retirar {
     grid-template-columns: repeat(3, 1fr);
 }
-.cardBox .card
-{
+
+.cardBox .card {
     position: relative;
     background: var(--white);
     padding: 30px;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
-.cardBox .card .numbers
-{
+
+.cardBox .card .numbers {
     position: relative;
     font-weight: 500;
     font-size: 2.5em;
     color: var(--blue);
 }
-.cardBox .card .cardName
-{
+
+.cardBox .card .cardName {
     color: var(--black2);
     font-size: 1.1em;
     margin-top: 5px;
 }
-.cardBox .card .iconBx
-{
+
+.cardBox .card .iconBx {
     font-size: 3.5em;
     color: var(--black2);
 }
-.cardBox .card:hover
-{
+
+.cardBox .card:hover {
     background: var(--blue);
 }
+
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .cardName,
 .cardBox .card:hover .iconBx,
 .cardBox .card:hover select,
 .cardBox .card:hover input[type=number],
-.cardBox .card:hover .select2-selection__rendered
-{
+.cardBox .card:hover .select2-selection__rendered {
     color: var(--white);
 }
-.details
-{
+
+.details {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -314,59 +320,60 @@ body
     grid-gap: 30px;
     /*margin-top: 10px;*/
 }
-.dw50
-{
+
+.dw50 {
     grid-template-columns: 1fr 1fr;
 }
-.details .recentOrders
-{
+
+.details .recentOrders {
     position: relative;
     display: grid;
     min-height: 350px;
     background: var(--white);
     padding: 20px;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
     border-radius: 20px;
 }
-.cardHeader
-{
+
+.cardHeader {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
-.cardHeader h2
-{
+
+.cardHeader h2 {
     font-weight: 600;
     color: var(--blue);
 }
-.details table
-{
+
+.details table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-.details table thead td
-{
+
+.details table thead td {
     font-weight: 600;
 }
-.details .recentOrders table tr
-{
+
+.details .recentOrders table tr {
     color: var(--black1);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.details .recentOrders table tr:last-child
-{
+
+.details .recentOrders table tr:last-child {
     border-bottom: none;
 }
-.details .recentOrders table tbody tr:hover
-{
+
+.details .recentOrders table tbody tr:hover {
     background: var(--blue);
     color: var(--white);
 }
-.details .recentOrders table tr td
-{
+
+.details .recentOrders table tr td {
     padding: 10px;
 }
+
 /*.details .recentOrders table tr td:last-child
 {
     text-align: end;
@@ -379,40 +386,39 @@ body
 {
     text-align: center;
 }*/
-.status.delivered
-{
+.status.delivered {
     padding: 2px 4px;
     background: #6dc10b;
     color: var(--white);
     font-size: 14px;
     font-weight: 500;
 }
-.status.delivered
-{
+
+.status.delivered {
     padding: 2px 4px;
     background: #8de02c;
     color: var(--white);
     font-size: 14px;
     font-weight: 500;
 }
-.status.return
-{
+
+.status.return {
     padding: 2px 4px;
     background: #f00;
     color: var(--white);
     font-size: 14px;
     font-weight: 500;
 }
-.status.pending
-{
+
+.status.pending {
     padding: 2px 4px;
     background: #f9ca3f;
     color: var(--white);
     font-size: 14px;
     font-weight: 500;
 }
-.status.inProgress
-{
+
+.status.inProgress {
     white-space: nowrap;
     padding: 2px 4px;
     background: #1795ce;
@@ -420,26 +426,26 @@ body
     font-size: 14px;
     font-weight: 500;
 }
-.recentCustomers
-{
+
+.recentCustomers {
     position: relative;
     display: grid;
     min-height: 500px;
     padding: 20px;
     background: var(--white);
-    box-shadow: 0 7px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
     border-radius: 20px;
 }
-.recentCustomers .imgBx
-{
+
+.recentCustomers .imgBx {
     position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
 }
-.recentCustomers .imgBx img
-{
+
+.recentCustomers .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -447,8 +453,8 @@ body
     height: 100%;
     object-fit: cover;
 }
-.recentCustomers .imgBx i
-{
+
+.recentCustomers .imgBx i {
     font-size: 2.5em;
     position: absolute;
     top: 0;
@@ -457,156 +463,154 @@ body
     height: 100%;
     object-fit: cover;
 }
-.recentCustomers table tr:hover
-{
+
+.recentCustomers table tr:hover {
     background: var(--blue);
     color: var(--white);
 }
-.recentCustomers table tr td
-{
+
+.recentCustomers table tr td {
     padding: 12px 10px;
 }
-.recentCustomers table tr td h4
-{
+
+.recentCustomers table tr td h4 {
     font-size: 16px;
     font-width: 500;
     line-height: 1.2em;
 }
-.recentCustomers table tr td span
-{
+
+.recentCustomers table tr td span {
     font-size: 14px;
     color: var(--black2);
 }
-.recentCustomers table tr:hover td span
-{
+
+.recentCustomers table tr:hover td span {
     color: var(--white);
 }
 
 /* newProductGRIDS */
 
-.grid_newProduct
-{
+.grid_newProduct {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
 }
-.cardBox_newProduct
-{
+
+.cardBox_newProduct {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.grid_newProduct_list
-{
+
+.grid_newProduct_list {
     padding: 20px;
 }
-.recentCustomers_newProduct
-{
+
+.recentCustomers_newProduct {
     height: 100%;
     grid-template-rows: 75px;
 }
-.recentCustomers_newProduct table
-{
+
+.recentCustomers_newProduct table {
     border-collapse: collapse;
 }
-.container-box-register
-{
+
+.container-box-register {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
 /* Responsive design */
-@media (max-width: 1430px)
-{
-    .dw50
-    {
+@media (max-width: 1650px) {
+    .grid_newProduct {
+        grid-template-columns: 3fr;
+    }
+}
+
+@media (max-width: 1430px) {
+    .dw50 {
         grid-template-columns: 1fr;
     }
 }
-@media (max-width: 1412px)
-{
-    .cardBox_retirar
-    {
+
+@media (max-width: 1412px) {
+    .cardBox_retirar {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media (max-width: 1112px)
-{
-    .cardBox_retirar
-    {
+
+@media (max-width: 1112px) {
+    .cardBox_retirar {
         grid-template-columns: 1fr;
     }
 }
-@media (max-width: 991px)
-{
-    .navigation
-    {
+
+@media (max-width: 991px) {
+    .navigation {
         left: -300px;
     }
-    .navigation.active
-    {
+
+    .navigation.active {
         width: 300px;
         left: 0;
     }
-    .main
-    {
+
+    .main {
         width: 100%;
         left: 0;
     }
-    .main.active
-    {
+
+    .main.active {
         left: 300px;
     }
-    .cardBox
-    {
+
+    .cardBox {
         grid-template-columns: repeat(2, 1fr);
     }
-    .cardBox_retirar
-    {
+
+    .cardBox_retirar {
         grid-template-columns: 1fr;
     }
 }
-@media (max-width: 768px)
-{
-    .details
-    {
+
+@media (max-width: 768px) {
+    .details {
         grid-template-columns: 1fr;
     }
-    .recentOrders
-    {
+
+    .recentOrders {
         overflow-x: auto;
     }
 }
-@media (max-width: 480px)
-{
-    .cardBox
-    {
+
+@media (max-width: 480px) {
+    .cardBox {
         grid-template-columns: 1fr;
     }
-    .cardHeader h2
-    {
+
+    .cardHeader h2 {
         font-size: 20px;
     }
-    .user
-    {
+
+    .user {
         min-width: 40px;
     }
-    .navigation
-    {
+
+    .navigation {
         width: 100%;
         left: -100%;
         z-index: 1000;
     }
-    .navigation.active
-    {
+
+    .navigation.active {
         width: 100%;
         left: 0;
     }
-    .toggle
-    {
+
+    .toggle {
         z-index: 10001;
     }
-    .main.active .toggle
-    {
+
+    .main.active .toggle {
         position: fixed;
         right: 0px;
         color: var(--white);
