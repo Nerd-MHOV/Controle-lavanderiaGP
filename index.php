@@ -1,7 +1,8 @@
 <?php
 ob_start();
 session_start();
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
+
 use Source\Support\Painel;
 use CoffeeCode\Router\Router;
 use Source\Controllers\Web;
@@ -11,13 +12,13 @@ $router->namespace("Source\Controllers");
 
 
 /**
-* login WEB
-*/
+ * login WEB
+ */
 $router->group(null);
-$router->get("/","Web:login", "web.login");
-$router->get("/cadastrar","Web:register","web.register");
-$router->get("/recuperar","Web:forget","web.forget");
-$router->get("/senha/{email}/{forget}","Web:reset","web.reset");
+$router->get("/", "Web:login", "web.login");
+$router->get("/cadastrar", "Web:register", "web.register");
+$router->get("/recuperar", "Web:forget", "web.forget");
+$router->get("/senha/{email}/{forget}", "Web:reset", "web.reset");
 
 /**
  * login AUTH
@@ -32,25 +33,25 @@ $router->post("/reset", "Auth:reset", "auth.reset");
  *  home PAINEL
  */
 $router->group('painel');
-$router->get("/home","Painel:home", "painel.home");
-$router->get("/retirar","Painel:retirar", "painel.retirar");
-$router->get("/devolver","Painel:devolver", "painel.devolver");
-$router->get("/produto","Painel:produto", "painel.produto");
-$router->get("/departamento","Painel:departamento", "painel.departamento");
-$router->get("/relatorio","Painel:relatorio", "painel.relatorio");
-$router->get("/estoque","Painel:estoque", "painel.estoque");
-$router->get("/sair","Painel:logoff", "painel.logoff");
+$router->get("/home", "Painel:home", "painel.home");
+$router->get("/retirar", "Painel:retirar", "painel.retirar");
+$router->get("/devolver", "Painel:devolver", "painel.devolver");
+$router->get("/produto", "Painel:produto", "painel.produto");
+$router->get("/departamento", "Painel:departamento", "painel.departamento");
+$router->get("/relatorio", "Painel:relatorio", "painel.relatorio");
+$router->get("/estoque", "Painel:estoque", "painel.estoque");
+$router->get("/sair", "Painel:logoff", "painel.logoff");
 
 
 /**
  *  retirar RESPONSE
  */
 $router->group('retirar');
-$router->post("/colaborador", "Response:collaborator","response.colaborador");
+$router->post("/colaborador", "Response:collaborator", "response.colaborador");
 $router->post("/produtos", "Response:products", "response.produtos");
 $router->post("/produtos/tipo", "Response:productType", "response.typeproducts");
 $router->post("/produtos/oficio", "Response:productService", "response.product_service");
-$router->post("/retirada", "Response:withdrawal","response.withdrawal");
+$router->post("/retirada", "Response:withdrawal", "response.withdrawal");
 $router->get("/documento/{id}", "Withdraw:document", "withdraw.document");
 
 /**
@@ -67,11 +68,11 @@ $router->post("/finalizar", "Response:returnProduct", "response.return_product")
 $router->group('produto');
 $router->get("/novo-tipo", "WebProduct:newType", "web-product.new-type");
 $router->post("/novo-tipo", "WebProduct:registerType", "web-product.register-type");
-$router->get("/novo-oficio","WebProduct:newService", "web-product.new-service");
+$router->get("/novo-oficio", "WebProduct:newService", "web-product.new-service");
 $router->post("/novo-oficio", "WebProduct:registerService", "web-product.register-service");
-$router->get("/novo-produto", "WebProduct:newProduct","web-product.new-product");
-$router->post("/novo-produto","WebProduct:registerProduct", "web-product.register-product");
-$router->post("/recarregar-produtos","WebProduct:reloadProducts", "web-product.reload-products");
+$router->get("/novo-produto", "WebProduct:newProduct", "web-product.new-product");
+$router->post("/novo-produto", "WebProduct:registerProduct", "web-product.register-product");
+$router->post("/recarregar-produtos", "WebProduct:reloadProducts", "web-product.reload-products");
 
 /**
  *  departamento WEB DEPARTMENT
@@ -79,6 +80,8 @@ $router->post("/recarregar-produtos","WebProduct:reloadProducts", "web-product.r
 $router->group('departamento');
 $router->get("/novo-departamento", "WebDepartment:newDepartment", "web-department.new-department");
 $router->post("/novo-departamento", "WebDepartment:registerDepartment", "web-department.register-department");
+$router->get("/novo-colaborador", "WebDepartment:newCollaborator", "web-department.new-collaborator");
+$router->post("/novo-colaborador", "WebDepartment:registerCollaborator", "web-department.register-collaborator");
 
 /**
  * ERRORS

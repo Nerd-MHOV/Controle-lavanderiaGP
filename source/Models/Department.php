@@ -4,6 +4,9 @@ namespace Source\Models;
 
 use CoffeeCode\DataLayer\DataLayer;
 
+/**
+ * @property string|null department
+ */
 class Department extends DataLayer
 {
     public function __construct()

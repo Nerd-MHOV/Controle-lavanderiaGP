@@ -6,7 +6,7 @@
     <!-- order details list-->
     <div class="recentOrders">
         <div class="cardHeader">
-            <h2>Cadastrar Departamento:</h2>
+            <h2>Cadastrar Colaborador:</h2>
             <a href="<?= $router->route("painel.departamento") ?>" class="btnDashbord">voltar</a>
         </div>
 
@@ -15,10 +15,10 @@
         </div>
 
         <div class="form-register">
-            <form class="form-registerType" action="<?=$router->route("web-department.register-department")?>" method="post" autocomplete="off">
+            <form class="form-registerType" action="<?=$router->route("web-department.register-collaborator")?>" method="post" autocomplete="off">
                 <div class="box-register">
-                    <label for="inp_department">Departamento:</label>
-                    <input type="text" name="inp_department" id="inp_department" placeholder="qual o novo departamento...">
+                    <label for="inp_department">Colaborador:</label>
+                    <input type="text" name="inp_department" id="inp_department" placeholder="qual o nome do novo collaborador...">
                 </div>
                 <div class="buttons-form">
                     <input class="btn btn-blue" type="submit" value="cadastrar!"/>

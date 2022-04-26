@@ -60,7 +60,7 @@ CREATE TABLE `collaborator` (
 -- Extraindo dados da tabela `collaborator`
 --
 
-INSERT INTO `collaborator` (`id`, `id_department`, `collaborator`, `cpf`, `type`, `created_at`, `updated_at`) VALUES
+INSERT INTO `collaborator` (`id`, `id_department`, `collaborator`, `cpf`, id_type, `created_at`, `updated_at`) VALUES
 (0, 0, 'SETOR', '000.000.000-00', 'SETOR', NULL, NULL),
 (1, 1, 'Matheus Henrique de Oliveira Viana', '480.111.628-02', 'mesalista', NULL, NULL);
 

@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoTestManager">
+    <enabled-run-configurations>
+      <run-configuration type="PHPUnitRunConfigurationType" name="controle_lavanderia4.0" />
+    </enabled-run-configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Models/DepartmentHead.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/department/registeredDepartments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/product/select_departments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/theme/pages/department/newDepartment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phpunit.phar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/CollaboratorType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/department/registeredCollaborators.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/department/select_collaboratorTypes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/department/tableCollaborators.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/theme/pages/department/newCollaborator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MySql/lavanderia.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Controllers/WebProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/WebProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Collaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Collaborator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Models/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Department.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/form.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/js/mainMasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/mainMasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/js/painel.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/painel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/department/newDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/department/newDepartment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_departamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_departamento.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newProduct.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +42,9 @@
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="2659ce3a-3e6d-48ac-bda9-86c49a92c04f" />
     </execution>
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,6 +67,12 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost/controle_lavanderia4.0" id="16b51e95-bc38-460f-9122-d6c92af9d6d3" name="teste" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
     <include_path>
@@ -91,19 +106,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="JSON-Groovy.json.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/theme/pages/department" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
+    <property name="settings.editor.selected.configurable" value="proofread" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments\department" />
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\theme\pages\department" />
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments\product" />
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\theme\pages\product" />
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments" />
-      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\MySql" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets" />
@@ -114,30 +129,36 @@
       <command value="form.js" />
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.controle_lavanderia4.0">
-    <configuration name="controle_lavanderia4.0" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner directory="$PROJECT_DIR$" />
+  <component name="RunManager" selected="PHP Web Page.Lavanderia">
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/controle_lavanderia4.0/index.php">
       <method v="2" />
     </configuration>
-    <configuration name="Response.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/Controllers/Response.php">
+    <configuration name="controle_lavanderia4.0" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 8.1" />
         </PhpTestInterpreterSettings>
       </CommandLine>
+      <TestRunner coverage_engine="PHPDBG" directory="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="PHP Script.index.php" />
+      <item itemvalue="PHPUnit.controle_lavanderia4.0" />
+      <item itemvalue="PHP Web Page.Lavanderia" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.controle_lavanderia4.0" />
-        <item itemvalue="PHP Script.Response.php" />
+        <item itemvalue="JavaScript Debug.index.php" />
+        <item itemvalue="JavaScript Debug.Lavanderia" />
+        <item itemvalue="PHP Script.index.php" />
       </list>
     </recent_temporary>
   </component>
   <component name="SQLScriptSettings">
     <option name="matrix">
       <map>
-        <entry key="MARIADB.CreateComplete" value="Reformat=0" />
+        <entry key="MARIADB.CreateComplete" value="CreateOrReplace=1, CreateIfNotExists=1, ConstraintContext=CONSTRAINT_IN_TABLE, Reformat=0" />
       </map>
     </option>
     <option name="outputLayout" value="File per object by schema.groovy" />
@@ -167,7 +188,8 @@
       <workItem from="1649956944967" duration="13608000" />
       <workItem from="1650285891278" duration="35390000" />
       <workItem from="1650460226174" duration="14751000" />
-      <workItem from="1650896637376" duration="17533000" />
+      <workItem from="1650896637376" duration="17914000" />
+      <workItem from="1650977481176" duration="15534000" />
     </task>
     <servers />
   </component>
@@ -188,7 +210,14 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/controle_lavanderia4_0@controle_lavanderia4_0.xml" NAME="controle_lavanderia4.0 Coverage Results" MODIFIED="1648850123261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/controle_lavanderia4_0$Lavanderia.dat" NAME="Lavanderia Coverage Results" MODIFIED="1651007183870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/controle_lavanderia4_0$index_php__1_.dat" NAME="Lavanderia Coverage Results" MODIFIED="1651007099912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/controle_lavanderia4_0$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1650992448927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/controle_lavanderia4_0@controle_lavanderia4_0.xml" NAME="controle_lavanderia4.0 Coverage Results" MODIFIED="1651007131608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -2,6 +2,8 @@
 
 namespace Source\Controllers;
 
+use Source\Models\Collaborator;
+use Source\Models\CollaboratorType;
 use Source\Models\Department;
 use Source\Models\ProductService;
 use Source\Models\ProductType;
@@ -24,7 +26,7 @@ class WebDepartment extends Controller
     public function newDepartment(): void
     {
         $head = $this->seo->optimize(
-            "Cadastrar DEPARTAMENTO | " . site("name"),
+            "Cadastrar Departamento | " . site("name"),
             site("desc"),
             $this->router->route("web-department.new-department"),
             routeImage("CADASTRAR DEPARTAMENTO"),
@@ -32,6 +34,26 @@ class WebDepartment extends Controller
         $departments = (new Department())->find()->fetch(true);
         $this->view->addData(['head' => $head, 'departments' => $departments]);
         echo $this->view->render("theme/pages/department/newDepartment");
+    }
+
+    public function newCollaborator(): void
+    {
+        $head = $this->seo->optimize(
+            "Cadastrar Colaborador | " . site("name"),
+            site("desc"),
+            $this->router->route("web-department.new-collaborator"),
+            routeImage("CADASTRAR COLABORADOR"),
+        )->render();
+        $collaborators = (new Collaborator())->find("id_department != 0")->fetch(true);
+        $departments = (new Department())->find()->fetch(true);
+        $types = (new CollaboratorType())->find()->fetch(true);
+        $this->view->addData([
+            'head' => $head,
+            'collaborators' => $collaborators,
+            'departments' => $departments,
+            'types' => $types
+        ]);
+        echo $this->view->render("theme/pages/department/newCollaborator");
     }
 
     public function registerDepartment(array $data): void
@@ -75,5 +97,13 @@ class WebDepartment extends Controller
             ]);
             return;
         }
+    }
+
+    public function registerCollaborator(array $data) : void
+    {
+        
+
+        $callback["data"] = $data;
+        echo json_encode($callback);
     }
 }

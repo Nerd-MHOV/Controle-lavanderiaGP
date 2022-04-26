@@ -104,7 +104,8 @@ class Painel extends Controller
             routeImage("Departamento - Painel")
         )->render();
         $departments = (new Department())->find()->fetch(true);
-        $this->view->addData(['head'=>$head, 'departments' => $departments]);
+        $collaborators = (new Collaborator())->find("id_department != 0")->fetch(true);
+        $this->view->addData(['head'=>$head, 'departments' => $departments, 'collaborators' => $collaborators]);
         echo $this->view->render("theme/pages/painel_departamento");
     }
 

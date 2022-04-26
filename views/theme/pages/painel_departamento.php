@@ -4,7 +4,7 @@
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Colaboradores:</h2>
-            <a href="" class="btnDashbord">Novo</a>
+            <a href=" <?=$router->route("web-department.new-collaborator") ?>" class="btnDashbord">Novo</a>
         </div>
         <table>
             <thead>
@@ -16,30 +16,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Matheus Henrique</td>
-                <td>Monitoria</td>
-                <td>Mensalista</td>
-                <td><span class="status delivered">Ativo</span></td>
-            </tr>
-            <tr>
-                <td>Fernando Amaral</td>
-                <td>Manutenção</td>
-                <td>Diarista</td>
-                <td><span class="status inProgress">Disponivel</span></td>
-            </tr>
-            <tr>
-                <td>Matheus Henrique</td>
-                <td>Monitoria</td>
-                <td>Mensalista</td>
-                <td><span class="status return">Demitido</span></td>
-            </tr>
-            <tr>
-                <td>Gustavo Henrique</td>
-                <td>Monitoria</td>
-                <td>Diarista</td>
-                <td><span class="status pending">Fase de teste</span></td>
-            </tr>
+            <?php
+            $this->insert("assets/fragments/department/tableCollaborators", [
+                    'collaborators' => $collaborators
+            ])
+            ?>
             </tbody>
         </table>
     </div>

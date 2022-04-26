@@ -116,10 +116,19 @@
 }
 
 .form-registerType input[type=text],
-.form-registerType select{
+.form-registerType .selectForm{
     width: 100%;
     padding: 15px;
     font-size: 20px;
     text-align: center;
     border-radius: 50px;
 }
+
+.form-registerType .selectForm{
+    border: 2px solid;
+    background: white;
+    min-width: 250px;
+    height: 58px;
+    padding: 3px;
+}
+
