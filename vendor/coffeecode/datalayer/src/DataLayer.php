@@ -2,7 +2,6 @@
 
 namespace CoffeeCode\DataLayer;
 
-use Exception;
 use PDO;
 use PDOException;
 use stdClass;
@@ -16,40 +15,43 @@ abstract class DataLayer
     use CrudTrait;
 
     /** @var string $entity database table */
-    private $entity;
+    private string $entity;
 
     /** @var string $primary table primary key field */
-    private $primary;
+    private string $primary;
 
     /** @var array $required table required fields */
-    private $required;
+    private array $required;
 
-    /** @var string $timestamps control created and updated at */
-    private $timestamps;
+    /** @var bool $timestamps control created and updated at */
+    private bool $timestamps;
 
-    /** @var string */
-    protected $statement;
+    /** @var array|null */
+    private ?array $database;
 
-    /** @var string */
-    protected $params;
+    /** @var string|null */
+    protected ?string $statement = null;
 
-    /** @var string */
-    protected $group;
+    /** @var array|null */
+    protected ?array $params = null;
 
-    /** @var string */
-    protected $order;
+    /** @var string|null */
+    protected ?string $group = null;
 
-    /** @var int */
-    protected $limit;
+    /** @var string|null */
+    protected ?string $order = null;
 
-    /** @var int */
-    protected $offset;
+    /** @var string|null */
+    protected ?string $limit = null;
 
-    /** @var \PDOException|null */
-    protected $fail;
+    /** @var string|null */
+    protected ?string $offset = null;
+
+    /** @var PDOException|null */
+    protected ?PDOException $fail = null;
 
     /** @var object|null */
-    protected $data;
+    protected ?object $data = null;
 
     /**
      * DataLayer constructor.
@@ -58,12 +60,18 @@ abstract class DataLayer
      * @param string $primary
      * @param bool $timestamps
      */
-    public function __construct(string $entity, array $required, string $primary = 'id', bool $timestamps = true)
-    {
+    public function __construct(
+        string $entity,
+        array $required,
+        string $primary = 'id',
+        bool $timestamps = true,
+        array $database = null
+    ) {
         $this->entity = $entity;
         $this->primary = $primary;
         $this->required = $required;
         $this->timestamps = $timestamps;
+        $this->database = $database;
     }
 
     /**
@@ -106,12 +114,13 @@ abstract class DataLayer
         return ($this->data->$name ?? null);
     }
 
-    /*
-    * @return PDO mode
-    */
-    public function columns($mode = PDO::FETCH_OBJ)
+    /**
+     * @param int $mode
+     * @return array|null
+     */
+    public function columns($mode = PDO::FETCH_OBJ): ?array
     {
-        $stmt = Connect::getInstance()->prepare("DESCRIBE {$this->entity}");
+        $stmt = Connect::getInstance($this->database)->prepare("DESCRIBE {$this->entity}");
         $stmt->execute($this->params);
         return $stmt->fetchAll($mode);
     }
@@ -126,9 +135,9 @@ abstract class DataLayer
     }
 
     /**
-     * @return PDOException|Exception|null
+     * @return PDOException|null
      */
-    public function fail()
+    public function fail(): ?PDOException
     {
         return $this->fail;
     }
@@ -203,12 +212,14 @@ abstract class DataLayer
 
     /**
      * @param bool $all
-     * @return array|mixed|null
+     * @return static|array|null
      */
-    public function fetch(bool $all = false)
+    public function fetch(bool $all = false): array|static|null
     {
         try {
-            $stmt = Connect::getInstance()->prepare($this->statement . $this->group . $this->order . $this->limit . $this->offset);
+            $stmt = Connect::getInstance($this->database)->prepare(
+                $this->statement . $this->group . $this->order . $this->limit . $this->offset
+            );
             $stmt->execute($this->params);
 
             if (!$stmt->rowCount()) {
@@ -231,7 +242,7 @@ abstract class DataLayer
      */
     public function count(): int
     {
-        $stmt = Connect::getInstance()->prepare($this->statement);
+        $stmt = Connect::getInstance($this->database)->prepare($this->statement);
         $stmt->execute($this->params);
         return $stmt->rowCount();
     }
@@ -243,30 +254,32 @@ abstract class DataLayer
     {
         $primary = $this->primary;
         $id = null;
+        $save = null;
 
         try {
             if (!$this->required()) {
-                throw new Exception("Preencha os campos necessários");
+                throw new PDOException("Preencha os campos necessários");
             }
 
             /** Update */
             if (!empty($this->data->$primary)) {
                 $id = $this->data->$primary;
-                $this->update($this->safe(), "{$this->primary} = :id", "id={$id}");
+                $save = $this->update($this->safe(), "{$this->primary} = :id", "id={$id}");
             }
 
             /** Create */
             if (empty($this->data->$primary)) {
                 $id = $this->create($this->safe());
+                $save = $id;
             }
 
-            if (!$id) {
+            if ($save === null) {
                 return false;
             }
 
             $this->data = $this->findById($id)->data();
             return true;
-        } catch (Exception $exception) {
+        } catch (PDOException $exception) {
             $this->fail = $exception;
             return false;
         }
@@ -295,7 +308,7 @@ abstract class DataLayer
         $data = (array)$this->data();
         foreach ($this->required as $field) {
             if (empty($data[$field])) {
-                if(!is_int($data[$field])){
+                if (!is_int($data[$field])) {
                     return false;
                 }
             }

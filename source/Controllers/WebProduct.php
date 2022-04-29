@@ -3,6 +3,7 @@
 namespace Source\Controllers;
 
 use Source\Models\Department;
+use Source\Models\Input;
 use Source\Models\Product;
 use Source\Models\ProductService;
 use Source\Models\ProductType;
@@ -255,10 +256,16 @@ class WebProduct extends Controller
         $product->id_product_service = $data["select_service"];
         $product->product = $data["inp_product"];
         $product->unitary_value = $data["inp_unitaryValue"];
-        $id_product = $product->save();
+        $product->save();
+        $id_product = $product->id;
 
+        $input = (new Input());
+        $input->id_product = $id_product;
+        $input->id_department = $data["select_department"];
+        $input->amount = $data["inp_amount"];
+        $input->save();
 
-        if ($product->fail()) {
+        if ($product->fail() || $input->fail()) {
             $debug = $product->fail()->getMessage();
             echo $this->ajaxResponse("message", [
                 "type" => "error",
@@ -277,9 +284,6 @@ class WebProduct extends Controller
             ]);
             return;
         }
-
-        $callback["data"] = $data;
-        echo json_encode($callback);
     }
 
     /**

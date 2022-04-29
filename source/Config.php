@@ -2,7 +2,7 @@
 setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
 
-if ($_SERVER["SERVER_NAME"] == "localhost") {
+if ($_SERVER["SERVER_NAME"] == "localhost" || $_SERVER["SERVER_NAME"] == "PhpStorm 2021.3.3") {
     require __DIR__ . "/Minify.php";
     require __DIR__ . "/MinifyDashbord.php";
 

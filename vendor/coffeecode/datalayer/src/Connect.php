@@ -11,30 +11,35 @@ use PDOException;
  */
 class Connect
 {
-    /** @var PDO */
-    private static $instance;
+    /** @var array */
+    private static array $instance;
 
-    /** @var PDOException */
-    private static $error;
+    /** @var PDOException|null */
+    private static ?PDOException $error = null;
 
     /**
-     * @return PDO
+     * @param array|null $database
+     * @return PDO|null
      */
-    public static function getInstance(): ?PDO
+    public static function getInstance(array $database = null): ?PDO
     {
-        if (empty(self::$instance)) {
+        $dbConf = $database ?? DATA_LAYER_CONFIG;
+        $dbName = "{$dbConf["driver"]}-{$dbConf["dbname"]}@{$dbConf["host"]}";
+        
+        if (empty(self::$instance[$dbName])) {
             try {
-                self::$instance = new PDO(
-                    DATA_LAYER_CONFIG["driver"] . ":host=" . DATA_LAYER_CONFIG["host"] . ";dbname=" . DATA_LAYER_CONFIG["dbname"] . ";port=" . DATA_LAYER_CONFIG["port"],
-                    DATA_LAYER_CONFIG["username"],
-                    DATA_LAYER_CONFIG["passwd"],
-                    DATA_LAYER_CONFIG["options"]
+                self::$instance[$dbName] = new PDO(
+                    $dbConf["driver"] . ":host=" . $dbConf["host"] . ";dbname=" . $dbConf["dbname"] . ";port=" . $dbConf["port"],
+                    $dbConf["username"],
+                    $dbConf["passwd"],
+                    $dbConf["options"]
                 );
             } catch (PDOException $exception) {
                 self::$error = $exception;
             }
         }
-        return self::$instance;
+
+        return self::$instance[$dbName];
     }
 
 

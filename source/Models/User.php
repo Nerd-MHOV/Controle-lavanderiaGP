@@ -42,7 +42,7 @@ class User extends DataLayer
     protected function validateUser(): bool
     {
         if(empty($this->user) || !filter_var($this->user, FILTER_DEFAULT)){
-            $this->fail = new \Exception("Informe um usuario válido");
+            $this->fail = new Exception("Informe um usuario válido");
             return false;
         }
 
@@ -54,7 +54,7 @@ class User extends DataLayer
         }
 
         if ($userByUser) {
-            $this->fail = new \Exception("O usuario informado já está em uso");
+            $this->fail = new Exception("O usuario informado já está em uso");
             return false;
         }
 
@@ -64,7 +64,7 @@ class User extends DataLayer
     protected function validateEmail(): bool
     {
         if(empty($this->email) || !filter_var($this->email, FILTER_VALIDATE_EMAIL)){
-            $this->fail = new \Exception("Informe um e-mail válido");
+            $this->fail = new Exception("Informe um e-mail válido");
             return false;
         }
 
@@ -76,7 +76,7 @@ class User extends DataLayer
         }
 
         if ($userByEmail) {
-            $this->fail = new \Exception("O e-mail informado já está em uso");
+            $this->fail = new Exception("O e-mail informado já está em uso");
             return false;
         }
 

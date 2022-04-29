@@ -7,9 +7,9 @@
         <!-- search -->
         <div class="search">
             <label>
-                <input type="text" placeholder="Search here">
+                <input type="text" placeholder="Buscar produto">
                 <i class='bx bx-search'></i>
-                <!--<img style="width: 100%; max-width:200px" src="<?=asset("images/GrupoperaltasCompleto.png")?>" alt="LogoCompleta">-->
+                <!--<img style="width: 100%; max-width:200px" src="<?= asset("images/GrupoperaltasCompleto.png") ?>" alt="LogoCompleta">-->
             </label>
         </div>
     </div>
@@ -17,7 +17,9 @@
         <table>
             <thead>
             <tr>
-                <th colspan="2">Produto</th>
+                <th>Tipo</th>
+                <th>Produto</th>
+                <th>Oficio</th>
                 <th>Departamento</th>
                 <th>Estoque</th>
                 <th>Pendente</th>
@@ -25,38 +27,23 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Camiseta</td>
-                <td>Amarela</td>
-                <td>Monitoria</td>
-                <td>15</td>
-                <td>15</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>Camiseta</td>
-                <td>Amarela</td>
-                <td>Monitoria</td>
-                <td>15</td>
-                <td>15</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>Camiseta</td>
-                <td>Amarela</td>
-                <td>Monitoria</td>
-                <td>15</td>
-                <td>15</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>Camiseta</td>
-                <td>Amarela</td>
-                <td>Monitoria</td>
-                <td>15</td>
-                <td>15</td>
-                <td>30</td>
-            </tr>
+            <?php
+            if (!empty($products)):
+                foreach ($products as $product):
+                    ?>
+                    <tr>
+                        <td><?= $product->productType()->product_type ?></td>
+                        <td><?= $product->product ?></td>
+                        <td><?= $product->productService()->service ?></td>
+                        <td><?= $product->department()->department ?></td>
+                        <td><?= $product->inInventory() ?></td>
+                        <td><?= $product->inOutput() ?></td>
+                        <td><?= $product->amountOutInv()?></td>
+                    </tr>
+                <?php
+                endforeach;
+            endif;
+            ?>
             </tbody>
         </table>
     </div>

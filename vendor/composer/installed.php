@@ -5,18 +5,18 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'b1fc287f331ad7239715a59f3970757a23f1ca06',
+        'reference' => '2946e20f7d6335eb2163e016c9660f9edf6bb482',
         'name' => 'nerd-mhov/controle_lavanderia4.0',
         'dev' => true,
     ),
     'versions' => array(
         'coffeecode/datalayer' => array(
-            'pretty_version' => '1.1.8',
-            'version' => '1.1.8.0',
+            'pretty_version' => '2.0.6',
+            'version' => '2.0.6.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../coffeecode/datalayer',
             'aliases' => array(),
-            'reference' => '52e209190752eccc0bfd8ff3abcdd607ed4c01c1',
+            'reference' => 'acd0282698a9a16846c0bee72dcec0284fdc6600',
             'dev_requirement' => false,
         ),
         'coffeecode/optimizer' => array(
@@ -58,12 +58,12 @@
             'dev_requirement' => false,
         ),
         'matthiasmullie/minify' => array(
-            'pretty_version' => '1.3.67',
-            'version' => '1.3.67.0',
+            'pretty_version' => '1.3.68',
+            'version' => '1.3.68.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../matthiasmullie/minify',
             'aliases' => array(),
-            'reference' => 'acaee1b7ca3cd67a39d7f98673cacd7e4739a8d9',
+            'reference' => 'c00fb02f71b2ef0a5f53fe18c5a8b9aa30f48297',
             'dev_requirement' => false,
         ),
         'matthiasmullie/path-converter' => array(
@@ -81,7 +81,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'b1fc287f331ad7239715a59f3970757a23f1ca06',
+            'reference' => '2946e20f7d6335eb2163e016c9660f9edf6bb482',
             'dev_requirement' => false,
         ),
         'phenx/php-font-lib' => array(

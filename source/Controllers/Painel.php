@@ -8,6 +8,7 @@ use Source\Models\Output;
 use Source\Models\Product;
 use Source\Models\User;
 use CoffeeCode\DataLayer\DataLayer;
+use Source\Controllers\Controller;
 
 
 class Painel extends Controller
@@ -117,7 +118,8 @@ class Painel extends Controller
           $this->router->route('painel.estoque'),
           routeImage("Estoque itens")
         )->render();
-        $this->view->addData(['head'=>$head]);
+        $products = (new Product())->find()->fetch(true);
+        $this->view->addData(['head'=>$head,'products'=>$products]);
         echo $this->view->render("theme/pages/painel_estoque");
     }
 

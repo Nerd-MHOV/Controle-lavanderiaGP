@@ -9,8 +9,12 @@ use Source\Models\ProductService;
 use Source\Models\ProductType;
 use Source\Models\User;
 
+
 class WebDepartment extends Controller
 {
+    /**
+     * @param $router
+     */
     public function __construct($router)
     {
         parent::__construct($router);
@@ -23,6 +27,9 @@ class WebDepartment extends Controller
         }
     }
 
+    /**
+     * @return void
+     */
     public function newDepartment(): void
     {
         $head = $this->seo->optimize(
@@ -36,6 +43,9 @@ class WebDepartment extends Controller
         echo $this->view->render("theme/pages/department/newDepartment");
     }
 
+    /**
+     * @return void
+     */
     public function newCollaborator(): void
     {
         $head = $this->seo->optimize(
@@ -56,9 +66,13 @@ class WebDepartment extends Controller
         echo $this->view->render("theme/pages/department/newCollaborator");
     }
 
+    /**
+     * @param array $data
+     * @return void
+     */
     public function registerDepartment(array $data): void
     {
-        if (isset($data["inp_department"]) && $data["inp_department"] === ""){
+        if (isset($data["inp_department"]) && $data["inp_department"] === "") {
             echo $this->ajaxResponse("message", [
                 "type" => "error",
                 "message" => "Preencha o campo!"
@@ -66,8 +80,8 @@ class WebDepartment extends Controller
             return;
         }
 
-        if((new Department())->find("department = :depart", "depart={$data["inp_department"]}")->fetch()) {
-            echo $this->ajaxResponse("message",[
+        if ((new Department())->find("department = :depart", "depart={$data["inp_department"]}")->fetch()) {
+            echo $this->ajaxResponse("message", [
                 "type" => "alert",
                 "message" => "<u>{$data["inp_department"]}</u> já está cadastrado como departamento!"
             ]);
@@ -99,11 +113,80 @@ class WebDepartment extends Controller
         }
     }
 
-    public function registerCollaborator(array $data) : void
+    /**
+     * @param array $data
+     * @return void
+     */
+    public function registerCollaborator(array $data): void
     {
-        
+        if ($data["select_department"] == "") {
+            echo $this->ajaxResponse("message", [
+                "type" => "alert",
+                "message" => "Selecione um departamento"
+            ]);
+            return;
+        }
 
-        $callback["data"] = $data;
+        if ($data["select_type"] == "") {
+            echo $this->ajaxResponse("message", [
+                "type" => "alert",
+                "message" => "Selecione a forma de trabalho"
+            ]);
+            return;
+        }
+
+        if ($data["inp_collaborator"] == "") {
+            echo $this->ajaxResponse("message", [
+                "type" => "alert",
+                "message" => "Informe o nome do colaborador"
+            ]);
+            return;
+        }
+
+        if($data["inp_cpf"] == ""){
+            echo $this->ajaxResponse("message", [
+               "type" => "alert",
+               "message" => "Informe o C.P.F"
+            ]);
+            return;
+        }
+
+        $collaborator = (new Collaborator);
+        $collaborator->id_department = $data["select_department"];
+        $collaborator->id_type = $data["select_type"];
+        $collaborator->collaborator = $data["inp_collaborator"];
+        $collaborator->cpf = $data["inp_cpf"];
+
+        if(!$collaborator->save()) {
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => $collaborator->fail()->getMessage()
+            ]);
+            return;
+        }
+
+        $collaborators = (new Collaborator())->find("id_department != 0")->fetch(true);
+        echo $this->ajaxResponse("message", [
+            "type" => "success",
+            "message" => "{$data["inp_collaborator"]} cadastrado como um colaborador",
+            "registerType" => $this->view->render("assets/fragments/department/registeredCollaborators", [
+                "collaborators" => $collaborators
+            ]),
+        ]);
+        return;
+    }
+
+    /**
+     * @param array $data
+     * @return void
+     */
+    public function reloadCollaborators (array $data): void
+    {
+        $collaborators = (new Collaborator())->find("id_department = :depart", "depart={$data["department"]}")->fetch(true);
+        $callback["reload"] = $this->view->render("assets/fragments/department/registeredCollaborators",[
+            "collaborators" => $collaborators
+        ]);
+        $callback["data"] = $collaborators;
         echo json_encode($callback);
     }
 }

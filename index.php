@@ -3,7 +3,6 @@ ob_start();
 session_start();
 require __DIR__ . '/vendor/autoload.php';
 
-use Source\Support\Painel;
 use CoffeeCode\Router\Router;
 use Source\Controllers\Web;
 
@@ -82,6 +81,7 @@ $router->get("/novo-departamento", "WebDepartment:newDepartment", "web-departmen
 $router->post("/novo-departamento", "WebDepartment:registerDepartment", "web-department.register-department");
 $router->get("/novo-colaborador", "WebDepartment:newCollaborator", "web-department.new-collaborator");
 $router->post("/novo-colaborador", "WebDepartment:registerCollaborator", "web-department.register-collaborator");
+$router->post("/recarregar-colaborador", "WebDepartment:reloadCollaborators", "web-department.reload-collaborators");
 
 /**
  * ERRORS

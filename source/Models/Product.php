@@ -8,7 +8,7 @@ class Product extends DataLayer
 {
     public function __construct()
     {
-        parent::__construct("product", ["status", "id_product_type", "id_product_service", "product", "unitary_value"]);
+        parent::__construct("product", ["status", "id_product_type", "id_product_service", "product", "size", "unitary_value"]);
     }
 
     public function productType()
@@ -26,4 +26,27 @@ class Product extends DataLayer
         return (new Department())->findById($this->id_department);
     }
 
+    public function inInventory(): ?int
+    {
+        return ((new Inventory())
+            ->find("id_product = :product", "product={$this->id}")
+            ->fetch())->amount ?? 0;
+    }
+
+    public function inOutput(): ?int
+    {
+        $num = (new Output())->find("id_product = :product", "product={$this->id}")->fetch(true);
+        $valor = 0;
+        if (!empty($num)) {
+            foreach ($num as $n) {
+                $valor = $valor + $n->amount;
+            }
+        }
+        return $valor;
+    }
+
+    public function amountOutInv(): ?int
+    {
+        return ($this->inInventory() - $this->inOutput());
+    }
 }

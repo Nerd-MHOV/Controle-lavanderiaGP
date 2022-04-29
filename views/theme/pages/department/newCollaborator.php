@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="buttons-form">
-                    <input class="btn btn-blue" type="submit" value="cadastrar!" />
+                    <input class="btn btn-blue" type="submit" value="cadastrar!"/>
                 </div>
             </form>
         </div>
@@ -84,16 +84,38 @@
 
 <?php $this->start("scripts"); ?>
 <script>
-    $("#select_department").on("change", function() {
-        $("#select_type").prop("disabled", false)
+    $("#select_department").on("change", function () {
+        if ($(this).val() !== "") {
+            $("#select_type").prop("disabled", false)
+            let department = $(this).val()
+            $.ajax({
+                type: "POST",
+                url: "<?= $router->route("web-department.reload-collaborators") ?>",
+                data: {department: department},
+                dataType: 'json',
+                success: function (callback) {
+                    $("#tbl_registeredTypes").html(callback.reload);
+                }
+            })
+        } else {
+            $("#select_type").prop("disabled", true)
+        }
     })
 
     $("#select_type").on("change", function () {
-        $("#inp_collaborator").prop("disabled", false)
+        if ($(this).val() !== "") {
+            $("#inp_collaborator").prop("disabled", false)
+        } else {
+            $("#inp_collaborator").prop("disabled", true)
+        }
     })
 
-    $("#inp_collaborator").on("change", function() {
-        $("#inp_cpf").prop("disabled", false)
+    $("#inp_collaborator").on("change", function () {
+        if ($(this).val() !== "") {
+            $("#inp_cpf").prop("disabled", false)
+        } else {
+            $("#inp_cpf").prop("disabled", true)
+        }
     })
 </script>
 <?php $this->end(); ?>

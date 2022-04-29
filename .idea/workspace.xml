@@ -7,30 +7,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/phpunit.phar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Models/CollaboratorType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/department/registeredCollaborators.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/department/select_collaboratorTypes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/department/tableCollaborators.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/theme/pages/department/newCollaborator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Models/Input.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/Models/Company.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/Models/UserDatabase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/multi_db_example.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia.sql.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/SP_AtualizaEstoque.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/TRG_EntradaProduto_AD.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/TRG_EntradaProduto_AI.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/TRG_EntradaProduto_AU.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/TRG_SaidaProduto_AD.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/TRG_SaidaProduto_AI.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/TRG_SaidaProduto_AU.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/collaborator.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/department.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/department_head.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/input.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/inventory.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/output.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/product.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/product_service.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/product_type.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/returns.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia/users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/script.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/WebProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/WebProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Models/Collaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Collaborator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Department.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/js/mainMasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/mainMasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/js/painel.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/js/painel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/Models/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/Models/Address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/db_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/db_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/destroy_example.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/destroy_example.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/find_example.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/find_example.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/pdo_example.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/pdo_example.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/save_example.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/example/save_example.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/src/Connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/src/Connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/src/CrudTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/src/CrudTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/coffeecode/datalayer/src/DataLayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/coffeecode/datalayer/src/DataLayer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/JS.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/matthiasmullie/minify/src/JS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/scripts.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scripts.mim.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/department/newDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/department/newDepartment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_departamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_departamento.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/department/newCollaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/department/newCollaborator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,15 +140,15 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.data.extractors.current.export.id" value="JSON-Groovy.json.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MySql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="proofread" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -129,7 +168,7 @@
       <command value="form.js" />
     </option>
   </component>
-  <component name="RunManager" selected="PHP Web Page.Lavanderia">
+  <component name="RunManager" selected="PHP Script.Response.php">
     <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/controle_lavanderia4.0/index.php">
       <method v="2" />
     </configuration>
@@ -142,23 +181,33 @@
       <TestRunner coverage_engine="PHPDBG" directory="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="Response.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/Controllers/Response.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="WebDepartment.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/Controllers/WebDepartment.php">
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.index.php" />
       <item itemvalue="PHP Script.index.php" />
-      <item itemvalue="PHPUnit.controle_lavanderia4.0" />
       <item itemvalue="PHP Web Page.Lavanderia" />
+      <item itemvalue="PHPUnit.controle_lavanderia4.0" />
+      <item itemvalue="PHP Script.WebDepartment.php" />
+      <item itemvalue="PHP Script.Response.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.Response.php" />
+        <item itemvalue="PHP Script.WebDepartment.php" />
         <item itemvalue="JavaScript Debug.index.php" />
-        <item itemvalue="JavaScript Debug.Lavanderia" />
-        <item itemvalue="PHP Script.index.php" />
       </list>
     </recent_temporary>
   </component>
   <component name="SQLScriptSettings">
     <option name="matrix">
       <map>
-        <entry key="MARIADB.CreateComplete" value="CreateOrReplace=1, CreateIfNotExists=1, ConstraintContext=CONSTRAINT_IN_TABLE, Reformat=0" />
+        <entry key="MARIADB.CreateComplete" value="QualifyWithSchema=ALWAYS, ConstraintContext=CONSTRAINT_IN_TABLE, Reformat=0" />
+        <entry key="MARIADB.Truncate" value="UseDelete=1" />
       </map>
     </option>
     <option name="outputLayout" value="File per object by schema.groovy" />
@@ -189,7 +238,10 @@
       <workItem from="1650285891278" duration="35390000" />
       <workItem from="1650460226174" duration="14751000" />
       <workItem from="1650896637376" duration="17914000" />
-      <workItem from="1650977481176" duration="15534000" />
+      <workItem from="1650977481176" duration="15637000" />
+      <workItem from="1651061687383" duration="8832000" />
+      <workItem from="1651170460242" duration="10470000" />
+      <workItem from="1651234933580" duration="14380000" />
     </task>
     <servers />
   </component>

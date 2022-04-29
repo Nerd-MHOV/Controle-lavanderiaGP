@@ -15,5 +15,26 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="Servidor" uuid="38ebe801-4916-42e4-b7f1-e76696015c82">
+      <database-info product="MySQL" version="8.0.28-0ubuntu0.20.04.3" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MYSQL" exact-version="8.0.28" exact-driver-version="2.7">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>phpmyadmin</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="controle_lavanderia" />
+            <name qname="lavanderia" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <ssh-config-id>24179762-04ad-446a-b8e6-66c11f147efd</ssh-config-id>
+      </ssh-properties>
+    </data-source>
   </component>
 </project>

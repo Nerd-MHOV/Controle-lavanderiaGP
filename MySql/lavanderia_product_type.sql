@@ -1,0 +1,15 @@
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (1, 'Camiseta', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (2, 'Camiseta Dry fit', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (3, 'Capa de Junção', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (4, 'Edredom', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (5, 'Fronha', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (6, 'Jaquetas', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (7, 'Lençol', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (8, 'Manta', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (9, 'Moleton', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (10, 'Piso', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (11, 'Protetor de Xixi', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (12, 'Saia da Cama', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (13, 'Toalha de Banho', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (14, 'Toalha de mesa', null, null);
+INSERT INTO lavanderia.product_type (id, product_type, created_at, updated_at) VALUES (15, 'Travesseiro', null, null);
