@@ -84,6 +84,12 @@ $router->post("/novo-colaborador", "WebDepartment:registerCollaborator", "web-de
 $router->post("/recarregar-colaborador", "WebDepartment:reloadCollaborators", "web-department.reload-collaborators");
 
 /**
+ * estoque WEB Iventory
+ */
+$router->group('estoque');
+$router->post("/pesquisar", "WebIventory:searchIventory", "web-iventory.search-iventory");
+
+/**
  * ERRORS
  */
 $router->group('ops');

@@ -99,7 +99,7 @@
             <label>
                 <input type="text" placeholder="Search here">
                 <i class='bx bx-search'></i>
-                <!--<img style="width: 100%; max-width:200px" src="<?=asset("images/GrupoperaltasCompleto.png")?>" alt="LogoCompleta">-->
+                <!--<img style="width: 100%; max-width:200px" src="--><?//=asset("images/black.png")?><!--" alt="LogoCompleta">-->
             </label>
         </div>
         <!-- userImg -->

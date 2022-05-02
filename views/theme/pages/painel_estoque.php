@@ -1,5 +1,10 @@
-<!--validar permissão (1)-->
-<?php $this->layout("theme/_themeDashbord"); ?>
+<?php $this->layout("theme/_themeDashbord");
+
+use Source\Controllers\Painel;
+
+/** @var Painel $products */
+/** @var Painel $router */
+?>
 <!-- cards -->
 <div class="containerPainel">
     <div class="cardHeader">
@@ -7,7 +12,7 @@
         <!-- search -->
         <div class="search">
             <label>
-                <input type="text" placeholder="Buscar produto">
+                <input id="searchBar" type="text" placeholder="Buscar produto">
                 <i class='bx bx-search'></i>
                 <!--<img style="width: 100%; max-width:200px" src="<?= asset("images/GrupoperaltasCompleto.png") ?>" alt="LogoCompleta">-->
             </label>
@@ -26,7 +31,7 @@
                 <th>Total</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="bodyResponse">
             <?php
             if (!empty($products)):
                 foreach ($products as $product):
@@ -38,7 +43,7 @@
                         <td><?= $product->department()->department ?></td>
                         <td><?= $product->inInventory() ?></td>
                         <td><?= $product->inOutput() ?></td>
-                        <td><?= $product->amountOutInv()?></td>
+                        <td><?= $product->amountOutInv() ?></td>
                     </tr>
                 <?php
                 endforeach;
@@ -48,3 +53,20 @@
         </table>
     </div>
 </div>
+
+<?php $this->start("scripts") ?>
+<script>
+    $('#searchBar').keyup(function () {
+        let search = $(this).val();
+        $.ajax({
+            url: "<?= $router->route("web-iventory.search-iventory"); ?>",
+            type: "post",
+            data: {search: search},
+            dataType: "json",
+            success: function (callback) {
+                $("#bodyResponse").html(callback.response);
+            }
+        })
+    });
+</script>
+<?php $this->end() ?>
