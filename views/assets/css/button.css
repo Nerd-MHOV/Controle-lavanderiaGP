@@ -56,7 +56,7 @@
     background: #ef6951;
 }
 
-.btnDashbord {
+.btnDashboard {
     white-space: nowrap;
     position: relative;
     padding: 5px 10px;
@@ -66,6 +66,6 @@
     border-radius: 6px;
 }
 
-.btnDashbord:hover {
+.btnDashboard:hover {
     background: var(--black2);
 }

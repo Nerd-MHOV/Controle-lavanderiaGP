@@ -1,5 +1,5 @@
 <!--validar permissão (1)-->
-<?php $this->layout("theme/_themeDashbord"); ?>
+<?php $this->layout("theme/_themeDashboard"); ?>
 <!-- cards -->
 <div class="cardBox">
     <div class="card">
@@ -45,7 +45,7 @@
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Pagamentos Recentes</h2>
-            <a href="#" class="btnDashbord">View All</a>
+            <a href="#" class="btnDashboard">View All</a>
         </div>
         <table>
             <thead>
@@ -89,7 +89,7 @@
     <div class="recentCustomers">
         <div class="cardHeader">
             <h2>Próximos Eventos</h2>
-            <a href="#" class="btnDashbord">View All</a>
+            <a href="#" class="btnDashboard">View All</a>
         </div>
         <table>
             <tr>

@@ -8,7 +8,7 @@ use Source\Controllers\WebProduct;
 /** @var WebProduct $services */
 /** @var WebProduct $departments */
 /** @var WebProduct $products */
-$this->layout("theme/_themeDashbord"); ?>
+$this->layout("theme/_themeDashboard"); ?>
 <div class="grid_newProduct">
     <form class="" action="<?= $router->route("web-product.register-product"); ?>" method="post" autocomplete="off">
         <div class="grid_newProduct_register">
@@ -83,7 +83,7 @@ $this->layout("theme/_themeDashbord"); ?>
             <div class="containerPainel">
                 <div class="cardHeader">
                     <h2>Novo produto:</h2>
-                    <a href="<?= $router->route("painel.produto") ?>" class="btnDashbord">voltar</a>
+                    <a href="<?= $router->route("painel.produto") ?>" class="btnDashboard">voltar</a>
                 </div>
                 <div class="form-register" style="position: relative; top: 0">
                     <div class="form-registerType">

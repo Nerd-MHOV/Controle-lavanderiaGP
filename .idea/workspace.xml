@@ -7,15 +7,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/source/Controllers/WebIventory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/iventory/table_iventoryProducts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/images/black.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productSize.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/_themeDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/_themeDashbord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/MinifyDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/MinifyDashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/dashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/scriptsDashbord.mim.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/scriptsDashboard.mim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/styleDashbord.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashboard.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/_themeDashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/_themeDashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/department/newCollaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/department/newCollaborator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/department/newDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/department/newDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_departamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_departamento.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_homeOLD.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_homeOLD.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newService.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newType.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +107,7 @@
     <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/MySql" />
@@ -193,7 +212,7 @@
       <workItem from="1651061687383" duration="8832000" />
       <workItem from="1651170460242" duration="10470000" />
       <workItem from="1651234933580" duration="14380000" />
-      <workItem from="1651494718365" duration="9384000" />
+      <workItem from="1651494718365" duration="21411000" />
     </task>
     <servers />
   </component>

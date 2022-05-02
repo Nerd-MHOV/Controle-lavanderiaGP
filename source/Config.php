@@ -4,7 +4,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 if ($_SERVER["SERVER_NAME"] == "localhost" || $_SERVER["SERVER_NAME"] == "PhpStorm 2021.3.3") {
     require __DIR__ . "/Minify.php";
-    require __DIR__ . "/MinifyDashbord.php";
+    require __DIR__ . "/MinifyDashboard.php";
 
     define("SITE", [
         "name" => "controle_lavanderia",

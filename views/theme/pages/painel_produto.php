@@ -1,14 +1,16 @@
-<?php $this->layout("theme/_themeDashbord");
-// TODO: barra de pesquisa! FUNCIONALIDADE
+<?php $this->layout("theme/_themeDashboard");
+use Source\Controllers\Painel;
+/** @var Painel $router */
+/** @var Painel $products */
 ?>
 <!-- cards -->
 <div class="containerPainel">
     <div class="cardHeader">
         <h2>Produtos Cadastrados</h2>
         <div>
-            <a href="<?= $router->route("web-product.new-type"); ?>" class="btnDashbord">Novo tipo</a>
-            <a href="<?= $router->route("web-product.new-service"); ?>" class="btnDashbord">Novo oficio</a>
-            <a href="<?= $router->route("web-product.new-product"); ?>" class="btnDashbord">Novo produto</a>
+            <a href="<?= $router->route("web-product.new-type"); ?>" class="btnDashboard">Novo tipo</a>
+            <a href="<?= $router->route("web-product.new-service"); ?>" class="btnDashboard">Novo oficio</a>
+            <a href="<?= $router->route("web-product.new-product"); ?>" class="btnDashboard">Novo produto</a>
         </div>
     </div>
 

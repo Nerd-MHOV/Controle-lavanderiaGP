@@ -1,4 +1,4 @@
-<?php $this->layout("theme/_themeDashbord");
+<?php $this->layout("theme/_themeDashboard");
 
 use Source\Controllers\Painel;
 

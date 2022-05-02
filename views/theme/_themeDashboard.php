@@ -7,8 +7,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?= $head; ?>
-    <link rel="stylesheet" href="<?= asset("/css/sidebarDashbord.css"); ?>">
-    <link rel="stylesheet" href="<?= asset("/styleDashbord.min.css"); ?>"/>
+    <link rel="stylesheet" href="<?= asset("/css/sidebarDashboard.css"); ?>">
+    <link rel="stylesheet" href="<?= asset("/styleDashboard.min.css"); ?>"/>
     <link rel="icon" type="image/png" href="<?= asset("/images/favicon.ico"); ?>"/>
 </head>
 <body>
@@ -116,7 +116,7 @@
 
 </div>
 
-<script src="<?= asset("/scriptsDashbord.mim.js"); ?>"></script>
+<script src="<?= asset("/scriptsDashboard.mim.js"); ?>"></script>
 <?= $this->section("scripts"); ?>
 </body>
 </html>

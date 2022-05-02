@@ -58,7 +58,7 @@ class Response extends Controller
      */
     public function productService(array $data): void
     {
-        $products = (new Product())->find("id_product_type = :ipt AND id_product_service = :ips", "ipt={$data["id_productType"]}&ips={$data["id_productService"]}")->fetch(true);
+        $products = (new Product())->find("id_product_type = :ipt AND id_product_service = :ips", "ipt={$data["id_productType"]}&ips={$data["id_productService"]}")->group("product")->fetch(true);
         $callback["products"] = $this->view->render("assets/fragments/painel_product", [
             "products" => $products
         ]);
@@ -74,6 +74,20 @@ class Response extends Controller
     {
         $products = (new Product())->find("id_product_type = :idpt", "idpt={$data["id_selectProductType"]}")->group("id_product_service")->fetch(true);
         $callback["products"] = $this->view->render("assets/fragments/painel_productService", [
+            "products" => $products
+        ]);
+        $callback["debug"] = $products;
+        $callback["data"] = $data;
+        echo json_encode($callback);
+    }
+
+    public function productSend(array $data): void
+    {
+        $products = (new Product())
+            ->find("id_product_type = :idpt AND id_product_service = :idps AND product = :product",
+                "idpt={$data["id_productType"]}&idps={$data["id_productService"]}&product={$data["product"]}")
+            ->fetch(true);
+        $callback["products"] = $this->view->render("assets/fragments/painel_productSize", [
             "products" => $products
         ]);
         $callback["debug"] = $products;
@@ -137,7 +151,7 @@ class Response extends Controller
 
         if (!$data["colaborador"]) { //SETOR
             for ($i = 0; $i < $countRows; $i++) {
-                if ( ((new Output())->find("id_product = :idp AND id_collaborator = 0", "idp={$data["select_product"][$i]}")->count()) ){ //Já existe pendencias
+                if (((new Output())->find("id_product = :idp AND id_collaborator = 0", "idp={$data["select_product"][$i]}")->count())) { //Já existe pendencias
                     $output = (new Output())->find("id_product = :idp AND id_collaborator = 0", "idp={$data["select_product"][$i]}")->fetch();
                     $output->id_user = $_SESSION["user"];
                     $output->amount = ($output->amount + $data["amount"][$i]);
@@ -220,7 +234,7 @@ class Response extends Controller
         $productType = $outputs->productType();
         $productService = $outputs->productService();
 
-        $callback["modal"] = $this->view->render("assets/fragments/painel_devolver_modal",[
+        $callback["modal"] = $this->view->render("assets/fragments/painel_devolver_modal", [
             "productName" => "{$productType->product_type} {$product->product} {$productService->service}",
             "status_old" => $outputs->status,
             "obs_old" => $outputs->obs,
@@ -252,7 +266,7 @@ class Response extends Controller
      */
     public function returnProduct(array $data): void
     {
-        if(isset($data["estado-modal"]) && !$data["estado-modal"]){
+        if (isset($data["estado-modal"]) && !$data["estado-modal"]) {
             echo $this->ajaxResponse("message", [
                 "type" => "error",
                 "message" => "Informe o estado do item!"
@@ -261,7 +275,7 @@ class Response extends Controller
             return;
         }
 
-        if (isset($data["obs-modal"]) && $data["obs-modal"] === ""){
+        if (isset($data["obs-modal"]) && $data["obs-modal"] === "") {
             echo $this->ajaxResponse("message", [
                 "type" => "error",
                 "message" => "Descreva o porquê de o item estar \"Ruim\""
@@ -310,7 +324,6 @@ class Response extends Controller
             $returns->save();
             $output->destroy();
         }
-
 
 
         if ($output->fail() || $returns->fail()) {

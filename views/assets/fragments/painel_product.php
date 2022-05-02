@@ -4,7 +4,7 @@ if (!empty($products)):
     echo "<option value=''>Selecione o produto</option>";
     foreach ($products as $product):
         ?>
-        <option value="<?= $product->id  ?>"><?= $product->product ?></option>
+        <option value="<?= $product->product  ?>"><?= $product->product ?></option>
     <?php
     endforeach;
 endif;

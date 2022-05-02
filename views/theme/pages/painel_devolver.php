@@ -1,4 +1,4 @@
-<?= $this->layout("theme/_themeDashbord"); ?>
+<?= $this->layout("theme/_themeDashboard"); ?>
 <div class="login_form_callback center20px">
     <?= flash(); ?>
 </div>

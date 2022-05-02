@@ -1,10 +1,10 @@
-<?php $this->layout("theme/_themeDashbord"); ?>
+<?php $this->layout("theme/_themeDashboard"); ?>
 <div class="details">
     <!-- order details list-->
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Colaboradores:</h2>
-            <a href=" <?=$router->route("web-department.new-collaborator") ?>" class="btnDashbord">Novo</a>
+            <a href=" <?=$router->route("web-department.new-collaborator") ?>" class="btnDashboard">Novo</a>
         </div>
         <table>
             <thead>
@@ -29,7 +29,7 @@
     <div class="recentCustomers">
         <div class="cardHeader">
             <h2>Departamentos:</h2>
-            <a href="<?= $router->route("web-department.new-department") ?>" class="btnDashbord">Novo</a>
+            <a href="<?= $router->route("web-department.new-department") ?>" class="btnDashboard">Novo</a>
         </div>
         <table>
             <?php

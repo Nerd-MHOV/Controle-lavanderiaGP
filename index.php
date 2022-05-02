@@ -50,8 +50,10 @@ $router->post("/colaborador", "Response:collaborator", "response.colaborador");
 $router->post("/produtos", "Response:products", "response.produtos");
 $router->post("/produtos/tipo", "Response:productType", "response.typeproducts");
 $router->post("/produtos/oficio", "Response:productService", "response.product_service");
+$router->post("/produtos/enviar", "Response:productSend", "response.product_send");
 $router->post("/retirada", "Response:withdrawal", "response.withdrawal");
 $router->get("/documento/{id}", "Withdraw:document", "withdraw.document");
+
 
 /**
  *  devolver RESPONSE

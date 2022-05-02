@@ -1,4 +1,4 @@
-<?php $this->layout("theme/_themeDashbord");?>
+<?php $this->layout("theme/_themeDashboard"); ?>
 <!-- cards -->
 <form class="form" action="<?= $router->route("response.withdrawal"); ?>" method="post" autocomplete="off">
     <div class="cardBox cardBox_retirar">
@@ -59,7 +59,10 @@
             <table>
                 <thead>
                 <tr id="tr_obs">
-                    <th colspan="3">Produto</th>
+                    <th>Tipo</th>
+                    <th>Oficio</th>
+                    <th>Produto</th>
+                    <th>Tamanho</th>
                     <th id="amnt_status">Estado</th>
                     <th id="th_obs">Obs</th>
                 </tr>
@@ -74,9 +77,9 @@
         </div>
     </div>
 </form>
-
 <?php $this->start("scripts"); ?>
 <script>
+
     function ajax_load(action) {
         ajax_load_div = $(".ajax_load");
 
@@ -128,21 +131,33 @@
         });
 
 
-
         $("#nmb_qtdeRetiradas").on("change", function () {
-            //capturar informações para não perdelas quando att
-            let val_productType = $("[id^=select_productType]").map(function () { return $(this).val(); }).get();
-            let val_productService = $("[id^=select_productService]").map(function () { return $(this).val(); }).get();
-            let val_product = $("[id^=select_product-]").map(function () { return $(this).val(); }).get();
-            let val_amount = $("[id^=amount]").map(function () { return $(this).val(); }).get();
-            let val_status = $("[id^=select_status]").map(function () { return $(this).val(); }).get();
-            let val_obs = $("[id^=txta_obs]").map(function () { return $(this).val(); }).get();
+            let val_productType = $("[id^=select_productType]").map(function () {
+                return $(this).val();
+            }).get();
+            let val_productService = $("[id^=select_productService]").map(function () {
+                return $(this).val();
+            }).get();
+            let val_product = $("[id^=select_product-]").map(function () {
+                return $(this).val();
+            }).get();
+            let val_size = $("[id^=select_size-]").map(function () {
+                return $(this).val();
+            }).get();
+            let val_amount = $("[id^=amount]").map(function () {
+                return $(this).val();
+            }).get();
+            let val_status = $("[id^=select_status]").map(function () {
+                return $(this).val();
+            }).get();
+            let val_obs = $("[id^=txta_obs]").map(function () {
+                return $(this).val();
+            }).get();
 
             let select_department = $("#select_department").val();
             let select_collaborator = $("#select_collaborators").val();
             let nmb_qtdeRetiradas = $(this).val();
             let tb_products = $("#tb_products");
-
 
 
             $.ajax({
@@ -164,36 +179,45 @@
                     if (select_collaborator === "0") {
                         $("#amnt_status").html("Qtde");
                         $("#th_obs").remove();
-                    }else{
+                    } else {
                         $("#amnt_status").html("Estado");
-                        $("#tr_obs").
-                        html(`<th colspan="3">Produto</th>
-                              <th id="amnt_status">Estado</th>
-                              <th id="th_obs">Obs</th>`);
+                        $("#tr_obs").html(`<th>Tipo</th>
+                                            <th>Oficio</th>
+                                            <th>Produto</th>
+                                            <th>Tamanho</th>
+                                            <th id="amnt_status">Estado</th>
+                                            <th id="th_obs">Obs</th>`);
                     }
-                    function fnc_productType (ind){
-                        $("#select_productType-"+ind).select2("val", val_productType[ind])
-                        setTimeout(()=>{
-                            $("#select_productService-"+ind).select2("val", val_productService[ind])
-                            setTimeout(()=>{
-                                $("#select_product-"+ind).select2("val", val_product[ind])
-                                $("#amount-"+ind).val(val_amount[ind]);
-                                if(val_status[ind] !== "" && val_status[ind] !== "undefined"){
-                                    setTimeout(()=>{
-                                        $("#select_status-"+ind).select2("val", val_status[ind])
-                                        $("#txta_obs-"+ind).val(val_obs[ind])
-                                        console.log(val_status[ind])
-                                    },300)
-                                }
-                            },300)
-                        },300)
+
+                    function fnc_productType(ind) {
+                        $("#select_productType-" + ind).select2("val", val_productType[ind])
+                        setTimeout(() => {
+                            $("#select_productService-" + ind).select2("val", val_productService[ind])
+                            setTimeout(() => {
+                                let result = val_product[ind]
+                                $("#select_product-" + ind).val(result).trigger('change')
+                                setTimeout(() => {
+                                    $("#select_size-" + ind).val(val_size[ind]).trigger('change')
+                                    $("#amount-" + ind).val(val_amount[ind]);
+                                    if (val_status[ind] !== "" && val_status[ind] !== "undefined") {
+                                        setTimeout(() => {
+                                            $("#select_status-" + ind).select2("val", val_status[ind])
+                                            $("#txta_obs-" + ind).val(val_obs[ind])
+                                        }, 1000)
+                                    }
+                                }, 1000)
+                            }, 1000)
+                        }, 1000)
 
                     }
-                    for (i=0;i <= val_productType.length; i++) {
-                        if(val_productType[i] !== "" && val_productType[i] !== "undefined"){
+
+
+                    for (i = 0; i <= val_productType.length; i++) {
+                        if (val_productType[i] !== "" && val_productType[i] !== "undefined") {
                             fnc_productType(i)
                         }
                     }
+
                 },
                 complete: function () {
                     ajax_load("close")
@@ -202,5 +226,6 @@
             });
         })
     })
+
 </script>
 <?php $this->end(); ?>

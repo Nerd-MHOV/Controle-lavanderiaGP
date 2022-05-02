@@ -1,4 +1,4 @@
-<?php $this->layout("theme/_themeDashbord"); ?>
+<?php $this->layout("theme/_themeDashboard"); ?>
 <div class="login_form_callback center20px">
     <?= flash(); ?>
 </div>
@@ -7,7 +7,7 @@
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Cadastrar Colaborador:</h2>
-            <a href="<?= $router->route("painel.departamento") ?>" class="btnDashbord">voltar</a>
+            <a href="<?= $router->route("painel.departamento") ?>" class="btnDashboard">voltar</a>
         </div>
 
         <div class="back-register">

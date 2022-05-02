@@ -1,5 +1,5 @@
 <!--validar permissão (1)-->
-<?php $this->layout("theme/_themeDashbord"); ?>
+<?php $this->layout("theme/_themeDashboard"); ?>
 <div class="center">
 
 
