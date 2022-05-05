@@ -32,6 +32,11 @@ class WebDepartment extends Controller
      */
     public function newDepartment(): void
     {
+        if ($this->user->level < 2) {
+            $this->router->redirect("error.error",[
+                "errcode" => "401"
+            ]);
+        }
         $head = $this->seo->optimize(
             "Cadastrar Departamento | " . site("name"),
             site("desc"),
@@ -48,6 +53,11 @@ class WebDepartment extends Controller
      */
     public function newCollaborator(): void
     {
+        if ($this->user->level < 2) {
+            $this->router->redirect("error.error",[
+                "errcode" => "401"
+            ]);
+        }
         $head = $this->seo->optimize(
             "Cadastrar Colaborador | " . site("name"),
             site("desc"),

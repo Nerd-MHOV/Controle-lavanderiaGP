@@ -11,7 +11,7 @@
         </div>
 
         <div class="back-register">
-            <i class="bx bxs-hard-hat"></i>
+            <i class='bx bxs-briefcase' ></i>
         </div>
 
         <div class="form-register">

@@ -11,7 +11,7 @@ class Web extends Controller
         parent::__construct($router);
 
         if (!empty($_SESSION['user'])) {
-            $this->router->redirect("painel.home");
+            $this->router->redirect("painel.retirar");
         }
     }
 
@@ -101,25 +101,5 @@ class Web extends Controller
         )->render();
         $this->view->addData(['head' => $head]);
         echo $this->view->render("theme/login/reset");
-    }
-
-    /**
-     * @param $data
-     * @return void
-     */
-    public function error($data): void
-    {
-        $error = filter_var($data["errcode"], FILTER_VALIDATE_INT);
-        $head = $this->seo->optimize(
-            "Ooops {$error} | " . site("name"),
-            site("desc"),
-            $this->router->route('web.error',["errcode" => $error]),
-            routeImage($error),
-        )->render();
-        $this->view->addData([
-            'head' => $head,
-            'error' => $error
-        ]);
-        echo $this->view->render("theme/error");
     }
 }

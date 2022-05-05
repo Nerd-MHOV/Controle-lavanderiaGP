@@ -37,7 +37,7 @@ $router->get("/retirar", "Painel:retirar", "painel.retirar");
 $router->get("/devolver", "Painel:devolver", "painel.devolver");
 $router->get("/produto", "Painel:produto", "painel.produto");
 $router->get("/departamento", "Painel:departamento", "painel.departamento");
-$router->get("/relatorio", "Painel:relatorio", "painel.relatorio");
+$router->get("/danificados", "Painel:danificados", "painel.danificados");
 $router->get("/estoque", "Painel:estoque", "painel.estoque");
 $router->get("/sair", "Painel:logoff", "painel.logoff");
 
@@ -74,6 +74,7 @@ $router->post("/novo-oficio", "WebProduct:registerService", "web-product.registe
 $router->get("/novo-produto", "WebProduct:newProduct", "web-product.new-product");
 $router->post("/novo-produto", "WebProduct:registerProduct", "web-product.register-product");
 $router->post("/recarregar-produtos", "WebProduct:reloadProducts", "web-product.reload-products");
+$router->post("/pesquisar","WebProduct:searchProducts", "web-product.search-products");
 
 /**
  *  departamento WEB DEPARTMENT
@@ -95,7 +96,7 @@ $router->post("/pesquisar", "WebIventory:searchIventory", "web-iventory.search-i
  * ERRORS
  */
 $router->group('ops');
-$router->get('/{errcode}', "Web:error", "web.error");
+$router->get('/{errcode}', "Error:error", "error.error");
 
 /**
  * ROUTE PROCESS
@@ -107,10 +108,3 @@ if ($router->error()) {
 }
 
 ob_end_flush();
-
-/*
-if(Painel::logado() == false){
-    include('pages/login.php');
-    die();
-}
-*/

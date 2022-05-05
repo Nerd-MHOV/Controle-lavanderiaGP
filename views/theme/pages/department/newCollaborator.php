@@ -11,7 +11,7 @@
         </div>
 
         <div class="back-register">
-            <i class="bx bxs-hard-hat"></i>
+            <i class='bx bxs-user-circle'></i>
         </div>
 
         <div class="form-register">

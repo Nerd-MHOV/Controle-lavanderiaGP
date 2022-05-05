@@ -25,6 +25,7 @@ use Source\Controllers\Painel;
                 <th>Tipo</th>
                 <th>Produto</th>
                 <th>Oficio</th>
+                <th>Tamanho</th>
                 <th>Departamento</th>
                 <th>Estoque</th>
                 <th>Pendente</th>
@@ -40,6 +41,7 @@ use Source\Controllers\Painel;
                         <td><?= $product->productType()->product_type ?></td>
                         <td><?= $product->product ?></td>
                         <td><?= $product->productService()->service ?></td>
+                        <td><?= $product->size ?></td>
                         <td><?= $product->department()->department ?></td>
                         <td><?= $product->inInventory() ?></td>
                         <td><?= $product->inOutput() ?></td>

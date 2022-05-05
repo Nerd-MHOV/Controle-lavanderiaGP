@@ -31,7 +31,7 @@ $this->layout("theme/_themeDashboard"); ?>
                         </div>
                     </div>
                     <div class="iconBx iconBx_retirar">
-                        <i class='bx bxs-hard-hat'></i>
+                        <i class='bx bx-closet'></i>
                     </div>
                 </div>
                 <div class="card">
@@ -52,7 +52,7 @@ $this->layout("theme/_themeDashboard"); ?>
                         </div>
                     </div>
                     <div class="iconBx">
-                        <i class='bx bx-user'></i>
+                        <i class='bx bxs-briefcase'></i>
                     </div>
                 </div>
                 <div class="card">
@@ -73,7 +73,7 @@ $this->layout("theme/_themeDashboard"); ?>
                         </div>
                     </div>
                     <div class="iconBx">
-                        <i class='bx bx-user'></i>
+                        <i class='bx bxs-hard-hat'></i>
                     </div>
                 </div>
             </div>
@@ -92,6 +92,11 @@ $this->layout("theme/_themeDashboard"); ?>
                                 <label for="inp_product">Produto:</label>
                                 <input type="text" name="inp_product" id="inp_product"
                                        placeholder="qual o novo produto..." disabled/>
+                            </div>
+                            <div class="box-register">
+                                <label for="inp_size">Tamanho:</label>
+                                <input type="text" name="inp_size" id="inp_size"
+                                       placeholder="qual o tamanho..." disabled />
                             </div>
                             <div class="box-register">
                                 <label for="inp_unitaryValue">Valor Unitario:</label>
@@ -148,6 +153,7 @@ $this->layout("theme/_themeDashboard"); ?>
     $("#select_service").on("change", function () {
         if ($(this).val() !== "") {
             $("#select_department").prop("disabled", false);
+            $("#select_department").select2("val", 0)
         } else {
             $("#select_department").select2("val", 0)
             $("#select_department").prop("disabled", true);
@@ -160,6 +166,7 @@ $this->layout("theme/_themeDashboard"); ?>
             $("#inp_unitaryValue").prop("disabled", false);
             $("#inp_amount").prop("disabled", false);
             $("#inp_submit").prop("disabled", false);
+            $("#inp_size").prop("disabled", false);
 
             let type = $('#select_type').val()
             let service = $('#select_service').val()
@@ -182,6 +189,7 @@ $this->layout("theme/_themeDashboard"); ?>
             $("#inp_unitaryValue").prop("disabled", true);
             $("#inp_amount").prop("disabled", true);
             $("#inp_submit").prop("disabled", true);
+            $("#inp_size").prop("disabled", true);
         }
     })
 </script>

@@ -498,8 +498,9 @@ body {
 }
 
 .cardBox_newProduct {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .grid_newProduct_list {

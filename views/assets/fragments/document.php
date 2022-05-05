@@ -70,6 +70,7 @@
             <th>Tipo</th>
             <th>Produto</th>
             <th>Oficio</th>
+            <th>Tamanho</th>
             <th>Valor unitario</th>
             <th>Retirado em:</th>
             <th>Devolvido em:</th>
@@ -85,6 +86,7 @@
                 <td><?=$output->productType()->product_type?></td>
                 <td><?=$output->product()->product?></td>
                 <td><?=$output->productService()->service?></td>
+                <td><?=$output->product()->size?></td>
                 <td><?=$output->product()->unitary_value?></td>
                 <td><?=date("d/m H:i", strtotime($output->updated_at))?></td>
                 <td></td>

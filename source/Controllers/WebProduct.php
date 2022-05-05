@@ -26,7 +26,7 @@ class WebProduct extends Controller
     {
         parent::__construct($router);
 
-        if(empty($_SESSION["user"]) || !($this->user = (new User())->findById($_SESSION["user"]))) {
+        if (empty($_SESSION["user"]) || !($this->user = (new User())->findById($_SESSION["user"]))) {
             unset($_SESSION["user"]);
 
             flash("error", "Acesso negado. Favor logue-se");
@@ -39,6 +39,11 @@ class WebProduct extends Controller
      */
     public function newType(): void
     {
+        if ($this->user->level < 3) {
+            $this->router->redirect("error.error",[
+                "errcode" => "401"
+            ]);
+        }
         $head = $this->seo->optimize(
             "Cadastrar TIPO | " . site("name"),
             site("desc"),
@@ -55,6 +60,11 @@ class WebProduct extends Controller
      */
     public function newService(): void
     {
+        if ($this->user->level < 3) {
+            $this->router->redirect("error.error",[
+                "errcode" => "401"
+            ]);
+        }
         $head = $this->seo->optimize(
             "Cadastrar OFICIO | " . site("name"),
             site("desc"),
@@ -71,6 +81,11 @@ class WebProduct extends Controller
      */
     public function newProduct(): void
     {
+        if ($this->user->level < 3) {
+            $this->router->redirect("error.error",[
+                "errcode" => "401"
+            ]);
+        }
         $head = $this->seo->optimize(
             "Cadastrar PRODUTO | " . site("name"),
             site("desc"),
@@ -97,7 +112,7 @@ class WebProduct extends Controller
      */
     public function registerType(array $data): void
     {
-        if (isset($data["inp-typeregister"]) && $data["inp-typeregister"] === ""){
+        if (isset($data["inp-typeregister"]) && $data["inp-typeregister"] === "") {
             echo $this->ajaxResponse("message", [
                 "type" => "error",
                 "message" => "Preencha o campo!"
@@ -105,10 +120,10 @@ class WebProduct extends Controller
             return;
         }
 
-        if((new ProductType())->find("product_type = :ptp", "ptp={$data["inp-typeregister"]}")->fetch()) {
-            echo $this->ajaxResponse("message",[
-               "type" => "alert",
-               "message" => "<u>{$data["inp-typeregister"]}</u> já está cadastrado como tipo!"
+        if ((new ProductType())->find("product_type = :ptp", "ptp={$data["inp-typeregister"]}")->fetch()) {
+            echo $this->ajaxResponse("message", [
+                "type" => "alert",
+                "message" => "<u>{$data["inp-typeregister"]}</u> já está cadastrado como tipo!"
             ]);
             return;
         }
@@ -144,7 +159,7 @@ class WebProduct extends Controller
      */
     public function registerService(array $data): void
     {
-        if (isset($data["inp-typeregister"]) && $data["inp-typeregister"] === ""){
+        if (isset($data["inp-typeregister"]) && $data["inp-typeregister"] === "") {
             echo $this->ajaxResponse("message", [
                 "type" => "error",
                 "message" => "Preencha o campo!"
@@ -152,8 +167,8 @@ class WebProduct extends Controller
             return;
         }
 
-        if((new ProductService())->find("service = :svc", "svc={$data["inp-typeregister"]}")->fetch()) {
-            echo $this->ajaxResponse("message",[
+        if ((new ProductService())->find("service = :svc", "svc={$data["inp-typeregister"]}")->fetch()) {
+            echo $this->ajaxResponse("message", [
                 "type" => "alert",
                 "message" => "<u>{$data["inp-typeregister"]}</u> já está cadastrado como oficio!"
             ]);
@@ -191,14 +206,14 @@ class WebProduct extends Controller
      */
     public function registerProduct(array $data): void
     {
-        if($data["select_type"] == ""){
+        if ($data["select_type"] == "") {
             echo $this->ajaxResponse("message", [
                 "type" => "alert",
                 "message" => "Selecione o Tipo",
             ]);
             return;
         }
-        if($data["select_service"] == ""){
+        if ($data["select_service"] == "") {
             echo $this->ajaxResponse("message", [
                 "type" => "alert",
                 "message" => "Selecione o Oficio"
@@ -206,7 +221,7 @@ class WebProduct extends Controller
             return;
 
         }
-        if($data["select_department"] == ""){
+        if ($data["select_department"] == "") {
             echo $this->ajaxResponse("message", [
                 "type" => "alert",
                 "message" => "Selecione o Departamento"
@@ -214,7 +229,7 @@ class WebProduct extends Controller
             return;
 
         }
-        if($data["inp_product"] == ""){
+        if ($data["inp_product"] == "") {
             echo $this->ajaxResponse("message", [
                 "type" => "alert",
                 "message" => "Qual o nome do produto",
@@ -222,7 +237,14 @@ class WebProduct extends Controller
             return;
 
         }
-        if($data["inp_unitaryValue"] == ""){
+        if ($data["inp_size"] == "") {
+            echo $this->ajaxResponse("message", [
+                "type" => "alert",
+                "message" => "Defina o \"tamanho\" do produto, se não houver opte por \"Unico\""
+            ]);
+            return;
+        }
+        if ($data["inp_unitaryValue"] == "") {
             echo $this->ajaxResponse("message", [
                 "type" => "alert",
                 "message" => "O produto precisa ter um valor unitário para cadastro!",
@@ -230,7 +252,7 @@ class WebProduct extends Controller
             return;
 
         }
-        if($data["inp_amount"] == ""){
+        if ($data["inp_amount"] == "") {
             echo $this->ajaxResponse("message", [
                 "type" => "alert",
                 "message" => "Informe a quantidade!",
@@ -238,9 +260,9 @@ class WebProduct extends Controller
             return;
 
         }
-        if((new Product())
-            ->find("id_department = :department AND id_product_type = :type AND id_product_service = :service AND product = :product",
-            "department={$data["select_department"]}&type={$data["select_type"]}&service={$data["select_service"]}&product={$data["inp_product"]}")
+        if ((new Product())
+            ->find("id_department = :department AND id_product_type = :type AND id_product_service = :service AND product = :product AND size = :size",
+                "department={$data["select_department"]}&type={$data["select_type"]}&service={$data["select_service"]}&product={$data["inp_product"]}&size={$data["inp_size"]}")
             ->fetch()) {
             echo $this->ajaxResponse("message", [
                 "type" => "error",
@@ -255,6 +277,7 @@ class WebProduct extends Controller
         $product->id_product_type = $data["select_type"];
         $product->id_product_service = $data["select_service"];
         $product->product = $data["inp_product"];
+        $product->size = $data["inp_size"];
         $product->unitary_value = $data["inp_unitaryValue"];
         $product->save();
         $id_product = $product->id;
@@ -296,14 +319,22 @@ class WebProduct extends Controller
             ->find("id_department = :depart AND id_product_type = :type AND id_product_service = :service",
                 "depart={$data["department"]}&type={$data["type"]}&service={$data["service"]}")
             ->fetch(true);
-        $callback["reload"] = $this->view->render("assets/fragments/product/registeredProducts",[
+        $callback["reload"] = $this->view->render("assets/fragments/product/registeredProducts", [
             'products' => $products
         ]);
         $callback["data"] = $data;
         echo json_encode($callback);
     }
 
-
+    public function searchProducts(array $data): void
+    {
+        $products = (new Product())->search($data["search"]);
+        $callback["data"] = $products[0]->product;
+        $callback["response"] = $this->view->render("assets/fragments/product/table_searchProducts",[
+            "products" => $products
+        ]);
+        echo json_encode($callback);
+    }
 
 
 }

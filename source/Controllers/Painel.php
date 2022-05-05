@@ -6,11 +6,15 @@ use Source\Models\Collaborator;
 use Source\Models\Department;
 use Source\Models\Output;
 use Source\Models\Product;
+use Source\Models\Returns;
 use Source\Models\User;
 use CoffeeCode\DataLayer\DataLayer;
 use Source\Controllers\Controller;
 
 
+/**
+ *
+ */
 class Painel extends Controller
 {
     /**
@@ -25,7 +29,7 @@ class Painel extends Controller
     {
         parent::__construct($router);
 
-        if(empty($_SESSION["user"]) || !$this->user = (new User())->findById($_SESSION["user"])) {
+        if (empty($_SESSION["user"]) || !$this->user = (new User())->findById($_SESSION["user"])) {
             unset($_SESSION["user"]);
 
             flash("error", "Acesso negado. Favor logue-se");
@@ -49,6 +53,9 @@ class Painel extends Controller
         echo $this->view->render("theme/pages/painel_home");
     }
 
+    /**
+     * @return void
+     */
     public function retirar(): void
     {
         $head = $this->seo->optimize(
@@ -65,6 +72,9 @@ class Painel extends Controller
         echo $this->view->render("theme/pages/painel_retirar");
     }
 
+    /**
+     * @return void
+     */
     public function devolver(): void
     {
         $head = $this->seo->optimize(
@@ -83,8 +93,16 @@ class Painel extends Controller
         echo $this->view->render("theme/pages/painel_devolver");
     }
 
+    /**
+     * @return void
+     */
     public function produto(): void
     {
+        if (($this->user->level) < 3) {
+            $this->router->redirect("error.error",[
+                "errcode" => "401"
+            ]);
+        }
         $head = $this->seo->optimize(
             "Produtos | " . site("name"),
             site("desc"),
@@ -96,8 +114,16 @@ class Painel extends Controller
         echo $this->view->render("theme/pages/painel_produto");
     }
 
+    /**
+     * @return void
+     */
     public function departamento(): void
     {
+        if ($this->user->level < 2) {
+            $this->router->redirect("error.error",[
+                "errcode" => "401"
+            ]);
+        }
         $head = $this->seo->optimize(
             "Departamentos | " . site("name"),
             site("desc"),
@@ -106,20 +132,41 @@ class Painel extends Controller
         )->render();
         $departments = (new Department())->find()->fetch(true);
         $collaborators = (new Collaborator())->find("id_department != 0")->fetch(true);
-        $this->view->addData(['head'=>$head, 'departments' => $departments, 'collaborators' => $collaborators]);
+        $this->view->addData(['head' => $head, 'departments' => $departments, 'collaborators' => $collaborators]);
         echo $this->view->render("theme/pages/painel_departamento");
     }
 
+    public function danificados(): void
+    {
+        $head = $this->seo->optimize(
+            "Danificados | " . site("name"),
+            site("desc"),
+            $this->router->route("painel.danificados"),
+            routeImage("Danificados - Painel")
+        )->render();
+        $damagedCollaborators = (new Returns())->find("id_collaborator != 0 AND status_in = 'bom' AND status_out = 'ruim'")->fetch(true);
+        $damagedDepartments = (new Returns())->find("id_collaborator = 0 AND status_in = 'bom' AND status_out = 'ruim'")->fetch(true);
+        $this->view->addData([
+            'head' => $head,
+            "damagedCollaborators" => $damagedCollaborators,
+            "damagedDepartments" => $damagedDepartments
+        ]);
+        echo $this->view->render("theme/pages/painel_danificados");
+    }
+
+    /**
+     * @return void
+     */
     public function estoque(): void
     {
         $head = $this->seo->optimize(
-          "Estoque | " . site("name"),
-          site("desc"),
-          $this->router->route('painel.estoque'),
-          routeImage("Estoque itens")
+            "Estoque | " . site("name"),
+            site("desc"),
+            $this->router->route('painel.estoque'),
+            routeImage("Estoque itens")
         )->render();
         $products = (new Product())->find()->fetch(true);
-        $this->view->addData(['head'=>$head,'products'=>$products]);
+        $this->view->addData(['head' => $head, 'products' => $products]);
         echo $this->view->render("theme/pages/painel_estoque");
     }
 

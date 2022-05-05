@@ -17,14 +17,15 @@
                 <td>Oficio</td>
                 <td>Tamanho</td>
                 <td>Retirado</td>
-                <td>Devolver</td>
+                <td>Devolvido</td>
+                <td>Status</td>
             </tr>
             </thead>
             <tbody>
             <?php
             $this->insert(
-                "assets/fragments/painel_outputsCollaborator",
-                ["pendingCollaborator" => $pendingCollaborator]
+                "assets/fragments/damaged/damagedCollaborators",
+                ["damagedCollaborators" => $damagedCollaborators]
             );
             ?>
             </tbody>
@@ -43,14 +44,15 @@
                 <td>Oficio</td>
                 <td>Tamanho</td>
                 <td>Retirado</td>
-                <td>Devolver</td>
+                <td>Devolvido</td>
+                <td>Status</td>
             </tr>
             </thead>
             <tbody>
             <?php
             $this->insert(
-                "assets/fragments/painel_outputsDepartment",
-                ["pendingDepartment" => $pendingDepartment]
+                "assets/fragments/damaged/damagedDepartments",
+                ["damagedDepartments" => $damagedDepartments]
             );
             ?>
             </tbody>

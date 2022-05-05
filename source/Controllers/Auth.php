@@ -46,7 +46,7 @@ class Auth extends Controller
 
         $_SESSION['user'] = $user->id;
         echo $this->ajaxResponse("redirect", [
-            "url" => $this->router->route("painel.home")
+            "url" => $this->router->route("painel.retirar")
         ]);
     }
 
@@ -82,7 +82,7 @@ class Auth extends Controller
 
         $_SESSION["user"] = $user->id;
         echo $this->ajaxResponse("redirect", [
-            "url" => $this->router->route("app.home")
+            "url" => $this->router->route("painel.retirar")
         ]);
     }
 

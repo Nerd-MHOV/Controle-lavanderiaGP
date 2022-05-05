@@ -8,12 +8,13 @@ if (!empty($pendingCollaborator)):
             <td><?=$collaborator->productType()->product_type?></td>
             <td><?=$collaborator->product()->product?></td>
             <td><?=$collaborator->productService()->service?></td>
+            <td><?=$collaborator->product()->size?></td>
             <td><?=date("d/m H:i", strtotime($collaborator->created_at))?></td>
             <td><span class="status inProgress" onclick="openModal(<?=$collaborator->id?>)" style="cursor: pointer;">Devolver</span></td>
         </tr>
     <?php
     endforeach;
 else:
-    echo "<tr> <td colspan='6' style='text-align: center'>Não exitem pendencias com os Colaboradores</td> </tr>";
+    echo "<tr> <td colspan='8' style='text-align: center'>Não exitem pendencias com os Colaboradores</td> </tr>";
 endif;
 ?>

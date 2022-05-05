@@ -34,12 +34,12 @@
                 </a>
             </li>
 
-            <li <?= (str_contains($_GET["route"], "home")) ? "class=\"hovered\"" : ""; ?>>
+            <!-- <li <?= (str_contains($_GET["route"], "home")) ? "class=\"hovered\"" : ""; ?>>
                 <a href="<?= $router->route("painel.home") ?>">
                     <span class="icon"><i class='bx bxs-home'></i></span>
                     <span class="title">Home</span>
                 </a>
-            </li>
+            </li> -->
             <li <?= (str_contains($_GET["route"], "retirar")) ? "class=\"hovered\"" : ""; ?>>
                 <a href="<?= $router->route("painel.retirar") ?>">
                     <span class="icon"><i class='bx bxs-shopping-bags'></i></span>
@@ -64,10 +64,10 @@
                     <span class="title">Departamento</span>
                 </a>
             </li>
-            <li <?= (str_contains($_GET["route"], "relatorios")) ? "class=\"hovered\"" : ""; ?>>
-                <a href="<?= $router->route("painel.relatorio") ?>">
-                    <span class="icon"><i class='bx bxs-pie-chart-alt-2'></i></span>
-                    <span class="title">Relatórios</span>
+            <li <?= (str_contains($_GET["route"], "danificados")) ? "class=\"hovered\"" : ""; ?>>
+                <a href="<?= $router->route("painel.danificados") ?>">
+                    <span class="icon"><i class='bx bx-calendar-exclamation'></i></span>
+                    <span class="title">Danificados</span>
                 </a>
             </li>
             <li <?= (str_contains($_GET["route"], "estoque")) ? "class=\"hovered\"" : ""; ?>>
@@ -96,11 +96,11 @@
         </div>
         <!-- search -->
         <div class="search">
-            <label>
+            <!-- <label>
                 <input type="text" placeholder="Search here">
                 <i class='bx bx-search'></i>
-                <!--<img style="width: 100%; max-width:200px" src="--><?//=asset("images/black.png")?><!--" alt="LogoCompleta">-->
-            </label>
+                <img style="width: 100%; max-width:200px" src="<?=asset("images/black.png")?>" alt="LogoCompleta">
+            </label> -->
         </div>
         <!-- userImg -->
         <div class="user">

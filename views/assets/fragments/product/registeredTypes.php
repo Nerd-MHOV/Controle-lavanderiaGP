@@ -4,7 +4,7 @@ if (!empty($types)):
         ?>
         <tr>
             <td>
-                <div class="imgBx"><i class="bx bxs-hard-hat"></i></div>
+                <div class="imgBx"><i class='bx bx-closet'></i></div>
             </td>
             <td><h4><?=$type->product_type?></h4><span><?=$type->amountProducts()?> Produto(s)</span></td>
         </tr>

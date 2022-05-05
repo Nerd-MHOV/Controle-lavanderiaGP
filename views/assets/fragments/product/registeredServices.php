@@ -4,7 +4,7 @@ if (!empty($services)):
         ?>
         <tr>
             <td>
-                <div class="imgBx"><i class="bx bxs-hard-hat"></i></div>
+                <div class="imgBx"><i class='bx bxs-briefcase' ></i></div>
             </td>
             <td><h4><?=$service->service?></h4><span><?=$service->amountProducts()?> Produto(s)</span></td>
         </tr>

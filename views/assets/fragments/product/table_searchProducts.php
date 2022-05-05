@@ -1,17 +1,21 @@
 <?php
 if (!empty($products)):
     foreach ($products as $p):
-        $product = (new \Source\Models\Product())->findById($p->id)
         ?>
         <tr>
             <td><?= $p->product_type ?></td>
             <td><?= $p->product ?></td>
             <td><?= $p->service ?></td>
             <td><?= $p->size ?></td>
+            <td><?= $p->unitary_value ?></td>
             <td><?= $p->department ?></td>
-            <td><?= $product->inInventory() ?></td>
-            <td><?= $product->inOutput() ?></td>
-            <td><?= $product->amountOutInv() ?></td>
+            <?php
+            if ($p->status == "A"):
+                echo "<td><span class=\"status delivered\">Ativo</span></td>";
+            elseif ($p->status == "D"):
+                echo "<td><span class=\"status return\">Desativado</span></td>";
+            endif;
+            ?>
         </tr>
     <?php
     endforeach;

@@ -1,7 +1,9 @@
 <?php $this->layout("theme/_themeDashboard");
+
 use Source\Controllers\Painel;
+
 /** @var Painel $router */
-/** @var Painel $products */
+/** @var Painel::produto $products */
 ?>
 <!-- cards -->
 <div class="containerPainel">
@@ -18,7 +20,7 @@ use Source\Controllers\Painel;
     <div class="searchRight">
         <div class="search">
             <label>
-                <input type="text" placeholder="Buscar produto">
+                <input id="searchBar" type="text" placeholder="Buscar produto" />
                 <i class='bx bx-search'></i>
             </label>
         </div>
@@ -32,20 +34,22 @@ use Source\Controllers\Painel;
                 <th>Tipo</th>
                 <th>Produto</th>
                 <th>Oficio</th>
+                <th>Tamanho</th>
                 <th>Valor por Unidade</th>
                 <th>Departamento</th>
                 <th>Status</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="bodyResponse">
             <?php
-            if (!empty($poducts)):
+            if (!empty($products)):
                 foreach ($products as $product):
                     ?>
                     <tr>
                         <td><?= $product->productType()->product_type ?></td>
                         <td><?= $product->product ?></td>
                         <td><?= $product->productService()->service ?></td>
+                        <td><?= $product->size ?></td>
                         <td><?= $product->unitary_value ?></td>
                         <td><?= $product->department()->department ?></td>
                         <?php
@@ -55,7 +59,6 @@ use Source\Controllers\Painel;
                             echo "<td><span class=\"status return\">Desativado</span></td>";
                         endif;
                         ?>
-
                     </tr>
                 <?php
                 endforeach;
@@ -65,3 +68,20 @@ use Source\Controllers\Painel;
         </table>
     </div>
 </div>
+
+<?php $this->start("scripts") ?>
+    <script>
+        $('#searchBar').keyup(function () {
+            let search = $(this).val();
+            $.ajax({
+                url: "<?= $router->route("web-product.search-products"); ?>",
+                type: "post",
+                data: {search: search},
+                dataType: "json",
+                success: function (callback) {
+                    $("#bodyResponse").html(callback.response);
+                }
+            })
+        });
+    </script>
+<?php $this->end() ?>

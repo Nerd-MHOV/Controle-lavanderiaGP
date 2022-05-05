@@ -49,14 +49,14 @@ class Product extends DataLayer
 
     public function amountOutInv(): ?int
     {
-        return ($this->inInventory() - $this->inOutput());
+        return ($this->inInventory() + $this->inOutput());
     }
 
     public function search(string $search)
     {
         $connect = Connect::getInstance(DATA_LAYER_CONFIG);
         $products = $connect->query("
-        SELECT p.id,p.product, pt.product_type, ps.service, d.department
+        SELECT p.id, p.size, p.product, pt.product_type, ps.service, d.department, p.status, p.unitary_value
         FROM product AS p 
         INNER JOIN product_type AS pt ON p.id_product_type = pt.id 
         INNER JOIN product_service AS ps ON p.id_product_service = ps.id      
@@ -65,6 +65,8 @@ class Product extends DataLayer
         OR pt.product_type LIKE '%{$search}%'
         OR ps.service LIKE '%{$search}%'
         OR d.department LIKE '%{$search}%'
+        OR p.size LIKE '%{$search}%'
+        OR p.unitary_value LIKE '%{$search}%'
         ");
         $return = ($products->fetchAll(PDO::FETCH_OBJ));
 
