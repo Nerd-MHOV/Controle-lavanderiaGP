@@ -9,8 +9,8 @@ if (isset($damagedCollaborators) && !empty($damagedCollaborators)):
             <td><?= $collaborator->product()->product ?></td>
             <td><?= $collaborator->productService()->service ?></td>
             <td><?= $collaborator->product()->size ?></td>
-            <td><?= date("d/m H:i", strtotime($collaborator->created_at)) ?></td>
-            <td><?= date("d/m H:i", strtotime($collaborator->created_at)) ?></td>
+            <td><?= date("d/m H:i", strtotime($collaborator->date_in)) ?></td>
+            <td><?= date("d/m H:i", strtotime($collaborator->date_out)) ?></td>
             <td><span class="status inProgress" onclick="openModal(<?= $collaborator->id ?>)"
                       style="cursor: pointer;">Status</span>
             </td>
@@ -18,5 +18,5 @@ if (isset($damagedCollaborators) && !empty($damagedCollaborators)):
     <?php
     endforeach;
 else:
-    echo "<tr> <td colspan='8' style='text-align: center'>Nenhum produto danificado pelos Colaboradores</td> </tr>";
+    echo "<tr> <td colspan='9' style='text-align: center'>Nenhum produto danificado pelos Colaboradores</td> </tr>";
 endif;

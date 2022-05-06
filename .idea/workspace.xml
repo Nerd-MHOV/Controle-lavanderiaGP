@@ -7,57 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/source/Controllers/Error.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedCollaborators.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedDepartments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/product/table_searchProducts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/theme/pages/painel_danificados.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_collaborator.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_collaborator.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_collaborator_type.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_collaborator_type.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_department.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department_head.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_department_head.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_input.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_input.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_inventory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_inventory.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_output.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_output.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_product.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_service.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_product_service.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_type.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_product_type.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MySql/lavanderia_returns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_returns.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_users.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Controllers/Web.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Controllers/WebProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/WebProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Models/Returns.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Returns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/department/registeredCollaborators.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/department/registeredCollaborators.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/document.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/document.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/iventory/table_iventoryProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/iventory/table_iventoryProducts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_outputsCollaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsCollaborator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_outputsDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsDepartment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/product/registeredProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/product/registeredProducts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/product/registeredServices.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/product/registeredServices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/product/registeredTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/product/registeredTypes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/styleDashboard.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashboard.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/_themeDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/_themeDashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/error.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/department/newCollaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/department/newCollaborator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newService.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/product/newType.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/product/newType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedCollaborators.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedCollaborators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedDepartments.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedDepartments.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +199,12 @@
       <workItem from="1651494718365" duration="22481000" />
       <workItem from="1651528995767" duration="524000" />
       <workItem from="1651692308961" duration="5800000" />
-      <workItem from="1651753087457" duration="21716000" />
+      <workItem from="1651753087457" duration="22438000" />
+      <workItem from="1651844673883" duration="3593000" />
+      <workItem from="1651851416606" duration="644000" />
+      <workItem from="1651857382481" duration="665000" />
+      <workItem from="1651859520703" duration="541000" />
+      <workItem from="1651860950382" duration="594000" />
     </task>
     <servers />
   </component>

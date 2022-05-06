@@ -5,11 +5,25 @@ namespace Source\Models;
 use CoffeeCode\DataLayer\DataLayer;
 
 
+/**
+ * @property int|null $id_product
+ * @property int|null $id_department
+ * @property int|null $id_collaborator
+ * @property int|null $id_user
+ * @property int|null $amount
+ * @property string|null $status_in
+ * @property string|null $status_out
+ * @property string|null $date_in
+ * @property string|null $date_out
+ * @property string|null $obs_in
+ * @property string|null $obs_out
+ * @property int|null $amount_bad
+ */
 class Returns extends DataLayer
 {
     public function __construct()
     {
-        parent::__construct("returns", ["id_product", "id_department", "id_collaborator", "id_user", "amount", "status_in", "status_out"]);
+        parent::__construct("returns", ["id_product", "id_department", "id_collaborator", "id_user", "amount", "status_in", "status_out", "date_in", "date_out"]);
     }
 
     public function collaborator()

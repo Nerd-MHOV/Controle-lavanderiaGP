@@ -303,11 +303,14 @@ class Response extends Controller
             $returns->id_collaborator = $output->id_collaborator;
             $returns->id_user = $_SESSION["user"];
             $returns->amount = $amountTotal;
-            $returns->amountBad = $data["nmb_bad"];
+            $returns->amount_bad = $data["nmb_bad"];
             $returns->status_in = $output->status;
             $returns->status_out = ($data["nmb_bad"] > 0) ? "ruim" : "bom";
             $returns->obs_in = $output->obs;
             $returns->obs_out = $data["obs-modal"] ?? "";
+            $returns->date_in = $output->updated_at;
+            $returns->date_out = date("Y-m-d H:i:s");
+
 
 
             $newAmount = ($output->amount - $returns->amount);
@@ -330,6 +333,8 @@ class Response extends Controller
             $returns->status_out = $data["estado-modal"];
             $returns->obs_in = $output->obs;
             $returns->obs_out = $data["obs-modal"] ?? "";
+            $returns->date_in = $output->updated_at;
+            $returns->date_out = date("Y-m-d H:i:s");
 
             $id = $data["id_saida"];
             $returns->save();

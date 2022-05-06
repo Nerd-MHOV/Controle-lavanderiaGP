@@ -25,10 +25,7 @@
       <user-name>phpmyadmin</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema">
-            <name qname="controle_lavanderia" />
-            <name qname="lavanderia" />
-          </node>
+          <node kind="schema" qname="lavanderia" />
         </introspection-scope>
       </schema-mapping>
       <ssh-properties>

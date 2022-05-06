@@ -8,12 +8,13 @@ if (isset($damagedDepartments) && !empty($damagedDepartments)):
             <td><?= $department->product()->product ?></td>
             <td><?= $department->productService()->service ?></td>
             <td><?= $department->product()->size ?></td>
-            <td><?= date("d/m H:i", strtotime($department->created_at)) ?></td>
+            <td><?= date("d/m H:i", strtotime($department->date_in)) ?></td>
+            <td><?= date("d/m H:i", strtotime($department->date_out)) ?></td>
             <td><span class="status inProgress" onclick="openModal(<?= $department->id ?>, true)"
                       style="cursor: pointer;">Status</span></td>
         </tr>
     <?php
     endforeach;
 else:
-    echo "<tr> <td colspan='7' style='text-align: center'>Nenhum produto danificado pelos Setores</td> </tr>";
+    echo "<tr> <td colspan='8' style='text-align: center'>Nenhum produto danificado pelos Setores</td> </tr>";
 endif;
