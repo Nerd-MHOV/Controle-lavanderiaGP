@@ -38,6 +38,7 @@ class Response extends Controller
     /**
      * @param array $data
      * @return void
+     * SELECIONE O TIPO
      */
     public function products(array $data): void
     {
@@ -46,7 +47,8 @@ class Response extends Controller
         $callback["products"] = $this->view->render("assets/fragments/painel_response_products", [
             "countRow" => $data["qtdeRetiradas"],
             "products" => $products,
-            "id_collaborator" => $data["id_collaborator"]
+            "id_collaborator" => $data["id_collaborator"],
+            "id_department" => $data["id_department"]
         ]);
         $callback["data"] = $data;
         $callback["debug"] = $products;
@@ -56,10 +58,11 @@ class Response extends Controller
     /**
      * @param array $data
      * @return void
+     * SELECIONE O PRODUTO
      */
     public function productService(array $data): void
     {
-        $products = (new Product())->find("id_product_type = :ipt AND id_product_service = :ips", "ipt={$data["id_productType"]}&ips={$data["id_productService"]}")->group("product")->fetch(true);
+        $products = (new Product())->find("status = 'A' AND id_department = :did AND id_product_type = :ipt AND id_product_service = :ips", "did={$data["id_department"]}&ipt={$data["id_productType"]}&ips={$data["id_productService"]}")->group("product")->fetch(true);
         $callback["products"] = $this->view->render("assets/fragments/painel_product", [
             "products" => $products
         ]);
@@ -70,10 +73,11 @@ class Response extends Controller
     /**
      * @param array $data
      * @return void
+     * SELECIONE O OFICIO
      */
     public function productType(array $data): void
     {
-        $products = (new Product())->find("id_product_type = :idpt", "idpt={$data["id_selectProductType"]}")->group("id_product_service")->fetch(true);
+        $products = (new Product())->find("status = 'A' AND id_department = :did AND id_product_type = :idpt", "did={$data["id_department"]}&idpt={$data["id_selectProductType"]}")->group("id_product_service")->fetch(true);
         $callback["products"] = $this->view->render("assets/fragments/painel_productService", [
             "products" => $products
         ]);
@@ -85,8 +89,8 @@ class Response extends Controller
     public function productSend(array $data): void
     {
         $products = (new Product())
-            ->find("id_product_type = :idpt AND id_product_service = :idps AND product = :product",
-                "idpt={$data["id_productType"]}&idps={$data["id_productService"]}&product={$data["product"]}")
+            ->find("status = 'A' AND id_department = :did AND id_product_type = :idpt AND id_product_service = :idps AND product = :product",
+                "did={$data["id_department"]}&idpt={$data["id_productType"]}&idps={$data["id_productService"]}&product={$data["product"]}")
             ->fetch(true);
         $callback["products"] = $this->view->render("assets/fragments/painel_productSize", [
             "products" => $products
@@ -328,7 +332,7 @@ class Response extends Controller
             $returns->id_collaborator = $output->id_collaborator;
             $returns->id_user = $_SESSION["user"];
             $returns->amount = $output->amount;
-            $returns->amountBad = 0;
+            $returns->amount_bad = 0;
             $returns->status_in = $output->status;
             $returns->status_out = $data["estado-modal"];
             $returns->obs_in = $output->obs;

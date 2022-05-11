@@ -8,14 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/controle_lavanderia.Eqasag.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/controle_lavanderia.Eqasag.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_returns.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/lavanderia_returns.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Returns.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Returns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedCollaborators.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedCollaborators.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedDepartments.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/damagedDepartments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_productService.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +203,10 @@
       <workItem from="1651851416606" duration="644000" />
       <workItem from="1651857382481" duration="665000" />
       <workItem from="1651859520703" duration="541000" />
-      <workItem from="1651860950382" duration="594000" />
+      <workItem from="1651860950382" duration="645000" />
+      <workItem from="1652208809885" duration="117000" />
+      <workItem from="1652209400325" duration="5771000" />
+      <workItem from="1652271939951" duration="3686000" />
     </task>
     <servers />
   </component>

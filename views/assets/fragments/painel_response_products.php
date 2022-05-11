@@ -44,13 +44,15 @@ if (!$id_collaborator): //SETOR
                 let select_productType = $(this).val();
                 let select_productService = $("#select_productService-<?= $i ?>");
                 let select_product = $("#select_product-<?= $i ?>");
+                let id_department = "<?=$id_department?>";
 
 
                 $.ajax({
                     type: "POST",
                     url: "<?=$router->route("response.typeproducts")?>",
                     data: {
-                        id_selectProductType: select_productType
+                        id_selectProductType: select_productType,
+                        id_department: id_department
                     },
                     dataType: "json",
                     beforeSend: function () {
@@ -73,13 +75,15 @@ if (!$id_collaborator): //SETOR
                 let select_productService = $(this).val();
                 let select_productType = $("#select_productType-<?= $i ?>").val();
                 let select_product = $("#select_product-<?= $i ?>");
+                let id_department = "<?=$id_department?>";
 
                 $.ajax({
                     type: "post",
                     url: "<?=$router->route("response.product_service")?>",
                     data: {
                         id_productType: select_productType,
-                        id_productService: select_productService
+                        id_productService: select_productService,
+                        id_department: id_department
                     },
                     dataType: "json",
                     beforeSend: function () {
@@ -104,6 +108,7 @@ if (!$id_collaborator): //SETOR
                 let select_productService = $("#select_productService-<?= $i ?>").val();
                 let select_product = $("#select_product-<?= $i ?>").val();
                 let select_size = $("#select_size-<?= $i ?>");
+                let id_department = "<?= $id_department ?>";
 
                 $.ajax({
                     url: "<?=$router->route("response.product_send")?>",
@@ -112,6 +117,7 @@ if (!$id_collaborator): //SETOR
                     data: {
                         id_productType: select_productType,
                         id_productService: select_productService,
+                        id_department: id_department,
                         product: select_product,
                     },
                     beforeSend: function () {
