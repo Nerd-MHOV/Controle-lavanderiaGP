@@ -9,7 +9,6 @@ use Source\Controllers\Web;
 $router = new Router(site());
 $router->namespace("Source\Controllers");
 
-
 /**
  * login WEB
  */
@@ -91,6 +90,15 @@ $router->post("/recarregar-colaborador", "WebDepartment:reloadCollaborators", "w
  */
 $router->group('estoque');
 $router->post("/pesquisar", "WebIventory:searchIventory", "web-iventory.search-iventory");
+
+/**
+ *  danificados WEB Damaged
+ */
+$router->group('danificados');
+$router->post("/colaborador", "WebDamaged:returnCollaborator", "web-damaged.return_collaborator");
+$router->post("/setor", "WebDamaged:returnDepartment", "web-damaged.return_department");
+$router->get("/colaborador", "WebDamaged:perCollaborator", "web-damaged.per-collaborator");
+
 
 /**
  * ERRORS

@@ -28,6 +28,11 @@ class Collaborator extends DataLayer
         return ((new CollaboratorType())->findById((int)$this->id_type))->type;
     }
 
+    public function amountPendencies(): ?int
+    {
+        return ((new Output())->find("id_collaborator LIKE {$this->id}")->count());
+    }
+
     public function save(): bool
     {
         if (

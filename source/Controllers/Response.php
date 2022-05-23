@@ -48,7 +48,7 @@ class Response extends Controller
             "countRow" => $data["qtdeRetiradas"],
             "products" => $products,
             "id_collaborator" => $data["id_collaborator"],
-            "id_department" => $data["id_department"]
+            "id_department" => $data["id_department"],
         ]);
         $callback["data"] = $data;
         $callback["debug"] = $products;
@@ -64,7 +64,8 @@ class Response extends Controller
     {
         $products = (new Product())->find("status = 'A' AND id_department = :did AND id_product_type = :ipt AND id_product_service = :ips", "did={$data["id_department"]}&ipt={$data["id_productType"]}&ips={$data["id_productService"]}")->group("product")->fetch(true);
         $callback["products"] = $this->view->render("assets/fragments/painel_product", [
-            "products" => $products
+            "products" => $products,
+            "selected" => @$data["val_product"]
         ]);
         $callback["data"] = $data;
         echo json_encode($callback);
@@ -77,9 +78,13 @@ class Response extends Controller
      */
     public function productType(array $data): void
     {
-        $products = (new Product())->find("status = 'A' AND id_department = :did AND id_product_type = :idpt", "did={$data["id_department"]}&idpt={$data["id_selectProductType"]}")->group("id_product_service")->fetch(true);
+        $products = (new Product())->find("status = 'A' AND id_department = :did AND id_product_type = :idpt",
+            "did={$data["id_department"]}&idpt={$data["id_selectProductType"]}")
+            ->group("id_product_service")
+            ->fetch(true);
         $callback["products"] = $this->view->render("assets/fragments/painel_productService", [
-            "products" => $products
+            "products" => $products,
+            "selected" => @$data["val_service"]
         ]);
         $callback["debug"] = $products;
         $callback["data"] = $data;

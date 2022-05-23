@@ -2,13 +2,13 @@
 
 use Source\Controllers\Painel;
 
-/** @var Painel $products */
+/** @var Painel $collaborator */
 /** @var Painel $router */
 ?>
 <!-- cards -->
 <div class="containerPainel">
     <div class="cardHeader" style="margin-bottom: 10px">
-        <h2>Itens em estoque</h2>
+        <h2>Danificados por colaborador</h2>
         <!-- search -->
         <div class="search">
             <label>
@@ -22,30 +22,22 @@ use Source\Controllers\Painel;
         <table>
             <thead>
             <tr>
-                <th>Tipo</th>
-                <th>Produto</th>
-                <th>Oficio</th>
-                <th>Tamanho</th>
+                <th>Colaborador</th>
                 <th>Departamento</th>
-                <th>Estoque</th>
-                <th>Pendente</th>
-                <th>Total</th>
+                <th>Pendencias</th>
+                <th>Detalhes...</th>
             </tr>
             </thead>
             <tbody id="bodyResponse">
             <?php
-            if (!empty($products)):
-                foreach ($products as $product):
+            if (!empty($collaborator)):
+                foreach ($collaborator as $collab):
                     ?>
                     <tr>
-                        <td><?= $product->productType()->product_type ?></td>
-                        <td><?= $product->product ?></td>
-                        <td><?= $product->productService()->service ?></td>
-                        <td><?= $product->size ?></td>
-                        <td><?= $product->department()->department ?></td>
-                        <td><?= $product->inInventory() ?></td>
-                        <td><?= $product->inOutput() ?></td>
-                        <td><?= $product->amountOutInv() ?></td>
+                        <td><?= $collab->collaborator ?></td>
+                        <td><?= $collab->department() ?></td>
+                        <td><?= $collab->amountPendencies() ?></td>
+                        <td><span class="status inProgress" onclick="openModal(<?=$collab->id?>)" style="cursor: pointer;">Ver mais!</span></td>
                     </tr>
                 <?php
                 endforeach;

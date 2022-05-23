@@ -2,11 +2,15 @@
 <div class="login_form_callback center20px">
     <?= flash(); ?>
 </div>
-<div class="details dw50">
+<div class="details dw100">
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Colaboradores:</h2>
+            <div>
+                <a href="<?= $router->route("web-damaged.per-collaborator"); ?>" class="btnDashboard">Por colaborador</a>
+            </div>
         </div>
+
         <table>
             <thead>
             <tr>
@@ -82,7 +86,7 @@
             $.ajax({
                 type: 'POST',
                 data: {id_saida: id},
-                url: '<?=$router->route("response.return_collaborator")?>',
+                url: '<?=$router->route("web-damaged.return_collaborator")?>',
                 dataType: 'json',
                 success: function (data) {
 
@@ -97,7 +101,7 @@
             $.ajax({
                 type: 'POST',
                 data: {id_saida: id},
-                url: '<?=$router->route("response.return_department")?>',
+                url: '<?=$router->route("web-damaged.return_department")?>',
                 dataType: 'json',
                 success: function (data) {
                     $('#myModal').html(data.modal);

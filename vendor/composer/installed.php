@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '2946e20f7d6335eb2163e016c9660f9edf6bb482',
+        'reference' => '9c2cbafc8ea0b0387d30033bf286bdcf6e928df2',
         'name' => 'nerd-mhov/controle_lavanderia4.0',
         'dev' => true,
     ),
@@ -81,7 +81,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '2946e20f7d6335eb2163e016c9660f9edf6bb482',
+            'reference' => '9c2cbafc8ea0b0387d30033bf286bdcf6e928df2',
             'dev_requirement' => false,
         ),
         'phenx/php-font-lib' => array(

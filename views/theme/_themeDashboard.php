@@ -104,6 +104,11 @@
         </div>
         <!-- userImg -->
         <div class="user">
+            <a href="https://drive.google.com/drive/folders/1bzP33rjtIr8xYWl0WJXW9BI8B_wvXLBv">
+            <div class="helpButton">
+                <i class='bx bx-question-mark'></i>
+            </div>
+            </a>
             <!--<img src="<?= asset("images/perfil.jpg") ?>"/>-->
         </div>
     </div>

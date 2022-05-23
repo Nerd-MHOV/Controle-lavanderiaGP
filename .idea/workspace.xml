@@ -1,20 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoTestManager">
-    <enabled-run-configurations>
-      <run-configuration type="PHPUnitRunConfigurationType" name="controle_lavanderia4.0" />
-    </enabled-run-configurations>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="">
+    <list default="true" id="5fdc63cc-7732-440b-9b46-10cc4bb63b9d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql/all.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Controllers/WebDamaged.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/modalCollaborator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/modalDepartment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/theme/pages/damaged/perCollaborator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/controle_lavanderia.Eqasag.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/database.exGpag.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/projeto01.ZJaxyg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/projetoconsulta.GPx2Fg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/sysescolas.V043JA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ad.K9hyfw.base.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ad.K9hyfw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ad.K9hyfw.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ai.MNhyfw.base.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ai.MNhyfw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ai.MNhyfw.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_au.PNhyfw.base.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_au.PNhyfw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_au.PNhyfw.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/controle_lavanderia.Eqasag.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/controle_lavanderia.Eqasag.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_collaborator.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_collaborator_type.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department_head.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_input.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_inventory.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_output.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_service.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_type.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_returns.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Collaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Collaborator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_productService.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/styleDashboard.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashboard.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/_themeDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/_themeDashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/login/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_danificados.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_danificados.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,42 +74,15 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="2659ce3a-3e6d-48ac-bda9-86c49a92c04f" />
-    </execution>
-  </component>
-  <component name="CoverageOptionsProvider">
-    <option name="myAddOrReplace" value="0" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="PhpServers">
-    <servers>
-      <server host="localhost/controle_lavanderia4.0" id="16b51e95-bc38-460f-9122-d6c92af9d6d3" name="teste" />
-    </servers>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
       <path value="$PROJECT_DIR$/vendor/composer" />
@@ -74,139 +98,42 @@
       <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
     </include_path>
   </component>
-  <component name="ProjectId" id="271whb3ZEvYO5DACYVz7Qtkhgpr" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="29RJTIxfplA15Y9tFH7bs2R99TJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="TODO_SCOPE" value="All Places" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
-    <property name="import_schema_mapping" value="&lt;schema-mapping&gt;&lt;databases&gt;&lt;list&gt;&lt;schema-mapping-item&gt;&lt;source-data-source-id&gt;38ebe801-4916-42e4-b7f1-e76696015c82&lt;/source-data-source-id&gt;&lt;source-path&gt;schema/&quot;lavanderia&quot;&lt;/source-path&gt;&lt;target-data-source-id&gt;38ebe801-4916-42e4-b7f1-e76696015c82&lt;/target-data-source-id&gt;&lt;target-path&gt;schema/&quot;lavanderia&quot;&lt;/target-path&gt;&lt;/schema-mapping-item&gt;&lt;schema-mapping-item&gt;&lt;source-data-source-id&gt;012ee59d-42cd-46c1-b079-3e8399e24309&lt;/source-data-source-id&gt;&lt;source-path&gt;schema/&quot;lavanderia&quot;&lt;/source-path&gt;&lt;target-data-source-id&gt;38ebe801-4916-42e4-b7f1-e76696015c82&lt;/target-data-source-id&gt;&lt;target-path&gt;schema/&quot;lavanderia&quot;&lt;/target-path&gt;&lt;/schema-mapping-item&gt;&lt;/list&gt;&lt;/databases&gt;&lt;/schema-mapping&gt;" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/assets/fragments/damaged" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments\damaged" />
-      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\theme\pages" />
-      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments\department" />
-      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\theme\pages\department" />
-      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments\product" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\controle_lavanderia4.0\views\assets" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="form.js" />
-      <command value="painel_devolver_modal" />
-    </option>
-  </component>
-  <component name="RunManager" selected="PHPUnit.controle_lavanderia4.0">
-    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/controle_lavanderia4.0/index.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="controle_lavanderia4.0" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP 8.1" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner coverage_engine="PHPDBG" directory="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Product.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/Models/Product.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="Response.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/Controllers/Response.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="WebDepartment.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/Controllers/WebDepartment.php">
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="JavaScript Debug.index.php" />
-      <item itemvalue="PHP Script.index.php" />
-      <item itemvalue="PHP Script.WebDepartment.php" />
-      <item itemvalue="PHP Script.Response.php" />
-      <item itemvalue="PHP Script.Product.php" />
-      <item itemvalue="PHP Web Page.Lavanderia" />
-      <item itemvalue="PHPUnit.controle_lavanderia4.0" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHP Script.Product.php" />
-        <item itemvalue="PHP Script.Response.php" />
-        <item itemvalue="PHP Script.WebDepartment.php" />
-        <item itemvalue="JavaScript Debug.index.php" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SQLScriptSettings">
-    <option name="matrix">
-      <map>
-        <entry key="MARIADB.CreateComplete" value="ConstraintContext=CONSTRAINT_AFTER_TABLE" />
-        <entry key="MARIADB.Truncate" value="UseDelete=1" />
-      </map>
-    </option>
-    <option name="outputLayout" value="File per object by schema.groovy" />
-    <option name="outputPath" value="C:\xampp\htdocs\controle_lavanderia4.0\MySql\02.05.2022" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programador/xampp/htdocs/controle_lavanderia4.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="PHP Script.index.php" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fc1b5c34-38fd-4be1-abc5-3693de13024c" name="Changes" comment="" />
-      <created>1648501028776</created>
+      <changelist id="5fdc63cc-7732-440b-9b46-10cc4bb63b9d" name="Changes" comment="" />
+      <created>1653069983119</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1648501028776</updated>
-      <workItem from="1648501031839" duration="3199000" />
-      <workItem from="1648562297908" duration="21216000" />
-      <workItem from="1648665423030" duration="6502000" />
-      <workItem from="1648734459236" duration="23337000" />
-      <workItem from="1648832347574" duration="15548000" />
-      <workItem from="1649257219912" duration="929000" />
-      <workItem from="1649258518916" duration="12087000" />
-      <workItem from="1649428244985" duration="10039000" />
-      <workItem from="1649686218658" duration="228000" />
-      <workItem from="1649686633084" duration="10991000" />
-      <workItem from="1649790277955" duration="5839000" />
-      <workItem from="1649862479057" duration="12020000" />
-      <workItem from="1649939587428" duration="1056000" />
-      <workItem from="1649956944967" duration="13608000" />
-      <workItem from="1650285891278" duration="35390000" />
-      <workItem from="1650460226174" duration="14751000" />
-      <workItem from="1650896637376" duration="17914000" />
-      <workItem from="1650977481176" duration="15637000" />
-      <workItem from="1651061687383" duration="8832000" />
-      <workItem from="1651170460242" duration="10470000" />
-      <workItem from="1651234933580" duration="14380000" />
-      <workItem from="1651494718365" duration="22481000" />
-      <workItem from="1651528995767" duration="524000" />
-      <workItem from="1651692308961" duration="5800000" />
-      <workItem from="1651753087457" duration="22438000" />
-      <workItem from="1651844673883" duration="3593000" />
-      <workItem from="1651851416606" duration="644000" />
-      <workItem from="1651857382481" duration="665000" />
-      <workItem from="1651859520703" duration="541000" />
-      <workItem from="1651860950382" duration="645000" />
-      <workItem from="1652208809885" duration="117000" />
-      <workItem from="1652209400325" duration="5771000" />
-      <workItem from="1652271939951" duration="3686000" />
+      <updated>1653069983119</updated>
+      <workItem from="1653069991321" duration="2641000" />
+      <workItem from="1653080188818" duration="2865000" />
+      <workItem from="1653332278983" duration="3093000" />
+      <workItem from="1653336234333" duration="1165000" />
+      <workItem from="1653337573043" duration="4325000" />
     </task>
     <servers />
   </component>
@@ -223,18 +150,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/controle_lavanderia4_0$Lavanderia.dat" NAME="Lavanderia Coverage Results" MODIFIED="1651007183870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/controle_lavanderia4_0$index_php__1_.dat" NAME="Lavanderia Coverage Results" MODIFIED="1651007099912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/controle_lavanderia4_0$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1650992448927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/controle_lavanderia4_0@controle_lavanderia4_0.xml" NAME="controle_lavanderia4.0 Coverage Results" MODIFIED="1651501107849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

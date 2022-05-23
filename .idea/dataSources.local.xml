@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="PS-213.7172.28">
-    <data-source name="MariaDB - lavanderia@localhost" uuid="012ee59d-42cd-46c1-b079-3e8399e24309">
-      <database-info product="MariaDB" version="10.4.24-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MARIADB" exact-version="10.4.24" exact-driver-version="2.7">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema" qname="@" />
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
-    <data-source name="Servidor" uuid="38ebe801-4916-42e4-b7f1-e76696015c82">
+  <component name="dataSourceStorageLocal" created-in="PS-221.5080.224">
+    <data-source name="SERVIDOR" uuid="38ebe801-4916-42e4-b7f1-e76696015c82">
       <database-info product="MySQL" version="8.0.29-0ubuntu0.20.04.3" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MYSQL" exact-version="8.0.29" exact-driver-version="2.7">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -30,8 +16,22 @@
       </schema-mapping>
       <ssh-properties>
         <enabled>true</enabled>
-        <ssh-config-id>24179762-04ad-446a-b8e6-66c11f147efd</ssh-config-id>
+        <ssh-config-id>4ced337e-97b8-47be-a38b-5eb3668a7356</ssh-config-id>
       </ssh-properties>
+    </data-source>
+    <data-source name="LOCAL" uuid="16129473-63dc-47cc-a63c-da7676898355">
+      <database-info product="MariaDB" version="10.4.24-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MARIADB" exact-version="10.4.24" exact-driver-version="2.7">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>
