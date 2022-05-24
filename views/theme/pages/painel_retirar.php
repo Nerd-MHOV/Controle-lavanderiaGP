@@ -56,6 +56,14 @@
 
     <div class="containerPainel">
         <div class="tablePainel">
+
+
+            <div id="responsibleBox">
+
+            </div>
+
+
+
             <div class="login_form_callback">
                 <?= flash(); ?>
             </div>
@@ -81,7 +89,6 @@
 </form>
 <?php $this->start("scripts"); ?>
 <script>
-
     // Animação de carregamento!!!
     function ajax_load(action) {
         ajax_load_div = $(".ajax_load");
@@ -123,6 +130,8 @@
                 nmb_qtdeRetiradas.val("0");
                 real_withdraws.val("0")
                 $("#tb_products").html("");
+                $("#responsibleBox").html("");
+
             },
             complete: function () {
                 ajax_load("close");
@@ -138,6 +147,7 @@
         nmb_qtdeRetiradas.val("0");
         real_withdraws.val("0")
         $("#tb_products").html("");
+        $("#responsibleBox").html("");
     });
 
 
@@ -167,6 +177,8 @@
         let select_collaborator = $("#select_collaborators").val();
         let nmb_qtdeRetiradas = $("#nmb_qtdeRetiradas").val();
         let tb_products = $("#tb_products");
+        let val_responsible = ($("#select_responsible").val()) ? $("#select_responsible").val() : "nada";
+        console.log(val_responsible);
 
         if (select_department !== "" && select_collaborator !== "") {
 
@@ -177,6 +189,7 @@
                     id_collaborator: select_collaborator,
                     id_department: select_department,
                     qtdeRetiradas: nmb_qtdeRetiradas,
+                    val_responsible: val_responsible,
                 },
                 dataType: "json",
                 beforeSend: function () {
@@ -185,6 +198,7 @@
                 success: function (callback) {
                     if (callback.data.qtdeRetiradas) {
                         tb_products.append(callback.products);
+                        $("#responsibleBox").html(callback.responsible);
                     }
                     if (select_collaborator === "0") {
                         $("#amnt_status").html("Qtde");
@@ -328,6 +342,5 @@
 
         })
     }
-
 </script>
 <?php $this->end(); ?>

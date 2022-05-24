@@ -4,11 +4,21 @@ namespace Source\Models;
 
 use CoffeeCode\DataLayer\DataLayer;
 
+/**
+ * @property int|null $id_product
+ * @property int|null $id_department
+ * @property int|null $id_collaborator
+ * @property int|null $id_responsible
+ * @property int|null $id_user
+ * @property int|null $amount
+ * @property string|null $status
+ * @property string|null $obs
+*/
 class Output extends DataLayer
 {
     public function __construct()
     {
-        parent::__construct("output", ["id_product","id_department","id_collaborator","id_user","amount","status"]);
+        parent::__construct("output", ["id_product","id_department","id_collaborator","id_responsible","id_user","amount","status"]);
     }
 
     public function collaborator()
@@ -34,5 +44,10 @@ class Output extends DataLayer
     public function productService()
     {
         return (new ProductService())->findById($this->product()->id_product_service);
+    }
+
+    public function responsible()
+    {
+        return ((new Collaborator())->findById($this->id_responsible)->collaborator);
     }
 }

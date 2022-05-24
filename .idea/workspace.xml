@@ -1,70 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5fdc63cc-7732-440b-9b46-10cc4bb63b9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/all.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Controllers/WebDamaged.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/modalCollaborator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/assets/fragments/damaged/modalDepartment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/theme/pages/damaged/perCollaborator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/withdraw/reposibleCard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/controle_lavanderia.Eqasag.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/database.exGpag.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/lavanderia.G9BW6w.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/projeto01.ZJaxyg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/projetoconsulta.GPx2Fg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_src_/schema/sysescolas.V043JA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ad.K9hyfw.base.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ad.K9hyfw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ad.K9hyfw.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ai.MNhyfw.base.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ai.MNhyfw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_ai.MNhyfw.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_au.PNhyfw.base.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_au.PNhyfw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/012ee59d-42cd-46c1-b079-3e8399e24309/storage_v2/_staging_/schema/lavanderia.G9BW6w/table/exit.HrkvAA/trigger/trg_saidaproduto_au.PNhyfw.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38ebe801-4916-42e4-b7f1-e76696015c82.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqlDataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_collaborator.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_collaborator_type.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_department_head.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_input.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_inventory.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_output.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_service.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_product_type.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_returns.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/lavanderia_users.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Models/Collaborator.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Collaborator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Output.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Output.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Returns.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Returns.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/painel.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/painel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_productService.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_productType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_response_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modalDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modalDepartment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/assets/styleDashboard.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashboard.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/_themeDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/_themeDashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/login/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_danificados.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_danificados.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_estoque.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_retirar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +37,8 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
       <path value="$PROJECT_DIR$/vendor/composer" />
@@ -112,6 +68,8 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Programador/xampp/htdocs/controle_lavanderia4.0&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -120,6 +78,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programador\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments" />
+    </key>
+  </component>
   <component name="RunManager" selected="PHP Script.index.php" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -133,7 +96,9 @@
       <workItem from="1653080188818" duration="2865000" />
       <workItem from="1653332278983" duration="3093000" />
       <workItem from="1653336234333" duration="1165000" />
-      <workItem from="1653337573043" duration="4325000" />
+      <workItem from="1653337573043" duration="4551000" />
+      <workItem from="1653401640852" duration="8090000" />
+      <workItem from="1653413804371" duration="11405000" />
     </task>
     <servers />
   </component>

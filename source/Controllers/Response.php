@@ -50,6 +50,14 @@ class Response extends Controller
             "id_collaborator" => $data["id_collaborator"],
             "id_department" => $data["id_department"],
         ]);
+
+        $collaborators = (new Collaborator())->find("id_department = :depart", "depart={$data["id_department"]}")->fetch(true);
+        $callback["responsible"] = $this->view->render("assets/fragments/withdraw/reposibleCard",[
+            "id_collaborator" => $data["id_collaborator"],
+            "collaborators" => $collaborators,
+            "selected" => $data["val_responsible"]
+        ]);
+
         $callback["data"] = $data;
         $callback["debug"] = $products;
         echo json_encode($callback);
@@ -124,6 +132,13 @@ class Response extends Controller
                 "message" => "Faça ao menos UMA retirada"
             ]);
         }
+        if (!isset($data["responsible"]) || $data["responsible"] == ""){
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => "Retiradas por setor necessitam de um responsável!"
+            ]);
+            return;
+        }
         if (!(false === array_search(false, $data["select_productType"], false))
             || !(false === array_search(false, $data["select_productService"], false))
             || !(false === array_search(false, $data["select_product"], false))
@@ -166,8 +181,9 @@ class Response extends Controller
             for ($i = 0; $i < $countRows; $i++) {
                 if (((new Output())->find("id_product = :idp AND id_collaborator = 0", "idp={$data["select_size"][$i]}")->count())) { //Já existe pendencias
                     $output = (new Output())->find("id_product = :idp AND id_collaborator = 0", "idp={$data["select_size"][$i]}")->fetch();
-                    $output->id_user = $_SESSION["user"];
                     $output->amount = ($output->amount + $data["amount"][$i]);
+                    $output->id_responsible = $data["responsible"];
+                    $output->id_user = $_SESSION["user"];
                     $output->save();
                 } else { //Não existe pendencia!
                     $output = new Output();
@@ -175,6 +191,7 @@ class Response extends Controller
                     $output->id_product = $data["select_size"][$i];
                     $output->id_department = $data["departamento"];
                     $output->id_collaborator = 0;
+                    $output->id_responsible = $data["responsible"];
                     $output->id_user = $_SESSION["user"];
                     $output->amount = $data["amount"][$i];
                     $output->save();
@@ -201,6 +218,7 @@ class Response extends Controller
                     $output->id_product = $data["select_size"][$i];
                     $output->id_department = $data["departamento"];
                     $output->id_collaborator = $data["colaborador"];
+                    $output->id_responsible = $data["colaborador"];
                     $output->id_user = $_SESSION["user"];
                     $output->amount = 1;
                     $output->status = $data["select_status"][$i];
@@ -213,6 +231,7 @@ class Response extends Controller
                     $output->id_product = $data["select_size"][$i];
                     $output->id_department = $data["departamento"];
                     $output->id_collaborator = $data["colaborador"];
+                    $output->id_responsible = $data["colaborador"];
                     $output->id_user = $_SESSION["user"];
                     $output->amount = 1;
                     $output->status = $data["select_status"][$i];
@@ -267,7 +286,8 @@ class Response extends Controller
         $callback["modal"] = $this->view->render("assets/fragments/painel_devolver_modalDepartment", [
             "productName" => "{$productType->product_type} {$product->product} {$productService->service} {$product->size}",
             "id_saida" => $data["id_saida"],
-            "totalAmount" => $outputs->amount
+            "totalAmount" => $outputs->amount,
+            "responsible_in" => $outputs->responsible(),
         ]);
         $callback["data"] = $data;
         echo json_encode($callback);
@@ -310,6 +330,8 @@ class Response extends Controller
             $returns->id_product = $output->id_product;
             $returns->id_department = $output->id_department;
             $returns->id_collaborator = $output->id_collaborator;
+            $returns->id_responsible_in= $output->id_responsible;
+            $returns->id_responsible_out= $data["id_responsible_out"];
             $returns->id_user = $_SESSION["user"];
             $returns->amount = $amountTotal;
             $returns->amount_bad = $data["nmb_bad"];
@@ -335,6 +357,8 @@ class Response extends Controller
             $returns->id_product = $output->id_product;
             $returns->id_department = $output->id_department;
             $returns->id_collaborator = $output->id_collaborator;
+            $returns->id_responsible_in = $output->id_collaborator;
+            $returns->id_responsible_out = $output->id_collaborator;
             $returns->id_user = $_SESSION["user"];
             $returns->amount = $output->amount;
             $returns->amount_bad = 0;

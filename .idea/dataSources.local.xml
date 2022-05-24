@@ -19,14 +19,14 @@
         <ssh-config-id>4ced337e-97b8-47be-a38b-5eb3668a7356</ssh-config-id>
       </ssh-properties>
     </data-source>
-    <data-source name="LOCAL" uuid="16129473-63dc-47cc-a63c-da7676898355">
-      <database-info product="MariaDB" version="10.4.24-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MARIADB" exact-version="10.4.24" exact-driver-version="2.7">
+    <data-source name="LOCALHOST" uuid="af7719fe-c4d3-4da1-9aab-54679697b182">
+      <database-info product="MySQL" version="5.5.5-10.4.24-MariaDB" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MARIADB" exact-version="10.4.24" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
+      <user-name>phpstorm</user-name>
       <schema-mapping>
         <introspection-scope>
           <node kind="schema" qname="@" />

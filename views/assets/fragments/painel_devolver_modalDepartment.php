@@ -18,8 +18,26 @@
                 </div>
             </div>
 
-            <div class="textarea">
-                <textarea placeholder="Descrição necessaria, quando o estado for 'Ruim'" name="obs-modal" id="txta-obsModal" maxlength="255" disabled></textarea>
+            <div class="modalContent">
+                <div class="responsibleReturnBox">
+                    <h5>retirado por:</h5>
+                    <div class="responsibleReturnSingle">
+                        <select class="selectClass" name="" id="" disabled>
+                            <option value=""><?=$responsible_in?></option>
+                        </select>
+                    </div>
+                    <h5>devolvido por:</h5>
+                    <div class="responsibleReturnSingle">
+                        <select class="selectClass" name="responsible_out" id="responsible_out" data-placeholder="Selecione quem devolveu">
+                            <option value=""></option>
+                            <option value="teste"><?=$responsible_in?></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="textarea">
+                    <textarea placeholder="Descrição necessaria, quando o estado for 'Ruim'" name="obs-modal" id="txta-obsModal" maxlength="255" disabled></textarea>
+                </div>
             </div>
         </div>
 
@@ -35,6 +53,7 @@
 
 <script src="<?=asset("js/form.js")?>"></script>
 <script>
+    $(".selectClass").select2();
     $('#numx').change(function(){
         maxValue = <?=$totalAmount?>;
         xvalue = $(this).val();

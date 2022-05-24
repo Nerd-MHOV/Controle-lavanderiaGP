@@ -138,6 +138,11 @@ class Painel extends Controller
 
     public function danificados(): void
     {
+        if (($this->user->level) < 4) {
+            $this->router->redirect("error.error",[
+                "errcode" => "401"
+            ]);
+        }
         $head = $this->seo->optimize(
             "Danificados | " . site("name"),
             site("desc"),

@@ -20,11 +20,34 @@
 {
     z-index: 1;
 }
+.tablePainel{
+    overflow-x: auto;
+}
 .tablePainel table
 {
     text-align: center;
     width: 100%;
     border-collapse: collapse;
+}
+.responsibleBox
+{
+    width: 300px;
+    margin: 0 auto;
+    border: 5px solid var(--grey);
+}
+.responsibleBox .responsibleTitle
+{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--blue);
+    padding: 20px 3px;
+    margin: 0 auto;
+    text-align: center;
+}
+.responsibleBox .responsibleSelect
+{
+    width: 100%;
+    margin-left: 16px;
 }
 .cardBox input[type=number]
 {
@@ -60,7 +83,7 @@
     font-weight: 600;
     font-size: 1.5em;
     color: var(--blue);
-    padding: 20px 0;
+    padding: 20px 3px;
 }
 .tablePainel table td
 {

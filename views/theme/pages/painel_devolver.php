@@ -2,7 +2,7 @@
 <div class="login_form_callback center20px">
     <?= flash(); ?>
 </div>
-<div class="details dw50">
+<div class="details dw100">
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Colaboradores:</h2>
