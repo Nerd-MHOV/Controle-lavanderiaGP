@@ -50,4 +50,18 @@ class Output extends DataLayer
     {
         return ((new Collaborator())->findById($this->id_responsible)->collaborator);
     }
+
+    public function log():void
+    {
+        $log = (new OutputLog());
+        $log->id_product = $this->id_product;
+        $log->id_department = $this->id_department;
+        $log->id_collaborator = $this->id_collaborator;
+        $log->id_responsible = $this->id_responsible;
+        $log->id_user = $this->id_user;
+        $log->amount = $this->amount;
+        $log->status = $this->status;
+        $log->obs = $this->obs;
+        $log->save();
+    }
 }

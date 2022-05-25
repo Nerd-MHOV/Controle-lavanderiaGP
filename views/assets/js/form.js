@@ -29,11 +29,9 @@ $(function(){
                 ajax_load("close");
 
                 if (typeof modal !== "undefined") {
-                    modal.style.display = "none";
-
                     if (su.message.type === "success") {
+                        modal.style.display = "none";
                         let id_saida = su.message.id
-
                         $("[data-id="+id_saida+"]").remove();
                     }
                 }

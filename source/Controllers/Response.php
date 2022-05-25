@@ -52,7 +52,7 @@ class Response extends Controller
         ]);
 
         $collaborators = (new Collaborator())->find("id_department = :depart", "depart={$data["id_department"]}")->fetch(true);
-        $callback["responsible"] = $this->view->render("assets/fragments/withdraw/reposibleCard",[
+        $callback["responsible"] = $this->view->render("assets/fragments/withdraw/reposibleCard", [
             "id_collaborator" => $data["id_collaborator"],
             "collaborators" => $collaborators,
             "selected" => $data["val_responsible"]
@@ -132,7 +132,7 @@ class Response extends Controller
                 "message" => "Faça ao menos UMA retirada"
             ]);
         }
-        if (!isset($data["responsible"]) || $data["responsible"] == ""){
+        if (isset($data["responsible"]) && $data["responsible"] == "") {
             echo $this->ajaxResponse("message", [
                 "type" => "error",
                 "message" => "Retiradas por setor necessitam de um responsável!"
@@ -184,6 +184,7 @@ class Response extends Controller
                     $output->amount = ($output->amount + $data["amount"][$i]);
                     $output->id_responsible = $data["responsible"];
                     $output->id_user = $_SESSION["user"];
+                    $output->log();
                     $output->save();
                 } else { //Não existe pendencia!
                     $output = new Output();
@@ -194,6 +195,7 @@ class Response extends Controller
                     $output->id_responsible = $data["responsible"];
                     $output->id_user = $_SESSION["user"];
                     $output->amount = $data["amount"][$i];
+                    $output->log();
                     $output->save();
                 }
             }
@@ -223,6 +225,7 @@ class Response extends Controller
                     $output->amount = 1;
                     $output->status = $data["select_status"][$i];
                     $output->obs = $data["txta_obs"][$ruim];
+                    $output->log();
                     $output->save();
                     $ruim++;
                 } else {
@@ -235,7 +238,7 @@ class Response extends Controller
                     $output->id_user = $_SESSION["user"];
                     $output->amount = 1;
                     $output->status = $data["select_status"][$i];
-
+                    $output->log();
                     $output->save();
                 }
             }
@@ -280,6 +283,7 @@ class Response extends Controller
     public function returnDepartment(array $data): void
     {
         $outputs = (new Output())->findById($data["id_saida"]);
+        $responsibles = (new Collaborator())->find("id_department LIKE {$outputs->id_department}")->fetch(true);
         $product = $outputs->product();
         $productType = $outputs->productType();
         $productService = $outputs->productService();
@@ -288,6 +292,7 @@ class Response extends Controller
             "id_saida" => $data["id_saida"],
             "totalAmount" => $outputs->amount,
             "responsible_in" => $outputs->responsible(),
+            "responsibles" => $responsibles,
         ]);
         $callback["data"] = $data;
         echo json_encode($callback);
@@ -304,7 +309,14 @@ class Response extends Controller
                 "type" => "error",
                 "message" => "Informe o estado do item!"
             ]);
+            return;
+        }
 
+        if (isset($data["responsible_out"]) && $data["responsible_out"] === "") {
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => "Necessario selecionar um responsável pela entrega!"
+            ]);
             return;
         }
 
@@ -313,7 +325,6 @@ class Response extends Controller
                 "type" => "error",
                 "message" => "Descreva o porquê de o item estar \"Ruim\""
             ]);
-
             return;
         }
 
@@ -330,8 +341,8 @@ class Response extends Controller
             $returns->id_product = $output->id_product;
             $returns->id_department = $output->id_department;
             $returns->id_collaborator = $output->id_collaborator;
-            $returns->id_responsible_in= $output->id_responsible;
-            $returns->id_responsible_out= $data["id_responsible_out"];
+            $returns->id_responsible_in = $output->id_responsible;
+            $returns->id_responsible_out = $data["responsible_out"];
             $returns->id_user = $_SESSION["user"];
             $returns->amount = $amountTotal;
             $returns->amount_bad = $data["nmb_bad"];
@@ -341,7 +352,6 @@ class Response extends Controller
             $returns->obs_out = $data["obs-modal"] ?? "";
             $returns->date_in = $output->updated_at;
             $returns->date_out = date("Y-m-d H:i:s");
-
 
 
             $newAmount = ($output->amount - $returns->amount);

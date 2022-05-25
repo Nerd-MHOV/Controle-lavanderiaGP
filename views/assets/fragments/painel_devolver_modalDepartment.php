@@ -4,6 +4,9 @@
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <h3>Devolver <u><?=$productName?></u> <i style="color: #cecece; font-size: 16px">maximo <?=$totalAmount?></i></h3>
 
+        <div class="login_form_callback center20px">
+            <?= flash(); ?>
+        </div>
 
 
         <div class="modal-wrapper modal-setor">
@@ -30,7 +33,15 @@
                     <div class="responsibleReturnSingle">
                         <select class="selectClass" name="responsible_out" id="responsible_out" data-placeholder="Selecione quem devolveu">
                             <option value=""></option>
-                            <option value="teste"><?=$responsible_in?></option>
+                            <?php
+                            if (!empty($responsibles)):
+                                foreach ($responsibles as $responsible):
+                                    ?>
+                                    <option value="<?= $responsible->id  ?>" ><?= $responsible->collaborator ?></option>
+                                <?php
+                                endforeach;
+                            endif;
+                            ?>
                         </select>
                     </div>
                 </div>

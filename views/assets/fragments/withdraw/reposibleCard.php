@@ -8,7 +8,7 @@ use Source\Controllers\Response;
 if($id_collaborator == 0): ?>
 <div class="responsibleCard responsibleBox">
     <div>
-        <div class="responsibleTitle">Retirante</div>
+        <div class="responsibleTitle">Responsável</div>
         <div class="responsibleSelect">
             <select class="selectClass" name="responsible" id="select_responsible" data-placeholder="Selecione um responsavel">
                 <option value=""></option>
