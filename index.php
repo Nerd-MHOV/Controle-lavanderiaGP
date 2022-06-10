@@ -55,12 +55,15 @@ $router->get("/documento/{id}", "Withdraw:document", "withdraw.document");
 
 
 /**
- *  devolver RESPONSE
+ *  devolver WEB RETURN
  */
 $router->group('devolver');
-$router->post("/colaborador", "Response:returnCollaborator", "response.return_collaborator");
-$router->post("/setor", "Response:returnDepartment", "response.return_department");
-$router->post("/finalizar", "Response:returnProduct", "response.return_product");
+$router->post("/colaborador", "WebReturn:returnCollaborator", "web-return.return_collaborator");
+$router->post("/setor", "WebReturn:returnDepartment", "web-return.return_department");
+$router->post("/finalizar", "WebReturn:returnProduct", "web-return.return_product");
+$router->post("/procurar-colaborador", "WebReturn:searchCollaborator", "web-return.search_collaborator");
+$router->post("/procurar-setor", "WebReturn:searchDepartment", "web-return.search_department");
+
 
 /**
  *  produto WEB PRODUCT

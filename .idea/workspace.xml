@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fdc63cc-7732-440b-9b46-10cc4bb63b9d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Controllers/WebReturn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsCollaborator_search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/assets/fragments/painel_outputsDepartment_search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Painel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/WebDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Controllers/WebProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Controllers/WebProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/css/sidebarDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/css/sidebarDashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modalDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/fragments/painel_devolver_modalDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/assets/styleDashboard.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/assets/styleDashboard.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/theme/pages/painel_devolver.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +32,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -53,7 +73,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
     &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;&lt;databases&gt;&lt;list&gt;&lt;schema-mapping-item&gt;&lt;source-data-source-id&gt;af7719fe-c4d3-4da1-9aab-54679697b182&lt;/source-data-source-id&gt;&lt;source-path&gt;schema/\&quot;lavanderia\&quot;&lt;/source-path&gt;&lt;target-data-source-id&gt;af7719fe-c4d3-4da1-9aab-54679697b182&lt;/target-data-source-id&gt;&lt;target-path&gt;schema/\&quot;lavanderia\&quot;&lt;/target-path&gt;&lt;/schema-mapping-item&gt;&lt;/list&gt;&lt;/databases&gt;&lt;/schema-mapping&gt;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Programador/xampp/htdocs/controle_lavanderia4.0/source/Models&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programador/xampp/htdocs/controle_lavanderia4.0/views/assets/fragments&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -66,6 +86,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programador\xampp\htdocs\controle_lavanderia4.0\views\assets\fragments" />
       <recent name="D:\Programador\xampp\htdocs\controle_lavanderia4.0\source\Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -91,7 +112,12 @@
       <workItem from="1653482168579" duration="3082000" />
       <workItem from="1653485626836" duration="7408000" />
       <workItem from="1653513327046" duration="42000" />
-      <workItem from="1654088251439" duration="3504000" />
+      <workItem from="1654088251439" duration="9513000" />
+      <workItem from="1654290599778" duration="649000" />
+      <workItem from="1654544238604" duration="1573000" />
+      <workItem from="1654695934836" duration="114000" />
+      <workItem from="1654706880350" duration="8613000" />
+      <workItem from="1654788416773" duration="6773000" />
     </task>
     <servers />
   </component>
@@ -103,7 +129,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

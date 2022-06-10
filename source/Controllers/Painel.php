@@ -119,7 +119,7 @@ class Painel extends Controller
      */
     public function departamento(): void
     {
-        if ($this->user->level < 2) {
+        if ($this->user->level < 1) {
             $this->router->redirect("error.error",[
                 "errcode" => "401"
             ]);

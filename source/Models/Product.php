@@ -10,7 +10,7 @@ class Product extends DataLayer
 {
     public function __construct()
     {
-        parent::__construct("product", ["status", "id_product_type", "id_product_service", "product", "size", "unitary_value"]);
+        parent::__construct("product", ["status", "id_department", "id_product_type", "id_product_service", "product", "size", "unitary_value"]);
     }
 
     public function productType()
@@ -31,8 +31,8 @@ class Product extends DataLayer
     public function inInventory(): ?int
     {
         return ((new Inventory())
-            ->find("id_product = :product", "product={$this->id}")
-            ->fetch())->amount ?? 0;
+                ->find("id_product = :product", "product={$this->id}")
+                ->fetch())->amount ?? 0;
     }
 
     public function inOutput(): ?int
@@ -67,6 +67,56 @@ class Product extends DataLayer
         OR d.department LIKE '%{$search}%'
         OR p.size LIKE '%{$search}%'
         OR p.unitary_value LIKE '%{$search}%'
+        ");
+        $return = ($products->fetchAll(PDO::FETCH_OBJ));
+
+        return $return;
+    }
+
+    public function searchOutputsCollaborator(string $search)
+    {
+        $connect = Connect::getInstance(DATA_LAYER_CONFIG);
+        $products = $connect->query("
+        SELECT o.id, o.updated_at, c.collaborator, d.department, p.product, p.size, pt.product_type, ps.service
+        FROM output o 
+        INNER JOIN collaborator c ON o.id_collaborator = c.id 
+        INNER JOIN department d on o.id_department = d.id
+        INNER JOIN product p on o.id_product = p.id
+        INNER JOIN product_type pt on p.id_product_type = pt.id
+        INNER JOIN product_service ps on p.id_product_service = ps.id
+        WHERE o.id_collaborator != 0
+        AND (o.updated_at LIKE '%{$search}%'
+        OR c.collaborator LIKE '%{$search}%'
+        OR d.department LIKE '%{$search}%'
+        OR p.product LIKE '%{$search}%'
+        OR p.size LIKE '%{$search}%'
+        OR pt.product_type LIKE '%{$search}%'
+        OR ps.service LIKE '%{$search}%')
+        ");
+        $return = ($products->fetchAll(PDO::FETCH_OBJ));
+
+        return $return;
+    }
+
+    public function searchOutputsDepartment(string $search)
+    {
+        $connect = Connect::getInstance(DATA_LAYER_CONFIG);
+        $products = $connect->query("
+        SELECT o.id, o.updated_at, c.collaborator, d.department, p.product, p.size, pt.product_type, ps.service
+        FROM output o 
+        INNER JOIN collaborator c ON o.id_collaborator = c.id 
+        INNER JOIN department d on o.id_department = d.id
+        INNER JOIN product p on o.id_product = p.id
+        INNER JOIN product_type pt on p.id_product_type = pt.id
+        INNER JOIN product_service ps on p.id_product_service = ps.id
+        WHERE o.id_collaborator = 0
+        AND (o.updated_at LIKE '%{$search}%'
+        OR c.collaborator LIKE '%{$search}%'
+        OR d.department LIKE '%{$search}%'
+        OR p.product LIKE '%{$search}%'
+        OR p.size LIKE '%{$search}%'
+        OR pt.product_type LIKE '%{$search}%'
+        OR ps.service LIKE '%{$search}%')
         ");
         $return = ($products->fetchAll(PDO::FETCH_OBJ));
 
