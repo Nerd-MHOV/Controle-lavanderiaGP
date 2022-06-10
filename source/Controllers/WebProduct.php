@@ -130,7 +130,7 @@ class WebProduct extends Controller
 
         $type = (new ProductType());
         $type->product_type = $data["inp-typeregister"];
-        //$type->save();
+        $type->save();
 
         if ($type->fail()) {
             $debug = $type->fail()->getMessage();

@@ -6,6 +6,17 @@
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Colaboradores:</h2>
+
+            <!-- search -->
+            <div class="searchRight">
+                <div class="search">
+                    <label>
+                        <input id="searchBar" type="text" placeholder="Buscar" />
+                        <i class='bx bx-search'></i>
+                    </label>
+                </div>
+            </div>
+
         </div>
         <table>
             <thead>
@@ -20,7 +31,7 @@
                 <td>Devolver</td>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="bodyResponse">
             <?php
             $this->insert(
                 "assets/fragments/painel_outputsCollaborator",
@@ -33,6 +44,17 @@
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Setor:</h2>
+
+            <!-- search -->
+            <div class="searchRight">
+                <div class="search">
+                    <label>
+                        <input id="searchBar2" type="text" placeholder="Buscar" />
+                        <i class='bx bx-search'></i>
+                    </label>
+                </div>
+            </div>
+
         </div>
         <table>
             <thead>
@@ -46,7 +68,7 @@
                 <td>Devolver</td>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="bodyResponse2">
             <?php
             $this->insert(
                 "assets/fragments/painel_outputsDepartment",
@@ -69,6 +91,33 @@
 
 <?php $this->start("scripts") ?>
 <script>
+
+    $('#searchBar').keyup(function () {
+        let search = $(this).val();
+        $.ajax({
+            url: "<?= $router->route("web-return.search_collaborator"); ?>",
+            type: "post",
+            data: {search: search},
+            dataType: "json",
+            success: function (callback) {
+                $("#bodyResponse").html(callback.response);
+            }
+        })
+    });
+
+    $('#searchBar2').keyup(function () {
+        let search = $(this).val();
+        $.ajax({
+            url: "<?= $router->route("web-return.search_department"); ?>",
+            type: "post",
+            data: {search: search},
+            dataType: "json",
+            success: function (callback) {
+                $("#bodyResponse2").html(callback.response);
+            }
+        })
+    });
+
     var modal = document.getElementById("myModal");
     var btn = document.getElementById("myBtn");
 
@@ -80,7 +129,7 @@
             $.ajax({
                 type: 'POST',
                 data: {id_saida: id},
-                url: '<?=$router->route("response.return_collaborator")?>',
+                url: '<?=$router->route("web-return.return_collaborator")?>',
                 dataType: 'json',
                 success: function (data) {
 
@@ -95,7 +144,7 @@
             $.ajax({
                 type: 'POST',
                 data: {id_saida: id},
-                url: '<?=$router->route("response.return_department")?>',
+                url: '<?=$router->route("web-return.return_department")?>',
                 dataType: 'json',
                 success: function (data) {
                     $('#myModal').html(data.modal);

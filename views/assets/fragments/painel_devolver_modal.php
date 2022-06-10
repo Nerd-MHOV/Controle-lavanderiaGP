@@ -1,4 +1,4 @@
-<form method="post" action="<?=$router->route("response.return_product")?>">
+<form method="post" action="<?=$router->route("web-return.return_product")?>">
     <div id="modalphp" class="modal-content">
 
         <span class="close-btn" onclick="closeModal()">&times;</span>
