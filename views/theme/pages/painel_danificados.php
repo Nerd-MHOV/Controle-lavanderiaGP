@@ -6,9 +6,11 @@
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Colaboradores:</h2>
+            <!--
             <div>
                 <a href="<?= $router->route("web-damaged.per-collaborator"); ?>" class="btnDashboard">Por colaborador</a>
             </div>
+            -->
         </div>
 
         <table>

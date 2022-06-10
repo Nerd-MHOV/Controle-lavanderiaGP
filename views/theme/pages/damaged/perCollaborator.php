@@ -12,7 +12,7 @@ use Source\Controllers\Painel;
         <!-- search -->
         <div class="search">
             <label>
-                <input id="searchBar" type="text" placeholder="Buscar produto">
+                <input id="searchBar" type="text" placeholder="Buscar">
                 <i class='bx bx-search'></i>
                 <!--<img style="width: 100%; max-width:200px" src="<?= asset("images/GrupoperaltasCompleto.png") ?>" alt="LogoCompleta">-->
             </label>

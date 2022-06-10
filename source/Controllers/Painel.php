@@ -175,6 +175,32 @@ class Painel extends Controller
         echo $this->view->render("theme/pages/painel_estoque");
     }
 
+    public function controle(): void
+    {
+        if (($this->user->level) < 4) {
+            $this->router->redirect("error.error",[
+                "errcode" => "401"
+            ]);
+        }
+        $head = $this->seo->optimize(
+            "Controle | " . site("name"),
+            site("desc"),
+            $this->router->route("painel.controle"),
+            routeImage("Controle - Painel")
+        )->render();
+        $today = date("Y-m-d");
+        $due = date('Y-m-d H:i:s', strtotime('-3 days'));
+
+        $this->view->addData([
+            'head' => $head,
+            'outputToday' => ((new Output())->find("updated_at LIKE '%{$today}%'")->count()),
+            'returnToday' => ((new Returns())->find("updated_at LIKE '%{$today}%'")->count()),
+            'pendencies' => ((new Output())->find()->count()),
+            'duePendencies' => ((new Output())->find("updated_at < '{$due}'")->count()),
+        ]);
+        echo $this->view->render("theme/pages/painel_controle");
+    }
+
     /**
      * @return void
      */

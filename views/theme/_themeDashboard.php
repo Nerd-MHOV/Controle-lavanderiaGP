@@ -76,6 +76,12 @@
                     <span class="title">Estoque</span>
                 </a>
             </li>
+            <li <?= (str_contains($_GET["route"], "controle")) ? "class=\"hovered\"" : ""; ?>>
+                <a href="<?= $router->route("painel.controle") ?>">
+                    <span class="icon"><i class='bx bxs-traffic-barrier'></i></span>
+                    <span class="title">Painel</span>
+                </a>
+            </li>
 
             <li>
                 <a href="<?= $router->route("painel.logoff"); ?>">

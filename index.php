@@ -38,6 +38,7 @@ $router->get("/produto", "Painel:produto", "painel.produto");
 $router->get("/departamento", "Painel:departamento", "painel.departamento");
 $router->get("/danificados", "Painel:danificados", "painel.danificados");
 $router->get("/estoque", "Painel:estoque", "painel.estoque");
+$router->get("/controle", "Painel:controle", "painel.controle");
 $router->get("/sair", "Painel:logoff", "painel.logoff");
 
 
@@ -101,6 +102,11 @@ $router->group('danificados');
 $router->post("/colaborador", "WebDamaged:returnCollaborator", "web-damaged.return_collaborator");
 $router->post("/setor", "WebDamaged:returnDepartment", "web-damaged.return_department");
 $router->get("/colaborador", "WebDamaged:perCollaborator", "web-damaged.per-collaborator");
+
+/**
+ *  controle WEB CONTROL
+ */
+$router->group('controle');
 
 
 /**
