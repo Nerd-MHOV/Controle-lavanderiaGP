@@ -5,6 +5,7 @@ namespace Source\Controllers;
 use Source\Models\Collaborator;
 use Source\Models\Department;
 use Source\Models\Output;
+use Source\Models\OutputLog;
 use Source\Models\Product;
 use Source\Models\Returns;
 use Source\Models\User;
@@ -193,10 +194,11 @@ class Painel extends Controller
 
         $this->view->addData([
             'head' => $head,
-            'outputToday' => ((new Output())->find("updated_at LIKE '%{$today}%'")->count()),
+            'outputToday' => ((new OutputLog())->find("updated_at LIKE '%{$today}%'")->count()),
             'returnToday' => ((new Returns())->find("updated_at LIKE '%{$today}%'")->count()),
             'pendencies' => ((new Output())->find()->count()),
             'duePendencies' => ((new Output())->find("updated_at < '{$due}'")->count()),
+            'recents' => ((new Returns())->find()->limit(20)->order("updated_at DESC")->fetch(true)),
         ]);
         echo $this->view->render("theme/pages/painel_controle");
     }

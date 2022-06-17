@@ -107,6 +107,7 @@ $router->get("/colaborador", "WebDamaged:perCollaborator", "web-damaged.per-coll
  *  controle WEB CONTROL
  */
 $router->group('controle');
+$router->post("/retiradas", "WebControl:tableOutputs", "web-control.table_outputs");
 
 
 /**

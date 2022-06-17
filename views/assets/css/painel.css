@@ -135,3 +135,40 @@
     position: absolute;
     opacity: 8%;
 }
+.select-filter
+{
+    display: flex;
+    padding: 10px;
+}
+.box-select-filter
+{
+    position: relative;
+    background: var(--white);
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgb(0, 0, 0, 10%);
+    margin: 0 5px;
+    color: var(--blue);
+}
+.box-select-filter:hover,
+.box-select-filter-selected
+{
+    background: var(--blue);
+    color: var(--white);
+}
+.pointer
+{
+    cursor: pointer;
+}
+.box-date-filter input
+{
+    position: relative;
+    background: var(--white);
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 10%);
+    margin: 0 5px;
+    border: none;
+    align-content: normal;
+    color: var(--blue);
+}

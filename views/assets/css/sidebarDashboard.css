@@ -320,7 +320,8 @@ body {
     color: var(--black2);
 }
 
-.cardBox .card:hover {
+.cardBox .card:hover,
+.cardBox .card-filter-selected{
     background: var(--blue);
 }
 
@@ -329,7 +330,10 @@ body {
 .cardBox .card:hover .iconBx,
 .cardBox .card:hover select,
 .cardBox .card:hover input[type=number],
-.cardBox .card:hover .select2-selection__rendered {
+.cardBox .card:hover .select2-selection__rendered,
+.cardBox .card-filter-selected .numbers,
+.cardBox .card-filter-selected .cardName,
+.cardBox .card-filter-selected .iconBx{
     color: var(--white);
 }
 
