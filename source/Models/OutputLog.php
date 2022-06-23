@@ -23,7 +23,7 @@ class OutputLog extends DataLayer
 
     public function collaborator()
     {
-        return (new Collaborator())->findById($this->id_collaborator);
+        return (new Collaborator())->findById($this->id_department);
     }
 
     public function department()

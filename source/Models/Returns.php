@@ -52,4 +52,13 @@ class Returns extends DataLayer
     {
         return (new ProductService())->findById($this->product()->id_product_service);
     }
+
+    public function responsibleIn()
+    {
+        return ((new Collaborator())->findById($this->id_responsible_in)->collaborator);
+    }
+    public function responsibleOut()
+    {
+        return ((new Collaborator())->findById($this->id_responsible_out)->collaborator);
+    }
 }

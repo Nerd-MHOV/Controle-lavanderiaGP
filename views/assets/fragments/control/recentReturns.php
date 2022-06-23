@@ -24,8 +24,8 @@
             foreach ($recents as $recent):
                 ?>
                 <tr>
-                    <td><?= $recent->collaborator()->collaborator ?></td>
-                    <td><?= $recent->department()->department ?></td>
+                    <td><?= $recent->collaborator()->collaborator ?><?= ($recent->id_collaborator == 0) ? " - {$recent->responsibleIn()} / {$recent->responsibleOut()}" : "" ?></td>
+                    <td><?= ($recent->id_collaborator != 0) ? $recent->collaborator()->department() : $recent->department()->department ?></td>
                     <td><?= $recent->productType()->product_type ?></td>
                     <td><?= $recent->product()->product ?></td>
                     <td><?= $recent->productService()->service ?></td>

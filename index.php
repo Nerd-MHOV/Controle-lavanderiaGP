@@ -109,6 +109,14 @@ $router->get("/colaborador", "WebDamaged:perCollaborator", "web-damaged.per-coll
 $router->group('controle');
 $router->post("/retiradas", "WebControl:tableOutputs", "web-control.table_outputs");
 
+/**
+ * EmailSender
+ */
+$router->group('email');
+$router->get("/","EmailSender:emailSender", "email-sender.email_sender");
+$router->get("/{days}","EmailSender:emailSender", "email-sender.email_sender");
+$router->get("/{days}/{enviar}","EmailSender:emailSender", "email-sender.email_sender");
+
 
 /**
  * ERRORS

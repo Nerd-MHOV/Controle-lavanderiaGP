@@ -178,7 +178,7 @@ class Painel extends Controller
 
     public function controle(): void
     {
-        if (($this->user->level) < 4) {
+        if (($this->user->level) < 1) {
             $this->router->redirect("error.error",[
                 "errcode" => "401"
             ]);
