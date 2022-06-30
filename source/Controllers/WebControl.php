@@ -30,7 +30,7 @@ class WebControl extends Controller
             'recents' => ((new Returns())
                 ->find()
                 ->limit(20)
-                ->order("updated_at DESC")
+                ->order("created_at DESC")
                 ->fetch(true)),
         ]);
         $query = "";
@@ -89,10 +89,10 @@ class WebControl extends Controller
 
             $dueDate = date('Y-m-d H:i:s', strtotime('-3 days'));
 
-            $filterDue = ($data["reference"] == "Pendencias Vencidas") ? " AND updated_at < '{$dueDate}'" : "";
+            $filterDue = ($data["reference"] == "Pendencias Vencidas") ? " AND created_at < '{$dueDate}' AND validate != 1" : "";
 
             $query = "
-                1 = 1
+                1 = 1 
                 $filterCollaborator
                 $filterDue
             ";

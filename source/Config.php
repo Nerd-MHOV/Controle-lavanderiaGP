@@ -7,8 +7,8 @@ if (
     || $_SERVER["SERVER_NAME"] == "PhpStorm 2021.3.3"
 ) {
 
-//    require __DIR__ . "/Minify.php";
-//    require __DIR__ . "/MinifyDashboard.php";
+    require __DIR__ . "/Minify.php";
+    require __DIR__ . "/MinifyDashboard.php";
 
     define("SITE", [
         "name" => "controle_lavanderia",

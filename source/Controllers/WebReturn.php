@@ -122,7 +122,7 @@ class WebReturn extends Controller
             $returns->status_out = ($data["nmb_bad"] > 0) ? "ruim" : "bom";
             $returns->obs_in = $output->obs;
             $returns->obs_out = $data["obs-modal"] ?? "";
-            $returns->date_in = $output->updated_at;
+            $returns->date_in = $output->created_at;
             $returns->date_out = date("Y-m-d H:i:s");
 
 
@@ -148,7 +148,7 @@ class WebReturn extends Controller
             $returns->status_out = $data["estado-modal"];
             $returns->obs_in = $output->obs;
             $returns->obs_out = $data["obs-modal"] ?? "";
-            $returns->date_in = $output->updated_at;
+            $returns->date_in = $output->created_at;
             $returns->date_out = date("Y-m-d H:i:s");
 
             $id = $data["id_saida"];

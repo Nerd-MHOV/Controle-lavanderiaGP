@@ -194,11 +194,11 @@ class Painel extends Controller
 
         $this->view->addData([
             'head' => $head,
-            'outputToday' => ((new OutputLog())->find("updated_at LIKE '%{$today}%'")->count()),
-            'returnToday' => ((new Returns())->find("updated_at LIKE '%{$today}%'")->count()),
+            'outputToday' => ((new OutputLog())->find("created_at LIKE '%{$today}%'")->count()),
+            'returnToday' => ((new Returns())->find("created_at LIKE '%{$today}%'")->count()),
             'pendencies' => ((new Output())->find()->count()),
-            'duePendencies' => ((new Output())->find("updated_at < '{$due}'")->count()),
-            'recents' => ((new Returns())->find()->limit(20)->order("updated_at DESC")->fetch(true)),
+            'duePendencies' => ((new Output())->find("created_at < '{$due}' AND validate != 1")->count()),
+            'recents' => ((new Returns())->find()->limit(20)->order("created_at DESC")->fetch(true)),
         ]);
         echo $this->view->render("theme/pages/painel_controle");
     }

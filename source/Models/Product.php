@@ -77,7 +77,7 @@ class Product extends DataLayer
     {
         $connect = Connect::getInstance(DATA_LAYER_CONFIG);
         $products = $connect->query("
-        SELECT o.id, o.updated_at, c.collaborator, d.department, p.product, p.size, pt.product_type, ps.service
+        SELECT o.id, o.created_at, c.collaborator, d.department, p.product, p.size, pt.product_type, ps.service
         FROM output o 
         INNER JOIN collaborator c ON o.id_collaborator = c.id 
         INNER JOIN department d on o.id_department = d.id
@@ -85,7 +85,7 @@ class Product extends DataLayer
         INNER JOIN product_type pt on p.id_product_type = pt.id
         INNER JOIN product_service ps on p.id_product_service = ps.id
         WHERE o.id_collaborator != 0
-        AND (o.updated_at LIKE '%{$search}%'
+        AND (o.created_at LIKE '%{$search}%'
         OR c.collaborator LIKE '%{$search}%'
         OR d.department LIKE '%{$search}%'
         OR p.product LIKE '%{$search}%'
@@ -102,7 +102,7 @@ class Product extends DataLayer
     {
         $connect = Connect::getInstance(DATA_LAYER_CONFIG);
         $products = $connect->query("
-        SELECT o.id, o.updated_at, c.collaborator, d.department, p.product, p.size, pt.product_type, ps.service
+        SELECT o.id, o.created_at, c.collaborator, d.department, p.product, p.size, pt.product_type, ps.service
         FROM output o 
         INNER JOIN collaborator c ON o.id_collaborator = c.id 
         INNER JOIN department d on o.id_department = d.id
@@ -110,7 +110,7 @@ class Product extends DataLayer
         INNER JOIN product_type pt on p.id_product_type = pt.id
         INNER JOIN product_service ps on p.id_product_service = ps.id
         WHERE o.id_collaborator = 0
-        AND (o.updated_at LIKE '%{$search}%'
+        AND (o.created_at LIKE '%{$search}%'
         OR c.collaborator LIKE '%{$search}%'
         OR d.department LIKE '%{$search}%'
         OR p.product LIKE '%{$search}%'

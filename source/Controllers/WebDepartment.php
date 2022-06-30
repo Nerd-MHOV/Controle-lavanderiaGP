@@ -2,14 +2,20 @@
 
 namespace Source\Controllers;
 
+use CoffeeCode\Optimizer\Optimizer;
 use Source\Models\Collaborator;
 use Source\Models\CollaboratorType;
 use Source\Models\Department;
+use Source\Models\Output;
+use Source\Models\Product;
 use Source\Models\ProductService;
 use Source\Models\ProductType;
 use Source\Models\User;
 
 
+/**
+ *
+ */
 class WebDepartment extends Controller
 {
     /**
@@ -198,5 +204,127 @@ class WebDepartment extends Controller
         ]);
         $callback["data"] = $collaborators;
         echo json_encode($callback);
+    }
+
+    /**
+     * @param array $data
+     * @return void
+     */
+    public function searchCollaborators (array $data): void
+    {
+        $collaborators = (new Collaborator())->search($data["search"]);
+        $callback["data"] = $collaborators[0]->collaborator;
+        $callback["response"] = $this->view->render("assets/fragments/department/table_searchCollaborator",[
+            "collaborators" => $collaborators
+        ]);
+        echo json_encode($callback);
+    }
+
+    /**
+     * @param array $data
+     * @return void
+     */
+    public function modalCollaborator (array $data): void
+    {
+        $collaborator = ((new Collaborator())->findById($data["id"]));
+        $pendencies = ((new Output())->find("id_collaborator LIKE {$collaborator->id}"))->fetch(true);
+        $types = ((new CollaboratorType())->find()->fetch(true));
+        $departments = ((new Department())->find()->fetch(true));
+        $callback["modal"] = $this->view->render("assets/fragments/department/modalCollaborator", [
+            "collaborator" => $collaborator,
+            "pendencies" => $pendencies,
+            "types" => $types,
+            "departments" => $departments,
+        ]);
+
+        $callback["data"] = $data;
+        echo json_encode($callback);
+    }
+
+    /**
+     * @param array $data
+     * @return void
+     */
+    public function changeDepartment (array $data): void
+    {
+        $collaborator = ((new Collaborator())->findById($data["collaborator"]));
+        $collaborator->id_department = $data["newDepartment"];
+
+
+        if (!$collaborator->save(false)) {
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => "ERROR, tente de novo, se o erro persistir entre em contato"
+            ]);
+            return;
+        }
+        echo $this->ajaxResponse("message", [
+            "type" => "info",
+            "message" => "O departamento foi trocado para {$collaborator->department()}"
+        ]);
+    }
+
+    /**
+     * @param array $data
+     * @return void
+     */
+    public function changeType (array $data): void
+    {
+        $collaborator = ((new Collaborator())->find("id = {$data["collaborator"]}")->fetch());
+        $collaborator->id_type = $data["newType"];
+
+
+        if (!$collaborator->save(false)) {
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => "ERROR, tente de novo, se o erro persistir entre em contato"
+            ]);
+            return;
+        }
+        echo $this->ajaxResponse("message", [
+            "type" => "info",
+            "message" => "O collaborador agora é um {$collaborator->type()}"
+        ]);
+    }
+
+    /**
+     * @param array $data
+     * @return void
+     */
+    public function changeSituation (array $data): void
+    {
+        $collaborator = ((new Collaborator())->findById($data["collaborator"]));
+        $collaborator->active = (int)$data["newSituation"];
+
+        if (!$collaborator->save(false)) {
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => "ERROR, tente de novo, se o erro persistir entre em contato. [ {$collaborator->fail()->getMessage()} ]"
+            ]);
+            return;
+        }
+        $logmessage = ($collaborator->active) ? "ativo" : "desativado";
+        echo $this->ajaxResponse("message", [
+            "type" => "info",
+            "message" => "Collaborador foi {$logmessage}"
+        ]);
+    }
+
+    public function validateOutput (array $data): void
+    {
+        $output = ((new Output())->findById($data["outputID"]));
+        $output->validate = ($data["check_validate"] == "true") ? "1" : "0";
+
+        if(!$output->save()){
+            echo $this->ajaxResponse("message", [
+                "type" => "error",
+                "message" => "ERROR, tente de novo, se o erro persistir entre em contato"
+            ]);
+            return;
+        }
+        echo $this->ajaxResponse("message", [
+            "type" => "info",
+            "message" => "{$output->id} alterado {$data["check_validate"]}"
+        ]);
     }
 }

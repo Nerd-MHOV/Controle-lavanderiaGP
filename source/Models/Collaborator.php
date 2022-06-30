@@ -2,20 +2,23 @@
 
 namespace Source\Models;
 
+use CoffeeCode\DataLayer\Connect;
 use CoffeeCode\DataLayer\DataLayer;
 use PDOException;
+use PDO;
 
 /**
  * @property string|null $id_department
  * @property string|null collaborator
  * @property string|null cpf
  * @property string|null id_type
+ * @property bool|null active
  */
 class Collaborator extends DataLayer
 {
     public function __construct()
     {
-        parent::__construct("collaborator", ["id_department", "id_type", "collaborator", "cpf"]);
+        parent::__construct("collaborator", ["id_department", "id_type", "collaborator", "cpf", "active"]);
     }
 
     public function department(): ?string
@@ -33,14 +36,19 @@ class Collaborator extends DataLayer
         return ((new Output())->find("id_collaborator LIKE {$this->id}")->count());
     }
 
-    public function save(): bool
+    public function save($create = true): bool
     {
-        if (
-            !$this->validateCPF()
-            || !$this->validateCollaborator()
-            || !parent::save()
+        if ($create){
+            if (
+                !$this->validateCPF()
+                || !$this->validateCollaborator()
+                || !parent::save()
             )
-            return false;
+                return false;
+        } else {
+            if(!parent::save())
+                return false;
+        }
 
         return true;
     }
@@ -95,5 +103,22 @@ class Collaborator extends DataLayer
         }
 
         return true;
+    }
+
+    public function search(string $search)
+    {
+        $connect = Connect::getInstance(DATA_LAYER_CONFIG);
+        $products = $connect->query("
+        SELECT c.id, c.collaborator, d.department, ct.type, c.active
+        FROM collaborator c 
+        INNER JOIN department d ON c.id_department = d.id
+        INNER JOIN collaborator_type ct ON c.id_type = ct.id
+        WHERE c.collaborator LIKE '%{$search}%'
+        OR d.department LIKE '%{$search}%'
+        OR ct.type LIKE '%{$search}%'
+        ");
+        $return = ($products->fetchAll(PDO::FETCH_OBJ));
+
+        return $return;
     }
 }

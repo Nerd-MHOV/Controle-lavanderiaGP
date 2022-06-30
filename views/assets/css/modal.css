@@ -183,3 +183,12 @@
 .modal-buttom input[name=btnDevol]:hover{
     background-color: #7a97b9;
 }
+
+.modal-table thead td {
+    font-weight: bold;
+    padding: 5px;
+}
+
+.modal-table tbody td {
+    padding: 10px;
+}

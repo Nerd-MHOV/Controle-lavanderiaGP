@@ -88,7 +88,7 @@
                 <td><?=$output->productService()->service?></td>
                 <td><?=$output->product()->size?></td>
                 <td><?=$output->product()->unitary_value?></td>
-                <td><?=date("d/m H:i", strtotime($output->updated_at))?></td>
+                <td><?=date("d/m H:i", strtotime($output->created_at))?></td>
                 <td></td>
                 <td style="font-size: 10px"><?=$output->obs?></td>
             </tr>

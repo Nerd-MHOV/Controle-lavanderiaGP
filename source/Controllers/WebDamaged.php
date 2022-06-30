@@ -33,7 +33,7 @@ class WebDamaged extends Controller
         $productType = $damaged->productType();
         $productService = $damaged->productService();
 
-        $callback["modal"] = $this->view->render("assets/fragments/damaged/modalCollaborator", [
+        $callback["modal"] = $this->view->render("assets/fragments/damaged/modalCollaborator.php", [
             "productName" => "{$productType->product_type} {$product->product} {$productService->service} {$product->size}",
             "status_in" => $damaged->status_in,
             "obs_in" => $damaged->obs_in,

@@ -22,7 +22,7 @@ class EmailSender extends Controller
     {
         $daysDue =(isset($data["days"])) ? (int)$data["days"] : 5;
         $dueDate = date('Y-m-d H:i:s', strtotime("-{$daysDue} days"));
-        $checkPendencies = ((new Output())->find("updated_at < '{$dueDate}' AND id_collaborator != 0"));
+        $checkPendencies = ((new Output())->find("created_at < '{$dueDate}' AND id_collaborator != 0 AND validate != 1"));
         $pendencies = $checkPendencies->group("id_department")->fetch(true);
 
 
@@ -34,15 +34,16 @@ class EmailSender extends Controller
                 // SELECIONA COLLABORADORES RELACIONADOS COM AS PENDENCIAS E SETORES
                 $connect = Connect::getInstance(DATA_LAYER_CONFIG);
                 $itemsPendencies = $connect->query("
-                SELECT c.collaborator, o.amount, pt.product_type, o.updated_at, p.product, ps.service, p.size
+                SELECT c.collaborator, o.amount, pt.product_type, o.created_at, p.product, ps.service, p.size
                 FROM output AS o 
                 INNER JOIN collaborator c ON o.id_collaborator = c.id
                 INNER JOIN product p on o.id_product = p.id    
                 INNER JOIN product_type pt on p.id_product_type = pt.id
                 INNER JOIN product_service ps on p.id_product_service = ps.id
                 WHERE o.id_collaborator != 0
-                AND o.updated_at < '{$dueDate}'
+                AND o.created_at < '{$dueDate}'
                 AND c.id_department LIKE {$pendency->id_department}
+                AND validate != 1
                 ");
                 $itemsPendencies = ($itemsPendencies->fetchAll(PDO::FETCH_OBJ));
 
@@ -52,7 +53,7 @@ class EmailSender extends Controller
 
                 // GERADOR DE LINHAS TABELA
                 foreach ($itemsPendencies as $item) {
-                    $outputDate = date("d/m H:i", strtotime($item->updated_at));
+                    $outputDate = date("d/m H:i", strtotime($item->created_at));
                     $tablePendencies .= "
                         <tr>
                             <td style='padding: 10px'>{$item->collaborator}</td>    

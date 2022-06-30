@@ -75,7 +75,7 @@ use Source\Controllers\WebControl;
                     <td><?= $recent->product()->size ?></td>
                     <td><?= $recent->amount ?></td>
                     <td><?= $recent->status ?></td>
-                    <td><?= date("d/m H:i", strtotime($recent->updated_at)) ?></td>
+                    <td><?= date("d/m H:i", strtotime($recent->created_at)) ?></td>
                 </tr>
             <?php
             endforeach;

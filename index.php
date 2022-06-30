@@ -88,6 +88,12 @@ $router->post("/novo-departamento", "WebDepartment:registerDepartment", "web-dep
 $router->get("/novo-colaborador", "WebDepartment:newCollaborator", "web-department.new-collaborator");
 $router->post("/novo-colaborador", "WebDepartment:registerCollaborator", "web-department.register-collaborator");
 $router->post("/recarregar-colaborador", "WebDepartment:reloadCollaborators", "web-department.reload-collaborators");
+$router->post("/pesquisar-colaborador", "WebDepartment:searchCollaborators", "web-department.search_collaborators");
+$router->post("/modal-colaborador", "WebDepartment:modalCollaborator", "web-department.modal_collaborator");
+$router->post("/modal-colaborador/departamento","WebDepartment:changeDepartment","web-department.change_department");
+$router->post("/modal-colaborador/tipo","WebDepartment:changeType","web-department.change_type");
+$router->post("/modal-colaborador/status","WebDepartment:changeSituation","web-department.change_situation");
+$router->post("/modal-colaborador/validade-saida","WebDepartment:validateOutput","web-department.validate_output");
 
 /**
  * estoque WEB Iventory
