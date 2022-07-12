@@ -172,6 +172,7 @@ class WebDepartment extends Controller
         $collaborator->id_type = $data["select_type"];
         $collaborator->collaborator = $data["inp_collaborator"];
         $collaborator->cpf = $data["inp_cpf"];
+        $collaborator->active = 1;
 
         if(!$collaborator->save()) {
             echo $this->ajaxResponse("message", [

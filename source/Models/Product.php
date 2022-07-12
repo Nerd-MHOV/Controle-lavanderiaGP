@@ -102,7 +102,7 @@ class Product extends DataLayer
     {
         $connect = Connect::getInstance(DATA_LAYER_CONFIG);
         $products = $connect->query("
-        SELECT o.id, o.created_at, c.collaborator, d.department, p.product, p.size, pt.product_type, ps.service
+        SELECT o.id, o.created_at, o.amount, c.collaborator, d.department, p.product, p.size, pt.product_type, ps.service
         FROM output o 
         INNER JOIN collaborator c ON o.id_collaborator = c.id 
         INNER JOIN department d on o.id_department = d.id

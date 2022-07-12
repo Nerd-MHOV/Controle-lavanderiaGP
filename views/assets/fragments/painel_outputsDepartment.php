@@ -8,6 +8,7 @@ if (!empty($pendingDepartment)):
             <td><?=$department->product()->product?></td>
             <td><?=$department->productService()->service?></td>
             <td><?=$department->product()->size?></td>
+            <td><?=$department->amount?></td>
             <td><?=date("d/m H:i", strtotime($department->created_at))?></td>
             <td><span class="status inProgress" onclick="openModal(<?=$department->id?>, true)" style="cursor: pointer;">Devolver</span></td>
         </tr>

@@ -8,6 +8,7 @@ if (!empty($products)):
             <td><?=$product->product?></td>
             <td><?=$product->service?></td>
             <td><?=$product->size?></td>
+            <td><?=$product->amount?></td>
             <td><?=date("d/m H:i", strtotime($product->created_at))?></td>
             <td><span class="status inProgress" onclick="openModal(<?=$product->id?>)" style="cursor: pointer;">Devolver</span></td>
         </tr>

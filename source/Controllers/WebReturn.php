@@ -116,6 +116,7 @@ class WebReturn extends Controller
             $returns->id_responsible_in = $output->id_responsible;
             $returns->id_responsible_out = $data["responsible_out"];
             $returns->id_user = $_SESSION["user"];
+            $returns->has_amount = $output->amount;
             $returns->amount = $amountTotal;
             $returns->amount_bad = $data["nmb_bad"];
             $returns->status_in = $output->status;
@@ -142,6 +143,7 @@ class WebReturn extends Controller
             $returns->id_responsible_in = $output->id_collaborator;
             $returns->id_responsible_out = $output->id_collaborator;
             $returns->id_user = $_SESSION["user"];
+            $returns->has_amount = $output->amount;
             $returns->amount = $output->amount;
             $returns->amount_bad = 0;
             $returns->status_in = $output->status;

@@ -64,6 +64,7 @@
                 <td>Produto</td>
                 <td>Oficio</td>
                 <td>Tamanho</td>
+                <td>Qtde</td>
                 <td>Retirado</td>
                 <td>Devolver</td>
             </tr>
